@@ -1,4 +1,14 @@
+@font-face {
+    font-family: 'myFont';
+    src: url('/asset/simpfy.ttf'); /* IE9 Compat Modes */
+    src: url('../asset/simpfy.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('../asset/simpfy.ttf?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../asset/simpfy.ttf') format('woff'), /* Modern Browsers */
+    url('../asset/simpfy.ttf') format('svg'); /* Legacy iOS */
+}
+
 /*PreLoad 测试*/
+
 body {
 
 }
@@ -11,6 +21,11 @@ body {
 }
 .loading {
     margin-top: 41vh;
+}
+.percentage{
+    margin-top: 2.4vh;
+    font-family: myFont;
+    font-size: 1.1rem;
 }
 .water-fill {
     -webkit-animation: wave 0.7s infinite linear, fill-up 10s infinite ease-out alternate;
