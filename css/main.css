@@ -1,0 +1,56 @@
+/*PreLoad 测试*/
+body {
+
+}
+
+.preload{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+}
+.loading {
+    margin-top: 41vh;
+}
+.water-fill {
+    -webkit-animation: wave 0.7s infinite linear, fill-up 10s infinite ease-out alternate;
+    /*-webkit-animation: wave 0.7s infinite linear;*/
+    animation: wave 0.7s infinite linear, fill-up 10s infinite ease-out alternate;
+    /*animation: wave 0.7s infinite linear;*/
+}
+@-webkit-keyframes wave {
+    0% {
+        x: -400px;
+    }
+    100% {
+        x: 0;
+    }
+}
+@keyframes wave {
+    0% {
+        x: -400px;
+    }
+    100% {
+        x: 0;
+    }
+}
+@-webkit-keyframes fill-up {
+    0% {
+        height: 0;
+        y: 120px;
+    }
+    100% {
+        height: 160px;
+        y: -25px;
+    }
+}
+@keyframes fill-up {
+    0% {
+        height: 0;
+        y: 120px;
+    }
+    100% {
+        height: 160px;
+        y: -25px;
+    }
+}
