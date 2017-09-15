@@ -6,12 +6,241 @@
     url('../asset/simpfy.ttf') format('woff'), /* Modern Browsers */
     url('../asset/simpfy.ttf') format('svg'); /* Legacy iOS */
 }
-
-/*PreLoad 测试*/
-
+ol,ul{
+     list-style: none;
+ }
+*,::after,::before{
+    box-sizing: border-box;
+}
+.none-display{
+    display: none;
+}
+/*公共的属性*/
 body {
+    position: relative;
+    color: #000;
+    background: url(../img/bg.png) repeat;
+    -webkit-font-smoothing: antialiased;
+}
+
+.nav-header{
+    width: 100%;
+    height: 6.6rem;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+}
+.nav-pc{
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 6.6rem;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 5px #f3f3f3;
 
 }
+
+.nav-pc_logo{
+    position: absolute;
+    left: 10%;
+    top:37%;
+    z-index: 100;
+    background-image: url(../img/logo.png);
+    background-size: 15rem 1.6rem;
+    width:15rem;
+    height:1.6rem;
+}
+
+.nav-pc_logo>a{
+    position: absolute;
+    top:0px;
+    left: 0px;
+    right: 0px;
+    bottom:0px;
+}
+.list-nav{
+    top:2.7rem;
+    right: 17%;
+    position: absolute;
+    z-index: 999;
+    zoom:1;
+    display: table;
+    justify-content: center;
+    align-items:center;
+}
+
+.list-nav .list-nav-item{
+  position: relative;
+    float: left;
+    display: table-cell;
+    cursor: pointer;
+    padding: 0 20px;
+}
+
+.list-nav .list-nav-item a{
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-size: 1.2rem;
+    font-family: myFont Arial;
+    color: #0f0f0f;
+}
+.list-nav .list-nav-item a:after{
+    background: none repeat scroll 0 0 transparent;
+    background-color: #2dbcfc;
+    content: "";
+    left: 50%;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+    position:relative;
+    display: block;
+    height: 6px;
+    bottom: -6px;
+}
+
+.list-nav .list-nav-item a:hover:after{
+  width:100%;
+    left: 0;
+}
+
+.nav-btn{
+    top:2.3rem;
+    right: 6%;
+    position: absolute;
+    z-index: 1999;
+    zoom:1;
+    display: table;
+    margin-bottom:0.5rem;
+    margin-left: 1.5rem;
+    width: 6.5rem;
+    height: 2rem;
+    border-radius: 1rem;
+    background-color:  #2dbcfc;
+    text-align:center;
+    cursor: pointer;
+
+}
+
+.nav-btn:hover{
+    background-color:  #07a3e8;
+}
+
+.nav-btn .nav-btn-text{
+    font-size: 0.8rem;
+    font-family: myFont Arial;
+    color: #fff;
+    margin-top: 0.6rem;
+}
+
+
+
+.nav-pc-follow{
+    height: 9.6rem;
+    background-color: #002739;
+}
+
+.list-follow{
+    top:2.1rem;
+    left: 8.5%;
+    position: absolute;
+    z-index: 999;
+    zoom:1;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.list-follow .list-follow-item{
+    position: relative;
+    background-size: 5rem 5rem;
+    width:5rem;
+    height:5rem;
+    margin: 0 20px;
+}
+
+.list-follow .list-follow-item a{
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.list-follow .weixin-follow{
+    background-image: url(../img/weixin.png);
+}
+
+.list-follow .weixin-follow:hover{
+    background-image: url(../img/qrcode.jpeg);
+}
+
+.list-follow .weibo-follow{
+    background-image: url(../img/weibo.png);
+}
+
+.list-follow  .zhihu-follow{
+    background-image: url(../img/zhihu.png);
+}
+
+.list-follow  .lofter-follow{
+    background-image: url(../img/lofter.png);
+}
+
+.nav-copyright{
+    top:4.2rem;
+    right: 9%;
+    position: absolute;
+    z-index: 999;
+    display: table;
+    width: 10rem;
+    height: 2rem;
+    text-align:center;
+    font-size: 1rem;
+    font-family: myFont Arial;
+    color: #fff;
+}
+
+.follow-close-btn{
+    position: absolute;
+    z-index: 999;
+    top:0.6rem;
+    right: 0.6rem;
+    cursor: pointer;
+}
+
+.follow-close-btn img{
+    width: 0.9rem;
+    height: 0.9rem;
+}
+
+.main-pc{
+    clear: both;
+    position: relative;
+    width: 1028px;
+    padding: 144px 0 0;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.main-design{
+    clear: both;
+    position: relative;
+    width: 1028px;
+    padding: 80px 0 ;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #a4a4a4;
+    font-family: myFont;
+
+}
+
+/*PreLoad 测试*/
 
 .preload{
     width: 100%;
@@ -28,10 +257,10 @@ body {
     font-size: 1.1rem;
 }
 .water-fill {
-    -webkit-animation: wave 0.7s infinite linear, fill-up 10s infinite ease-out alternate;
-    /*-webkit-animation: wave 0.7s infinite linear;*/
-    animation: wave 0.7s infinite linear, fill-up 10s infinite ease-out alternate;
-    /*animation: wave 0.7s infinite linear;*/
+    /*-webkit-animation: wave 0.7s infinite linear, fill-up 10s infinite ease-out alternate;*/
+    -webkit-animation: wave 0.7s infinite linear;
+    /*animation: wave 0.7s infinite linear, fill-up 10s infinite ease-out alternate;*/
+    animation: wave 0.7s infinite linear;
 }
 @-webkit-keyframes wave {
     0% {
@@ -69,3 +298,60 @@ body {
         y: -25px;
     }
 }
+
+/*首页canvas 效果测试*/
+
+.none{
+    display: none;
+}
+#canvas{
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/*团队页面效果测试*/
+
+.paper{
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    white-space: nowrap;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.paperProfile{
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.contact-title{
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    font-family: 微软雅黑;
+}
+
+.contact-email{
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.underline--magical {
+    background-image: linear-gradient(120deg, #a4e1fd 0%, #2dbcfc 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: 0 88%;
+    transition: background-size 0.25s ease-in;
+}
+.underline--magical:hover {
+    background-size: 100% 88%;
+}
+
+.contact-qr{
+    width: 15rem;
+    height: 15rem;
+    margin-top: 1.5rem;
+}
+/*团队页面canvas 效果测试*/
