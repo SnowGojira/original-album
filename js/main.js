@@ -74,7 +74,10 @@ function draw() {
     if (_pointcount > 400000) {
         restart();
     }
-    if (mouseIsPressed) restart();
+    $('#canvasHolder').click(function () {
+        restart()
+    });
+    // if (mouseIsPressed) restart();
 }
 
 function nextPoint() {
