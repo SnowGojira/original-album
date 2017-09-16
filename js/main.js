@@ -34,13 +34,16 @@ var _y = 0;
 
 //================================= init
 function setup() {
-    createCanvas(windowWidth, windowHeight-4);
+    var canvas=createCanvas(windowWidth,windowHeight-50);
+    canvas.parent('canvasHolder');
     smooth();
     restart();
 }
 
 function restart() {
-    createCanvas(windowWidth, windowHeight-4);
+
+    var canvas=createCanvas(windowWidth,windowHeight-50);
+    canvas.parent('canvasHolder');
     clearBackground();
     stroke(149,222,255);
     _A = int(random(8)) + 1;
@@ -148,8 +151,99 @@ function nextPoint() {
 /***********************team page的逻辑****************************/
 $('#follow-open').click(function () {
     $('.nav-pc-follow').show();
+    $('.main-pc').css("padding-top","300px");
 });
 
 $('#follow-close').click(function () {
     $('.nav-pc-follow').hide();
+    $('.main-pc').css("padding-top","144px");
+});
+
+var     times=1;
+function countTimes(){
+    times++;
+    console.log(times);
+    return times;
+}
+
+$('.foto_hs2').hide();
+$('.foto_hs3').hide();
+$('.fotos_hs').hover(function(){
+    if((times%3)==1){
+        $('.foto_hs1').show();
+        $('.foto_hs2').hide();
+        $('.foto_hs3').hide();
+        // $('.foto_hs1').show();
+    }else if((times%3)==2){
+        $('.foto_hs1').hide();
+        $('.foto_hs2').show();
+        $('.foto_hs3').hide();
+    }else if((times%3)==0){
+        $('.foto_hs1').hide();
+        $('.foto_hs2').hide();
+        $('.foto_hs3').show();
+    }
+
+},function () {
+    countTimes();
+});
+
+
+var     tlf_times=1;
+function tlf_countTimes(){
+    tlf_times++;
+    console.log(tlf_times);
+    return tlf_times;
+}
+
+$('.foto_tlf2').hide();
+$('.foto_tlf3').hide();
+$('.fotos_tlf').hover(function(){
+    if((tlf_times%3)==1){
+        $('.foto_tlf1').show();
+        $('.foto_tlf2').hide();
+        $('.foto_tlf3').hide();
+        // $('.foto_hs1').show();
+    }else if((tlf_times%3)==2){
+        $('.foto_tlf1').hide();
+        $('.foto_tlf2').show();
+        $('.foto_tlf3').hide();
+    }else if((tlf_times%3)==0){
+        $('.foto_tlf1').hide();
+        $('.foto_tlf2').hide();
+        $('.foto_tlf3').show();
+    }
+
+},function () {
+    tlf_countTimes();
+});
+
+
+var     zw_times=1;
+function zw_countTimes(){
+    zw_times++;
+    console.log(zw_times);
+    return zw_times;
+}
+
+$('.foto_zw2').hide();
+$('.foto_zw3').hide();
+$('.fotos_zw').hover(function(){
+    if((zw_times%3)==1){
+        $('.foto_zw1').show();
+        $('.foto_zw2').hide();
+        $('.foto_zw3').hide();
+        // $('.foto_hs1').show();
+    }else if((zw_times%3)==2){
+        $('.foto_zw1').hide();
+        $('.foto_zw2').show();
+        $('.foto_zw3').hide();
+    }else if((zw_times%3)==0){
+        $('.foto_zw1').hide();
+        $('.foto_zw2').hide();
+        $('.foto_zw3').show();
+    }
+
+},function () {
+    zw_countTimes();
 });

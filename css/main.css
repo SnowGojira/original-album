@@ -9,6 +9,7 @@
 ol,ul{
      list-style: none;
  }
+
 *,::after,::before{
     box-sizing: border-box;
 }
@@ -43,11 +44,11 @@ body {
 .nav-pc_logo{
     position: absolute;
     left: 10%;
-    top:37%;
+    top:38%;
     z-index: 100;
-    background-image: url(../img/logo.png);
-    background-size: 15rem 1.6rem;
-    width:15rem;
+    background-image: url(../img/logo-large.png);
+    background-size: 16rem 1.6rem;
+    width:16rem;
     height:1.6rem;
 }
 
@@ -240,6 +241,28 @@ body {
 
 }
 
+.paper{
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    white-space: nowrap;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.paperProfile{
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.paperRoute{
+    padding:98px 0;
+    white-space: normal;
+}
+.paperRoute_wrapper{
+    width:800px;
+    margin: 0 auto;
+}
+
 /*PreLoad 测试*/
 
 .preload{
@@ -301,34 +324,248 @@ body {
 
 /*首页canvas 效果测试*/
 
-.none{
-    display: none;
-}
-#canvas{
-    width: 100vw;
-    height: 100vh;
-}
+#canvasHolder{
+    width: 100%;
+    height: 100%;
+    top: 2rem;
+    left:0;
+    right:0;
+    bottom: 0;
+    position: absolute;
 
+}
+.index-content{
+    margin-top: ;
+}
 
 /*团队页面效果测试*/
-
-.paper{
+.team-title{
+    font-size: 2rem;
+    /*letter-spacing: 0.1rem;*/
+   /*font-weight: bold;*/
+    font-family: "Adobe 黑体 Std R";
+}
+.team-passage{
+    margin-top: 2rem;
+    line-height: 130%;
+}
+.list-btn{
     position: relative;
-    overflow: hidden;
-    background: #fff;
-    white-space: nowrap;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    zoom:1;
+    clear: both;
+    margin-bottom: 66px;
 }
 
-.paperProfile{
-    padding: 4rem 0;
+.list-btn li{
+    display: inline-block;
+    float: left;
+    margin-right:0.5rem;
+    position: relative;
+    min-width:120px;
+    padding:0 20px;
+    height: 40px;
+    background-color: #f3f3f3;
+    line-height: 40px;
+    font-size: 1rem;
+    border-radius: 4px;
     text-align: center;
+    background-position: 90% 50%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
 }
 
+.list-btn li a{
+    text-decoration: none;
+    color: #333;
+}
+
+.list-btn .isSelected{
+    background-color: #2dbcfc;
+}
+
+.list-btn li:hover{
+    background-color: #2dbcfc;
+}
+
+.team-profile{
+    position:relative;
+    float:left;
+    width:-moz-calc((100% - 20px)/3);
+    width:-webkit-calc((100% - 20px)/3);
+    width: calc((100% - 40px)/3);
+    margin-right:20px;
+
+}
+.team-profile-content{
+    width:100%;
+    height: 15rem;
+}
+.team-profile-last{
+
+    margin-right:0px;
+
+}
+
+.profile-title{
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    font-family: "Adobe 黑体 Std R";
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+.fotos_hs{
+    position:absolute;
+    left: 100px;
+    top:-60px;
+    width:270px;
+    height:300px;
+    z-index: 666;
+}
+.foto_hs1{
+    position: absolute;
+    left: 0px;
+    top:0px;
+    left:0px;
+    bottom:0px;
+    width:100%;
+    height:100%;
+    background-image: url(../img/hs3.png);
+    background-size: 19rem;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+}
+.foto_hs2{
+    position: absolute;
+    left: 0px;
+    top:0px;
+    left:0px;
+    bottom:0px;
+    width:100%;
+    height:100%;
+    background-image: url(../img/hs2.png);
+    background-size: 19rem;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+}
+.foto_hs3{
+    position: absolute;
+    left: 0px;
+    top:0px;
+    left:0px;
+    bottom:0px;
+    width:100%;
+    height:100%;
+    background-image: url(../img/hs1.png);
+    background-size: 19rem;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+}
+
+
+
+
+.fotos_tlf{
+     position:absolute;
+     left: 100px;
+     top:-60px;
+     width:300px;
+     height:300px;
+     z-index: 666;
+ }
+.foto_tlf1{
+    position: absolute;
+    left: 0px;
+    top:0px;
+    left:0px;
+    bottom:0px;
+    width:100%;
+    height:100%;
+    background-image: url(../img/tlf1.png);
+    background-size: 19rem;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+}
+.foto_tlf2{
+    position: absolute;
+    left: 0px;
+    top:0px;
+    left:0px;
+    bottom:0px;
+    width:100%;
+    height:100%;
+    background-image: url(../img/tlf2.png);
+    background-size: 19rem;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+}
+.foto_tlf3{
+    position: absolute;
+    left: 0px;
+    top:0px;
+    left:0px;
+    bottom:0px;
+    width:100%;
+    height:100%;
+    background-image: url(../img/tlf3.png);
+    background-size: 19rem;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+}
+
+
+.fotos_zw{
+    position:absolute;
+    left: 100px;
+    top:-60px;
+    width:300px;
+    height:300px;
+    z-index: 666;
+}
+.foto_zw1{
+    position: absolute;
+    left: 0px;
+    top:0px;
+    left:0px;
+    bottom:0px;
+    width:100%;
+    height:100%;
+    background-image: url(../img/zw1.png);
+    background-size: 19rem;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+}
+.foto_zw2{
+    position: absolute;
+    left: 0px;
+    top:0px;
+    left:0px;
+    bottom:0px;
+    width:100%;
+    height:100%;
+    background-image: url(../img/zw2.png);
+    background-size: 19rem;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+}
+.foto_zw3{
+    position: absolute;
+    left: 0px;
+    top:0px;
+    left:0px;
+    bottom:0px;
+    width:100%;
+    height:100%;
+    background-image: url(../img/zw3.png);
+    background-size: 19rem;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+}
+/*联系页面效果测试*/
 .contact-title{
     font-size: 2rem;
     letter-spacing: 0.1rem;
-    font-family: 微软雅黑;
+    font-family: "Adobe 黑体 Std R";
 }
 
 .contact-email{
@@ -347,6 +584,17 @@ body {
 }
 .underline--magical:hover {
     background-size: 100% 88%;
+}
+
+.underline-magical {
+    background-image: linear-gradient(120deg, #a4e1fd 0%, #2dbcfc 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: 0 100%;
+    transition: background-size 0.25s ease-in;
+}
+.underline-magical:hover {
+    background-size: 100% 95%;
 }
 
 .contact-qr{
