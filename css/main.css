@@ -176,7 +176,7 @@ body {
 }
 
 .list-follow .weixin-follow:hover{
-    background-image: url(../img/qrcode.jpeg);
+    background-image: url(../img/qrcode.png);
 }
 
 .list-follow .weibo-follow{
@@ -410,6 +410,8 @@ body {
     position: absolute;
     top:0;
     left:0;
+    text-align: center;
+    display:none;
 }
 .profile-title{
     font-size: 2rem;
@@ -566,9 +568,12 @@ body {
     background-repeat: no-repeat;
 }
 .wechat-contact{
+    position: absolute;
     width:1.5rem;
     margin-top: 1rem;
     margin-left: 0.5rem;
+    cursor: pointer;
+    z-index: 999;
 }
 #hs_contact:hover{
 

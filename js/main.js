@@ -250,3 +250,40 @@ $('.fotos_zw').hover(function(){
 },function () {
     zw_countTimes();
 });
+
+$('#hs_contact').click(function(){
+    $('#hsqr').show();
+    $('.fotos_hs').hide();
+    $('#hs_contact').hide();
+});
+
+$('#hsqr').click(function(){
+        $('#hsqr').hide();
+        $('.fotos_hs').show();
+    $('#hs_contact').show();
+});
+
+$('#zw_contact').click(function(){
+    $('#zwqr').show();
+    $('.fotos_zw').hide();
+    $('#zw_contact').hide();
+});
+
+$('#zwqr').click(function(){
+    $('#zwqr').hide();
+    $('.fotos_zw').show();
+    $('#zw_contact').show();
+});
+
+$('#tlf_contact').click(function(){
+    $('#tlfqr').show();
+    $('.fotos_tlf').hide();
+    $('#tlf_contact').hide();
+
+});
+
+$('#tlfqr').click(function(){
+    $('#tlfqr').hide();
+    $('.fotos_tlf').show();
+    $('#tlf_contact').show()
+});
