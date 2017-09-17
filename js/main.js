@@ -150,6 +150,68 @@ function nextPoint() {
     _y = height / 3 + (newy * height/6);
 }
 
+/***********************design page的逻辑****************************/
+
+//search bar 的hover逻辑
+$('#listTag').hover(function () {
+    $('.overlay-filter-year').hide();
+    $('.overlay-filter-catalog').hide();
+    $('.overlay-filter-tag').show();
+    $('.overlay-filter-tag').hover(function(){
+        $(this).show();
+    },function () {
+        $(this).hide();
+    });
+},function () {
+
+});
+
+$('#listYear').hover(function () {
+    $('.overlay-filter-tag').hide();
+    $('.overlay-filter-catalog').hide();
+    $('.overlay-filter-year').show();
+    $('.overlay-filter-year').hover(function(){
+        $(this).show();
+    },function () {
+        $(this).hide();
+    });
+},function () {
+
+});
+
+$('#listCatalog').hover(function () {
+    $('.overlay-filter-tag').hide();
+    $('.overlay-filter-year').hide();
+
+    $('.overlay-filter-catalog').show();
+    $('.overlay-filter-catalog').hover(function(){
+        $(this).show();
+    },function () {
+        $(this).hide();
+    });
+},function () {
+
+});
+
+//search bar 的点选逻辑
+$('.tag-item').click(function () {
+    $('.overlay-filter-tag').hide();
+    var textValue=$(this).data('value');
+    $('#listTag').text(textValue);
+});
+
+$('.year-item').click(function () {
+    $('.overlay-filter-year').hide();
+    var textValue=$(this).data('value');
+    $('#listYear').text(textValue);
+});
+
+$('.catalog-item').click(function () {
+    $('.overlay-filter-catalog').hide();
+    var textValue=$(this).data('value');
+    $('#listCatalog').text(textValue);
+});
+
 
 /***********************team page的逻辑****************************/
 $('#follow-open').click(function () {

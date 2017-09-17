@@ -218,10 +218,161 @@ body {
     height: 0.9rem;
 }
 
+.nav-search{
+    height: 4rem;
+    background-color: #ebebeb;
+}
+.nav-main_inner{
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    -webkit-box-align: center;
+    -ms-flex-align:center;
+    align-items: center;
+    -webkit-box-pack:justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 75%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.listSelect{
+    position: relative;
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    -webkit-box-align: center;
+    -ms-flex-align:center;
+    align-items: center;
+    flex-wrap: nowrap;
+    -ms-flex-wrap:nowrap;
+}
+.listSelectItem{
+    position: relative;
+    width: 160px;
+    height:40px;
+    background-color: #fff;
+    line-height: 40px;
+    font-size: 1rem;
+    border-radius: 4px;
+    text-align: center;
+    background-position: 90% 50%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 0 20px;
+    margin-right: 0.8rem;
+}
+
+.listSelectItem:hover{
+    background-color: #2dbcfc;
+}
+
+.listSelectItem:after{
+    position:absolute;
+    content:'';
+    display:block;
+    top:42%;
+    right:12px;
+    width:6px;
+    height:6px;
+    transform: rotate(-45deg);
+    border-left: #000 2px solid;
+    border-bottom:#000 2px solid;
+}
+.overlay-filter-tag{
+    position:absolute;
+    display: none;
+    top:46px;
+    left: 0;
+    width:600px;
+    padding:32px 40px;
+    max-height: 584px;
+    overflow-y: scroll;
+}
+.overlay-filter-year{
+    position:absolute;
+    display: none;
+    top:46px;
+    left: 173px;
+    width:600px;
+    padding:32px 40px;
+    max-height: 584px;
+    overflow-y: scroll;
+}
+
+.overlay-filter-catalog{
+    position:absolute;
+    display: none;
+    top:46px;
+    right:12px;
+    width:160px;
+    padding:32px 40px;
+    max-height: 584px;
+}
+
+.list-filter-center{
+    -webkit-box-pack: justify;
+    -ms-flex-pack:justify;
+    /*display: flex;*/
+    justify-content: space-between;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+.catalog-item{
+    cursor: pointer;
+    color: #fff;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: left;
+    margin:8px 0;
+    width: 100%;
+}
+.catalog-item:hover{
+    color:#2dbcfc ;
+}
+
+.overlay{
+    background-color: rgba(0,0,0,0.7);
+    border-radius:4px;
+    transition:all 0.12s linear;
+}
+.isHidden{
+    visibility: hidden;
+    opacity: 0;
+}
+.list-filter{
+    position:relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.list-filter-item{
+    cursor: pointer;
+    color: #fff;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    overflow: hidden;
+    white-space: nowrap;
+    width:calc(33% - 24px);
+    text-align: left;
+    margin:8px 0 8px 24px;
+}
+
+.list-filter-item:hover{
+    color:#2dbcfc ;
+}
+
 .main-pc{
     clear: both;
     position: relative;
-    width: 1028px;
+    width: 75%;
     padding: 144px 0 0;
     margin-left: auto;
     margin-right: auto;
@@ -231,7 +382,7 @@ body {
 .main-design{
     clear: both;
     position: relative;
-    width: 1028px;
+    width: 75%;
     padding: 80px 0 ;
     margin-left: auto;
     margin-right: auto;
@@ -335,7 +486,7 @@ body {
 
 }
 
-/*photo 页面12*/
+/*ava 页面12*/
 /*团队页面效果测试*/
 .team-title{
     font-size: 2rem;
@@ -570,8 +721,8 @@ body {
 .wechat-contact{
     position: absolute;
     width:1.5rem;
-    margin-top: 1rem;
-    margin-left: 0.5rem;
+    margin-top: 1.1rem;
+    margin-left: 0.1rem;
     cursor: pointer;
     z-index: 999;
 }
