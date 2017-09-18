@@ -391,7 +391,40 @@ body {
     font-family: myFont;
 
 }
+.work-col{
+    width: 33.3333%;
+    padding-bottom: 0.5rem;
+    padding-right:0.5rem ;
+    cursor: pointer;
+    transition: all 1s;
+}
+.paper-work{
+    width: 100%;
+    margin-right: 0.5rem;
+    padding:0.7rem;
+    text-align: center;
+}
+.paper-work img{
+    width:100%;
+}
+.work-title{
+    width: 100%;
+    text-align: left;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
 
+}
+.list-work{
+    margin-top: 4rem;
+}
+.list-event{
+    width: 100%;
+    position: relative;
+    display:flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
 .paper{
     position: relative;
     overflow: hidden;
@@ -504,7 +537,6 @@ body {
     clear: both;
     margin-bottom: 66px;
 }
-
 .list-btn li{
     display: inline-block;
     float: left;
@@ -523,19 +555,17 @@ body {
     cursor: pointer;
 
 }
-
 .list-btn li a{
     text-decoration: none;
     color: #333;
 }
-
 .list-btn .isSelected{
     background-color: #2dbcfc;
 }
-
 .list-btn li:hover{
     background-color: #2dbcfc;
 }
+
 
 .team-profile{
     position:relative;
@@ -571,6 +601,8 @@ body {
     font-weight: bold;
     margin-bottom: 2rem;
 }
+
+
 .fotos_hs{
     position:absolute;
     left: 100px;

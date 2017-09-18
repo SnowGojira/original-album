@@ -50,18 +50,18 @@
                <div id="listTag" class="listSelectItem">全部标签</div>
                <div class="overlay overlay-filter-tag">
                    <ul class="list-filter">
-                       <li data-value="全部标签" class="list-filter-item tag-item">全部标签</li>
-                       <li data-value="卡片计划" class="list-filter-item tag-item">卡片计划</li>
+                       <li id="tagAll" data-value="全部标签" class="list-filter-item tag-item">全部标签</li>
+                       <li id="tagCard" data-value="卡片计划" class="list-filter-item tag-item">卡片计划</li>
                    </ul>
                </div>
                <div id="listYear" class="listSelectItem">全部年份</div>
                <div class="overlay overlay-filter-year">
                    <ul class="list-filter">
-                       <li data-value="全部年份" class="list-filter-item year-item">全部年份</li>
-                       <li data-value="2017" class="list-filter-item year-item">2017</li>
-                       <li data-value="2016" class="list-filter-item year-item">2016</li>
-                       <li data-value="2015" class="list-filter-item year-item">2015</li>
-                       <li data-value="2015" class="list-filter-item year-item">2013</li>
+                       <li id="yearAll" data-value="全部年份" class="list-filter-item year-item">全部年份</li>
+                       <li id="year2017" data-value="2017" class="list-filter-item year-item">2017</li>
+                       <li id="year2016" data-value="2016" class="list-filter-item year-item">2016</li>
+                       <li id="year2015" data-value="2015" class="list-filter-item year-item">2015</li>
+                       <li id="year2013" data-value="2013" class="list-filter-item year-item">2013</li>
                    </ul>
                </div>
            </ul>
@@ -69,9 +69,79 @@
     </div>
 </div>
 
+<div class="main-pc list-work">
+    <ul class="list-btn">
+        <li><a href="#">#<span id="designResult">0</span>个结果#</a></li>
+    </ul>
+    <ul id='designListItem' class="list-event">
+
+
+    </ul>
+
+</div>
+
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/objs.js"></script>
 <script src="js/main.js"></script>
+<script>
+    var card='<li id="card%data1%"class="work-col "><div class="paper paper-work"><img class="card-img" src="%data2%"/><div class="work-title"><h4><span>%data3%</span></h4></div></div></li>'
+    window.onload=function () {
+        Reset();
 
+        $('.tag-item').click(function () {
+            Reset();
+        });
+
+        $('#yearAll').click(function(){
+            Reset();
+        });
+        $('#year2017').click(function () {
+           Refresh(2017);
+        });
+
+        $('#year2016').click(function () {
+            Refresh(2016);
+        });
+
+        $('#year2015').click(function () {
+            Refresh(2015);
+        });
+
+        $('#year2013').click(function () {
+            Refresh(2013);
+        });
+
+
+    };
+
+    function Refresh(para){
+        $('.work-col').remove();
+        var i=0;
+        for(var j=0;j<designSet.length;j++){
+            Replace(j,designSet[j].ava,designSet[j].title);
+            for(var m=0;m<designSet[j].tag.length;m++){
+                $('#card'+j).addClass(designSet[j].tag[m]);
+                $('#card'+j).addClass("none-display");
+            }
+            if(designSet[j].tag[0]==para){
+                $('#card'+j).show();
+                i++;
+            }
+
+            $('#designResult').text(i);
+        }
+    }
+    function Reset(){
+        $('#designResult').text(designSet.length);
+        $('.work-col').remove();
+        for(var j=0;j<designSet.length;j++){
+            Replace(j,designSet[j].ava,designSet[j].title);
+        }
+    }
+    function Replace(data1,data2,data3){
+        $('#designListItem').append(card.replace("%data1%",data1).replace("%data2%",data2).replace("%data3%",data3));
+    }
+
+</script>
 </body>
 </html>
