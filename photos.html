@@ -74,10 +74,80 @@
             </ul>
         </div>
     </div>
+
+</div>
+
+<div class="main-pc list-work">
+    <ul class="list-btn">
+        <li><a href="#">#<span class="Result">0</span>个结果#</a></li>
+    </ul>
+    <ul class="list-event resultItem">
+
+
+    </ul>
+
 </div>
 
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/objs.js"></script>
 <script src="js/main.js"></script>
+<script>
+    var card='<li id="card%data1%" class="work-col "><div class="paper paper-work"><img class="card-img" src="%data2%"/><div class="work-title"><h4><span>%data3%</span></h4></div></div></li>'
+
+    window.onload=function () {
+        Reset(photoSet);
+    };
+    ///////////////////////////////////
+    /*$('.tag-item').click(function () {
+        Reset(designSet);
+    });
+
+    $('#yearAll').click(function(){
+        Reset(designSet);
+    });
+    $('#year2017').click(function () {
+        Refresh(designSet,2017);
+    });
+
+    $('#year2016').click(function () {
+        Refresh(designSet,2016);
+    });
+
+    $('#year2015').click(function () {
+        Refresh(designSet,2015);
+    });
+
+    $('#year2013').click(function () {
+        Refresh(designSet,2013);
+    });*/
+    ///////////////////////////////////
+    function Refresh(dataSet,para1){
+        $('.work-col').remove();
+        var i=0;
+        for(var j=0;j<dataSet.length;j++){
+            Replace(j,dataSet[j].ava,dataSet[j].title);
+            for(var m=0;m<dataSet[j].tag.length;m++){
+                $('#card'+j).addClass(dataSet[j].tag[m]);
+                $('#card'+j).addClass("none-display");
+            }
+            if(dataSet[j].tag[0]==para1){
+                $('#card'+j).show();
+                i++;
+            }
+
+            $('.Result').text(i);
+        }
+    }
+    function Reset(dataSet){
+        $('.Result').text(dataSet.length);
+        $('.work-col').remove();
+        for(var j=0;j<dataSet.length;j++){
+            Replace(j,dataSet[j].ava,dataSet[j].title);
+        }
+    }
+    function Replace(data1,data2,data3){
+        $('.resultItem').append(card.replace("%data1%",data1).replace("%data2%",data2).replace("%data3%",data3));
+    }
+</script>
 </body>
 </html>

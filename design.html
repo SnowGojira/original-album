@@ -71,9 +71,9 @@
 
 <div class="main-pc list-work">
     <ul class="list-btn">
-        <li><a href="#">#<span id="designResult">0</span>个结果#</a></li>
+        <li><a href="#">#<span class="Result">0</span>个结果#</a></li>
     </ul>
-    <ul id='designListItem' class="list-event">
+    <ul class="list-event resultItem">
 
 
     </ul>
@@ -84,62 +84,72 @@
 <script src="js/objs.js"></script>
 <script src="js/main.js"></script>
 <script>
-    var card='<li id="card%data1%"class="work-col "><div class="paper paper-work"><img class="card-img" src="%data2%"/><div class="work-title"><h4><span>%data3%</span></h4></div></div></li>'
+    var card='<li id="card%data1%" class="work-col"><div class="paper paper-work"><img class="card-img" src="%data2%"/><div class="work-title"><h4><span>%data3%</span></h4></div></div></li>'
+
     window.onload=function () {
-        Reset();
+        Reset(designSet);
 
+        ///////////////////////////////////
         $('.tag-item').click(function () {
-            Reset();
+            Reset(designSet);
         });
-
         $('#yearAll').click(function(){
-            Reset();
+            Reset(designSet);
         });
         $('#year2017').click(function () {
-           Refresh(2017);
+            Refresh(designSet,2017);
         });
-
         $('#year2016').click(function () {
-            Refresh(2016);
+            Refresh(designSet,2016);
         });
-
         $('#year2015').click(function () {
-            Refresh(2015);
+            Refresh(designSet,2015);
         });
-
         $('#year2013').click(function () {
-            Refresh(2013);
+            Refresh(designSet,2013);
         });
-
+        ///////////////////////////////////
 
     };
 
-    function Refresh(para){
+    function Refresh(dataSet,para1){
         $('.work-col').remove();
         var i=0;
-        for(var j=0;j<designSet.length;j++){
-            Replace(j,designSet[j].ava,designSet[j].title);
-            for(var m=0;m<designSet[j].tag.length;m++){
-                $('#card'+j).addClass(designSet[j].tag[m]);
+        for(var j=0;j<dataSet.length;j++){
+            Replace(j,dataSet[j].ava,dataSet[j].title);
+            for(var m=0;m<dataSet[j].tag.length;m++){
+                $('#card'+j).addClass(dataSet[j].tag[m]);
                 $('#card'+j).addClass("none-display");
             }
-            if(designSet[j].tag[0]==para){
+            if(dataSet[j].tag[0]==para1){
                 $('#card'+j).show();
                 i++;
             }
 
-            $('#designResult').text(i);
+            $('.Result').text(i);
         }
+
+        gotoDesignDetail();
     }
-    function Reset(){
-        $('#designResult').text(designSet.length);
+    function Reset(dataSet){
+        $('.Result').text(dataSet.length);
         $('.work-col').remove();
-        for(var j=0;j<designSet.length;j++){
-            Replace(j,designSet[j].ava,designSet[j].title);
+        for(var j=0;j<dataSet.length;j++){
+            Replace(j,dataSet[j].ava,dataSet[j].title);
         }
+
+        gotoDesignDetail();
     }
     function Replace(data1,data2,data3){
-        $('#designListItem').append(card.replace("%data1%",data1).replace("%data2%",data2).replace("%data3%",data3));
+        $('.resultItem').append(card.replace("%data1%",data1).replace("%data2%",data2).replace("%data3%",data3));
+    }
+    function gotoDesignDetail() {
+        $('.work-col').click(function(){
+            var name = $('li').attr('id');
+            console.log(name);
+//            window.location.href="design-detail.html";
+
+        });
     }
 
 </script>

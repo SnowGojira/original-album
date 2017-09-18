@@ -1,22 +1,10 @@
 /**
- * Created by hakuh on 2017/8/28.
+ * Created by hakuh on 2017/9/8.
  */
 // (update: migrated to p5.js in May 2015 by Jerome Herr)
 // Jan 2009
 // http://www.abandonedart.org
 // http://www.zenbullets.com
-//
-// This work is licensed under a Creative Commons 3.0 License.
-// (Attribution - NonCommerical - ShareAlike)
-// http://creativecommons.org/licenses/by-nc-sa/3.0/
-//
-// This basically means, you are free to use it as long as you:
-// 1. give http://www.zenbullets.com a credit
-// 2. don't use it for commercial gain
-// 3. share anything you create with it in the same way I have
-//
-// These conditions can be waived if you want to do something groovy with it
-// though, so feel free to email me via http://www.zenbullets.com
 
 //================================= global vars
 
@@ -34,7 +22,7 @@ var _y = 0;
 
 //================================= init
 function setup() {
-    var canvas=createCanvas(windowWidth,windowHeight-50);
+    var canvas=createCanvas(windowWidth,windowHeight);
     canvas.parent('canvasHolder');
     smooth();
     restart();
@@ -42,7 +30,7 @@ function setup() {
 
 function restart() {
 
-    var canvas=createCanvas(windowWidth,windowHeight-50);
+    var canvas=createCanvas(windowWidth,windowHeight);
     canvas.parent('canvasHolder');
     clearBackground();
     stroke(149,222,255);
@@ -211,7 +199,6 @@ $('.catalog-item').click(function () {
     var textValue=$(this).data('value');
     $('#listCatalog').text(textValue);
 });
-
 
 /***********************team page的逻辑****************************/
 $('#follow-open').click(function () {
