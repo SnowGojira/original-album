@@ -219,8 +219,12 @@ body {
 }
 
 .nav-search{
-    height: 4rem;
+    height: 3.8rem;
     background-color: #ebebeb;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 .index-search{
     transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
@@ -400,27 +404,48 @@ body {
 }
 .work-col{
     width: 33.3333%;
-    padding-bottom: 0.5rem;
-    padding-right:0.5rem ;
+    padding-bottom: 2rem;
+    padding-right:1rem ;
     cursor: pointer;
-    transition: all 1s;
 }
 .paper-work{
     width: 100%;
     margin-right: 0.5rem;
-    padding:0.7rem;
     text-align: center;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+
+    transition: all 0.3s ease-out;
 }
+
+
+
+.paper-work:hover,.paper-work:focus{
+    transform: translateY(-5px) scale(1.005) translateZ(0);
+    box-shadow: 0 12px 18px rgba(0,0,0,0.11),
+    0 12px 23px rgba(220, 233, 255, 0.48);
+}
+
+
 .paper-work img{
     width:100%;
 }
+
 .work-title{
     width: 100%;
     text-align: left;
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    margin-left: 0.7rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+
 
 }
+
+
+
+
 .list-work{
     margin-top: 4rem;
 }
@@ -839,15 +864,19 @@ body {
     margin-top: 2.5rem;
     margin-bottom: 2rem;
 }
-/*detail 效果测试*/
+
+
+/*design-detail 效果测试*/
 .design-detail-title{
-    font-size:2rem;
+    width: 100%;
+    text-align: left;
+    font-size:1.7rem;
     font-weight: bold;
-    margin-bottom: 2rem;
+    margin-top: -3rem;
 }
 
 .design-detail{
-    margin-top:7rem;
+    margin-top:4rem;
     padding-left: 2rem;
     padding-right: 2rem;
     text-align: center;
@@ -856,4 +885,228 @@ body {
 .design-detail-desc{
     margin-top: 2rem;
     text-align: left;
+    font-size: 1rem;
+}
+
+.list-breadcrumb-Item a{
+    color: #000;
+}
+
+/*********photo detail's 样式**********/
+.center {
+    text-align: center;
+}
+
+.swiper-container,
+.swiper-container * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.swiper-container .swiper-no-swiping .swiper-button-prev,
+.swiper-container .swiper-no-swiping .swiper-button-next {
+    opacity: 0;
+}
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+    opacity: .1;
+}
+
+.product-gallery .product-photos-side,
+.product-gallery .product-photo-main {
+    position: relative;
+}
+
+.product-gallery .product-photo-main {
+    margin-bottom: 30px;
+}
+
+.product-gallery .product-photos-side .swiper-container {
+    height: 70px;
+}
+
+.product-gallery .product-photo-main .swiper-container {
+    height: 73vh;
+}
+
+.product-gallery .product-photos-side .swiper-slide {
+    width: 70px;
+    opacity: .4;
+    transition: 225ms opacity ease-in-out;
+}
+
+.product-gallery .product-photos-side .swiper-slide.swiper-slide-active {
+    opacity: 1;
+}
+
+.product-gallery .swiper-container {
+    position: static;
+    width: 100%;
+}
+
+.product-gallery .swiper-slide {
+    cursor: pointer;
+    text-align: center;
+}
+
+.product-gallery img {
+    max-height: 100%;
+    max-width: 100%;
+}
+/* full screen product gallery */
+
+.product-gallery-full-screen {
+    position: fixed;
+    background: #000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    width: 100vw;
+    opacity: 0;
+    pointer-events: none;
+    overflow-y: auto;
+    z-index: 999999;
+    transition: 350ms opacity ease-in-out;
+}
+
+.product-gallery-full-screen.opened {
+    opacity: 1;
+    overflow-y: scroll;
+    pointer-events: auto;
+}
+
+.product-gallery-full-screen .swiper-container {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.product-gallery-full-screen .swiper-slide {
+    overflow: hidden;
+}
+
+.product-gallery-full-screen .swiper-slide img,
+.product-photos-side .swiper-slide img {
+    max-height: 100%;
+    max-width: 100%;
+}
+.product-gallery-full-screen .swiper-slide img {
+    cursor: zoom-in;
+    transition: 350ms -webkit-transform ease-in-out, 350ms transform ease-in-out;
+}
+
+.product-gallery-full-screen .swiper-button-prev,
+.product-gallery-full-screen .swiper-button-next {
+    background: rgba(0, 0, 0, .4);
+    color: #aaa;
+    transition:
+            250ms opacity ease-in-out,
+            150ms color ease-in-out;
+}
+body:not(:hover) .product-gallery-full-screen .swiper-button-prev,
+body:not(:hover) .product-gallery-full-screen .swiper-button-next {
+    opacity: 0;
+    transition-delay: 1000ms;
+}
+body:hover .product-gallery-full-screen .swiper-button-prev,
+body:hover .product-gallery-full-screen .swiper-button-next {
+    transition-delay: 0ms;
+}
+
+.product-gallery-full-screen .swiper-button-prev:hover,
+.product-gallery-full-screen .swiper-button-next:hover {
+    color: #fff;
+}
+
+.product-gallery-full-screen .swiper-button-prev svg,
+.product-gallery-full-screen .swiper-button-next svg {
+    position: absolute;
+    fill: currentColor;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.gallery-nav {
+    position: absolute;
+    background: rgba(0, 0, 0, 1);
+    color: #aaa;
+    padding: 10px 15px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    transition:
+            250ms opacity ease-in-out;
+}
+body:not(:hover) .gallery-nav {
+    opacity: 0;
+    transition-delay: 1000ms;
+}
+body:hover .gallery-nav {
+    opacity: .65;
+    transition-delay: 0ms;
+}
+
+.gallery-nav ul,
+.gallery-nav li {
+    list-style: none;
+}
+
+.gallery-nav ul {
+    float: right;
+}
+
+.gallery-nav li {
+    float: left;
+    color: #aaa;
+    cursor: pointer;
+    margin-left: 15px;
+    transition: 150ms color ease-in-out;
+}
+
+.gallery-nav li:hover {
+    color: #fff;
+}
+
+.gallery-nav svg {
+    display: block;
+    fill: currentColor;
+    height: 24px;
+    width: 24px;
+}
+
+.gallery-nav .zoom.zoom-out svg.zoom-icon-zoom-in {
+    display: none;
+}
+.gallery-nav .zoom svg.zoom-icon-zoom-out {
+    display: none;
+}
+.gallery-nav .zoom.zoom-out svg.zoom-icon-zoom-out {
+    display: block;
+}
+
+.gallery-nav .fullscreen.leavefs svg.fs-icon {
+    display: none;
+}
+
+.gallery-nav .fullscreen svg.fs-icon-exit {
+    display: none;
+}
+
+.gallery-nav .fullscreen.leavefs svg.fs-icon-exit {
+    display: block;
+}
+
+.gallery-nav .swiper-pagination {
+    position: static;
+    float: left;
+    width: auto;
+    line-height: 24px;
 }

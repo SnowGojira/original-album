@@ -14,12 +14,293 @@
 
     <!--引用样式部分-->
     <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/swiper.min.css" rel="stylesheet">
     <link href="css/reset.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
 
 </head>
 <body>
+<div class="nav-header">
+    <!--一般显示用的banner-->
+    <div class="nav-pc nav-pc-follow none-display" >
+        <ul class="list-follow">
+            <li class="list-follow-item weixin-follow"><a href=""></a></li>
+            <li class="list-follow-item weibo-follow"><a href="https://weibo.com/originalalbum"></a></li>
+            <li class="list-follow-item zhihu-follow"><a href="https://www.zhihu.com/people/oalbum/answers"></a></li>
+            <li class="list-follow-item lofter-follow"><a href="http://o-album.lofter.com/"></a></li>
+        </ul>
+        <div class="nav-copyright">copy right © 原画册</div>
+        <div class="follow-close-btn" id="follow-close"><img src="img/cross.png"></div>
+    </div>
+
+    <div class="nav-pc">
+        <div class="nav-pc_logo"><a href="index.html"></a></div>
+        <ul class="list-nav">
+            <li class="list-nav-item"><a href="photos.html">PHOTO</a></li>
+            <li class="list-nav-item"><a href="design.html">DESIGN</a></li>
+            <li class="list-nav-item"><a href="events.html">EVENT</a></li>
+            <li class="list-nav-item"><a href="team.html">TEAM</a></li>
+            <li class="list-nav-item"><a href="contact.html">CONTACT</a></li>
+        </ul>
+        <div class="nav-btn"><div class="nav-btn-text" id="follow-open">FOLLOW US</div></div>
+    </div>
+    <div id="searchIndex" class="nav-search">
+        <div class="nav-main_inner">
+            <ul class="list-breadcrumb">
+                <li class="list-breadcrumb-Item">
+                    <a href="index.html">首页</a>
+                </li>
+                <li class="list-breadcrumb-Item">
+                    <a href="photos.htmlz">摄影</a>
+                </li>
+                <li class="list-breadcrumb-Item">
+                    详细
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="main-pc list-work" id="photoDetailWork">
+
+    <ul id="photoDetailTag" class="list-btn">
+        <!--<li><a href="#">#<span class="Tag">0</span>#</a></li>-->
+    </ul>
+
+    <div class="paper paperRoute design-detail">
+        <div class="design-detail-title"><h1>什么时候</h1></div>
+       <!--add the swiper-->
+
+
+        <div class="product-gallery">
+            <div class="product-photo-main">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="swiper-zoom-container">
+                                        <img src="img/work/architecture/berlin-resize.JPG">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper-zoom-container">
+                                        <img src="img/work/architecture/guangzhou-resize.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+            <div class="product-photos-side">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="swiper-zoom-container">
+                                        <img src="img/work/architecture/berlin-resize.JPG">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper-zoom-container">
+                                        <img src="img/work/architecture/guangzhou-resize.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+
+        <div class="product-gallery-full-screen">
+            <div class="swiper-container gallery-top">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="swiper-zoom-container">
+                            <img src="img/work/architecture/berlin-resize.JPG" draggable="false" ondragstart="return false;">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-zoom-container">
+                            <img src="img/work/architecture/guangzhou-resize.jpg" draggable="false" ondragstart="return false;">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="swiper-button-next swiper-button-white">
+                    <svg fill="#FFFFFF" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                    </svg>
+                </div>
+                <div class="swiper-button-prev swiper-button-white">
+                    <svg fill="#FFFFFF" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+                    </svg>
+                </div>
+
+                <div class="gallery-nav">
+                    <div class="swiper-pagination"></div>
+                    <ul class="gallery-menu">
+                        <li class="close">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                <path d="M0 0h24v24H0z" fill="none"/>
+                            </svg>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="design-detail-desc"><h2>什么花痴是后山的</h2></div>
+    </div>
+
+</div>
+
+</div>
+
+<div class="main-design">Designed by Assemble</div>
+
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/objs.js"></script>
+<script src="js/main.js"></script>
+<script>
+
+    //load the data
+    var designDetails='<div class="paper paperRoute design-detail"><div class="design-detail-title"><h1>%title%</h1> <img style="width:100%;margin-top: 3rem;" src="%work%"/> <div class="design-detail-desc"><h2>%desc%</h2></div> </div>';
+    var designTag='<li><a href="#"><span class="Tag">%data%</span></a></li>';
+    window.onload=function(){
+        var title=localStorage.getItem('design-title');
+        var work=localStorage.getItem('design-work');
+        var desc=localStorage.getItem('design-desc');
+        var tag=localStorage.getItem('design-tag').split(",");
+        Replace(title,work,desc);
+        for(var i=0;i<tag.length;i++){
+            $('#designDetailTag').append(designTag.replace("%data%",tag[i]));
+        }
+
+    }
+
+    function Replace(data1,data2,data3){
+        $('#designDetailWork').append(designDetails.replace("%title%",data1).replace("%work%",data2).replace("%desc%",data3));
+    }
+
+    //add the swiper's logic
+
+    $(document).ready(function() {
+        // --- VARIABLES ---
+        var swiperSide = new Swiper('.product-photos-side .swiper-container', {
+            direction: 'horizontal',
+            centeredSlides: true,
+            spaceBetween: 30,
+            slidesPerView: 'auto',
+            touchRatio: 0.2,
+            slideToClickedSlide: true,
+        })
+        var swiperProduct = new Swiper('.product-photo-main .swiper-container', {
+            direction: 'horizontal',
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            // keyboardControl: true,
+        })
+        var galleryTop = new Swiper('.product-gallery-full-screen .gallery-top', {
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            pagination: '.swiper-pagination',
+            paginationType: 'fraction',
+            spaceBetween: 10,
+            keyboardControl: false,
+            noSwiping: true,
+            zoom: false
+        })
+        swiperSide.params.control = swiperProduct || galleryTop;
+        swiperProduct.params.control = swiperSide || galleryTop;
+        galleryTop.params.control = swiperProduct || swiperSide;
+
+        var galleryOpen = false,
+                fullscreen = false,
+                fsTrigger = $('.gallery-nav .fullscreen')[0],
+                fsGallery = $('.product-gallery-full-screen')[0],
+                fsFunction = fsGallery.requestFullscreen;
+        // browser support check
+        if (!fsFunction) {
+            ['webkitRequestFullScreen',
+                'mozRequestFullscreen',
+                'msRequestFullScreen'
+            ].forEach(function(req) {
+                fsFunction = fsFunction || fsGallery[req];
+            });
+        }
+
+        // --- FUNCTIONS ---
+        function openImageGallery(slide) {
+            galleryOpen = true;
+            var galleryX = $('.product-photo-main').offset().left,
+                    galleryY = $('.product-photo-main').offset().top,
+                    galleryHeight = $('.product-photo-main').height(),
+                    galleryWidth = $('.product-photo-main').width(),
+                    activeIndex = slide.index(),
+                    indexes = $('.product-photo-main').find('.swiper-slide').length;
+            $('body').css('overflow', 'hidden');
+            $('.main, .product-gallery-full-screen').css('overflow-y', 'scroll');
+            $('.product-gallery-full-screen').addClass('opened');
+            galleryTop.activeIndex = activeIndex;
+            galleryTop.onResize();
+        }
+
+        function goFs() {
+            fullscreen = true;
+            $('.product-gallery-full-screen').css('overflow-y', 'auto');
+            $('.fullscreen').addClass('leavefs');
+            fsFunction.call(fsGallery);
+        }
+
+        function leaveFs() {
+            fullscreen = false;
+            $('.product-gallery-full-screen').css('overflow-y', 'scroll');
+            $('.fullscreen').removeClass('leavefs');
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.mozCancelFullScreen) {
+                document.mozCancelFullScreen();
+            } else if (document.webkitExitFullscreen) {
+                document.webkitExitFullscreen();
+            }
+        }
+
+        function closeImageGallery() {
+            // if(zoomed) {
+            //   zoom($('.product-gallery-full-screen .swiper-slide-active img'));
+            // }
+            $('body').css('overflow', 'auto');
+            $('.main, .product-gallery-full-screen').css('overflow-y', 'auto');
+            galleryOpen = false;
+            leaveFs();
+            $('.product-gallery-full-screen').removeClass('opened');
+        }
+
+        // --- EVENTS ---
+        // open the large image gallery
+        $('.product-photo-main .swiper-slide').on('click touch', function() {
+            var slide = $(this);
+            openImageGallery(slide);
+        });
+        // close the large image gallery
+        $('.gallery-nav .close').on('click touch', function() {
+            closeImageGallery();
+        });
+
+        $(window).on('resize', function() {
+            galleryTop.onResize();
+            swiperSide.onResize();
+            swiperProduct.onResize();
+        });
+    });
+</script>
 
 </body>
 </html>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="keywords" content="原画册,原画册官网,yuanhuace,O-Album,原画册摄影,手机摄影,摄影,原画册手机摄影,原画册韩松,韩松"/>
     <meta name="full-screen" content="true">
     <meta name="x5-fullscreen" content="true">
     <meta name="360-fullscreen" content="true">
@@ -48,20 +49,20 @@
         <div class="nav-main_inner">
            <ul class="listSelect only-pc">
                <div id="listTag" class="listSelectItem">全部标签</div>
-               <div class="overlay overlay-filter-tag">
-                   <ul class="list-filter">
-                       <li id="tagAll" data-value="全部标签" class="list-filter-item tag-item">全部标签</li>
-                       <li id="tagCard" data-value="卡片计划" class="list-filter-item tag-item">卡片计划</li>
+               <div class="overlay overlay-filter-tag" >
+                   <ul class="list-filter" data-filter-group="tag">
+                       <li id="tagAll" data-value="全部标签" data-filter="" class="list-filter-item tag-item">全部标签</li>
+                       <li id="tagCard" data-value="卡片计划" data-filter=".卡片计划" class="list-filter-item tag-item">卡片计划</li>
                    </ul>
                </div>
                <div id="listYear" class="listSelectItem">全部年份</div>
-               <div class="overlay overlay-filter-year">
-                   <ul class="list-filter">
-                       <li id="yearAll" data-value="全部年份" class="list-filter-item year-item">全部年份</li>
-                       <li id="year2017" data-value="2017" class="list-filter-item year-item">2017</li>
-                       <li id="year2016" data-value="2016" class="list-filter-item year-item">2016</li>
-                       <li id="year2015" data-value="2015" class="list-filter-item year-item">2015</li>
-                       <li id="year2013" data-value="2013" class="list-filter-item year-item">2013</li>
+               <div class="overlay overlay-filter-year" >
+                   <ul class="list-filter" data-filter-group="year">
+                       <li id="yearAll" data-value="全部年份" data-filter="" class="list-filter-item year-item">全部年份</li>
+                       <li id="year2017" data-value="2017" data-filter=".2017" class="list-filter-item year-item">2017</li>
+                       <li id="year2016" data-value="2016" data-filter=".2016" class="list-filter-item year-item">2016</li>
+                       <li id="year2015" data-value="2015" data-filter=".2015" class="list-filter-item year-item">2015</li>
+                       <li id="year2013" data-value="2013" data-filter=".2013" class="list-filter-item year-item">2013</li>
                    </ul>
                </div>
            </ul>
@@ -81,6 +82,7 @@
 </div>
 
 <script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/isotope.pkgd.min.js"></script>
 <script src="js/objs.js"></script>
 <script src="js/main.js"></script>
 <script>
@@ -88,9 +90,34 @@
 
     window.onload=function () {
         Reset(designSet);
-
+    };
         ///////////////////////////////////
-        $('.tag-item').click(function () {
+    var filters = {};
+
+    $('.list-filter').on( 'click', '.list-filter-item', function() {
+            var $this = $(this);
+            // get group key
+            var $buttonGroup = $this.parents('.list-filter');
+            var filterGroup = $buttonGroup.attr('data-filter-group');
+            // set filter for group
+            filters[ filterGroup ] = $this.attr('data-filter');
+            // combine filters
+            var filterValue = '';
+            for ( var prop in filters ) {
+                filterValue += filters[ prop ];
+            }
+            console.log(filterValue);
+            // set filter for Isotope
+            $('.resultItem').isotope({ filter:filterValue});
+            var $grid=$('.resultItem').isotope({ filter:filterValue});
+            var iso = $grid.data('isotope');
+            var num=iso.filteredItems.length;
+            $('.Result').text(num);
+//        console.log(num);
+
+    });
+
+       /* $('.tag-item').click(function () {
             Reset(designSet);
         });
         $('#yearAll').click(function(){
@@ -107,23 +134,20 @@
         });
         $('#year2013').click(function () {
             Refresh(designSet,2013);
-        });
+        });*/
         ///////////////////////////////////
 
-    };
 
     function Refresh(dataSet,para1){
         $('.work-col').remove();
         var i=0;
         for(var j=0;j<dataSet.length;j++){
             Replace(j,dataSet[j].ava,dataSet[j].title);
-            for(var m=0;m<dataSet[j].tag.length;m++){
-                $('#card'+j).addClass(dataSet[j].tag[m]);
-                $('#card'+j).addClass("none-display");
-            }
+
             if(dataSet[j].tag[0]==para1){
-                $('#card'+j).show();
                 i++;
+            }else{
+                $('#card'+j).hide();
             }
 
             $('.Result').text(i);
@@ -136,6 +160,9 @@
         $('.work-col').remove();
         for(var j=0;j<dataSet.length;j++){
             Replace(j,dataSet[j].ava,dataSet[j].title);
+            for(var m=0;m<dataSet[j].tag.length;m++){
+                $('#card'+j).addClass(dataSet[j].tag[m]);
+            }
         }
 
         gotoDesignDetail();
@@ -144,10 +171,15 @@
         $('.resultItem').append(card.replace("%data1%",data1).replace("%data2%",data2).replace("%data3%",data3));
     }
     function gotoDesignDetail() {
-        $('.work-col').click(function(){
-            var name = $('li').attr('id');
-            console.log(name);
-//            window.location.href="design-detail.html";
+
+        $("[id^=card]").click( function () {
+            var id=parseInt($(this).attr("id").split("card")[1]);
+
+            localStorage.setItem('design-title', designSet[id].title);
+            localStorage.setItem('design-tag', designSet[id].tag);
+            localStorage.setItem('design-work', designSet[id].work);
+            localStorage.setItem('design-desc', designSet[id].desc);
+            window.location.href="design-detail.html";
 
         });
     }

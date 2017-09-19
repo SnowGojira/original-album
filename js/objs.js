@@ -129,7 +129,115 @@ obj11={
 
 photoSet.push(obj11);
 
+obj12={
+    title:"土耳其，伊斯坦布尔",
+    desc:"手机摄影。",
+    tag:["2015","儿童"],
+    catalog:"摄影",
+    ava:'img/ava/children/IMG_1230.JPG',
+    work:'img/work/children/turkey1-resize.JPG'
+};
 
+photoSet.push(obj12);
+
+obj13={
+    title:"土耳其，马尔丁",
+    desc:"手机摄影。",
+    tag:["2015","儿童"],
+    catalog:"摄影",
+    ava:'img/ava/children/IMG_1618.JPG',
+    work:'img/work/children/turkey2-resize.JPG'
+};
+
+photoSet.push(obj13);
+
+obj14={
+    title:"土耳其，伊斯坦布尔",
+    desc:"手机摄影。",
+    tag:["2015","儿童"],
+    catalog:"摄影",
+    ava:'img/ava/children/IMG_1837.JPG',
+    work:'img/work/children/turkey3-resize.JPG'
+};
+
+photoSet.push(obj14);
+
+obj15={
+    title:"土耳其，马尔丁",
+    desc:"手机摄影。",
+    tag:["2015","儿童"],
+    catalog:"摄影",
+    ava:'img/ava/children/IMG_1838.JPG',
+    work:'img/work/children/turkey5-resize.JPG'
+};
+
+photoSet.push(obj15);
+
+obj16={
+    title:"土耳其，伊斯坦布尔",
+    desc:"手机摄影。",
+    tag:["2015","儿童"],
+    catalog:"摄影",
+    ava:'img/ava/children/IMG_1841.JPG',
+    work:'img/work/children/turkey4-resize.JPG'
+};
+
+photoSet.push(obj16);
+
+obj17={
+    title:"土耳其，伊斯坦布尔",
+    desc:"手机摄影。",
+    tag:["2015","儿童"],
+    catalog:"摄影",
+    ava:'img/ava/children/IMG_1842.JPG',
+    work:'img/work/children/turkey6-resize.JPG'
+};
+
+photoSet.push(obj17);
+
+obj18={
+    title:"土耳其，马尔丁",
+    desc:"手机摄影。",
+    tag:["2015","儿童"],
+    catalog:"摄影",
+    ava:'img/ava/children/IMG_1935.JPG',
+    work:'img/work/children/turkey7-resize.JPG'
+};
+
+photoSet.push(obj18);
+
+obj19={
+    title:"土耳其，伊斯坦布尔",
+    desc:"手机摄影。",
+    tag:["2015","儿童"],
+    catalog:"摄影",
+    ava:'img/ava/children/IMG_2725.JPG',
+    work:'img/work/children/turkey8-resize.JPG'
+};
+
+photoSet.push(obj19);
+
+obj20={
+    title:"土耳其，伊斯坦布尔",
+    desc:"手机摄影。",
+    tag:["2015","儿童"],
+    catalog:"摄影",
+    ava:'img/ava/children/IMG_4038.JPG',
+    work:'img/work/children/turkey9-resize.JPG'
+};
+
+photoSet.push(obj20);
+
+obj21={
+    title:"土耳其，马尔丁",
+    desc:"手机摄影。",
+    tag:["2015","儿童"],
+    catalog:"摄影",
+    ava:'img/ava/children/IMG_4039.JPG',
+    work:'img/work/children/turkey10-resize.JPG'
+};
+
+photoSet.push(obj21);
 
 
 //卡片计划

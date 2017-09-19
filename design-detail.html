@@ -18,6 +18,7 @@
     <link href="css/main.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
 
+
 </head>
 <body>
 <div class="nav-header">
@@ -44,7 +45,7 @@
         </ul>
         <div class="nav-btn"><div class="nav-btn-text" id="follow-open">FOLLOW US</div></div>
     </div>
-    <div id="searchIndex" class="nav-pc nav-search">
+    <div id="searchIndex" class="nav-search">
         <div class="nav-main_inner">
             <ul class="list-breadcrumb">
                 <li class="list-breadcrumb-Item">
@@ -61,23 +62,49 @@
     </div>
 </div>
 
-<div class="main-pc list-work">
-    <h1 class="design-detail-title">什么时候</h1>
-    <ul class="list-btn">
-        <li><a href="#">#<span class="Tag">0</span>个结果#</a></li>
+<div class="main-pc list-work" id="designDetailWork">
+
+    <ul id="designDetailTag" class="list-btn">
+        <!--<li><a href="#">#<span class="Tag">0</span>#</a></li>-->
     </ul>
 
-    <div class="paper paperRoute design-detail">
-        <img style="width:100%;" src="img/work/card/001-resize.jpg"/>
-        <div class="design-detail-desc">
-            <h2>什么花痴是后山的</h2></div>
+    <!--<div class="paper paperRoute design-detail">
+        <div class="design-detail-title"><h1>什么时候</h1>
+        <img style="width:100%;margin-top: 3rem;" src="img/work/card/001-resize.jpg"/>
+        <div class="design-detail-desc"><h2>什么花痴是后山的</h2></div>
     </div>
 
-</div>
+</div>-->
+
+    </div>
+
+<div class="main-design">Designed by Assemble</div>
+
 
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/objs.js"></script>
 <script src="js/main.js"></script>
+<script>
+    //引入数据
+    var designDetails='<div class="paper paperRoute design-detail"><div class="design-detail-title"><h1>%title%</h1> <img style="width:100%;margin-top: 3rem;" src="%work%"/> <div class="design-detail-desc"><h2>%desc%</h2></div> </div>';
+    var designTag='<li><a href="#"><span class="Tag">%data%</span></a></li>';
+    window.onload=function(){
+        var title=localStorage.getItem('design-title');
+        var work=localStorage.getItem('design-work');
+        var desc=localStorage.getItem('design-desc');
+        var tag=localStorage.getItem('design-tag').split(",");
+//
+        Replace(title,work,desc);
+        for(var i=0;i<tag.length;i++){
+            $('#designDetailTag').append(designTag.replace("%data%",tag[i]));
+        }
+
+    }
+
+    function Replace(data1,data2,data3){
+        $('#designDetailWork').append(designDetails.replace("%title%",data1).replace("%work%",data2).replace("%desc%",data3));
+    }
+</script>
 
 </body>
 </html>
