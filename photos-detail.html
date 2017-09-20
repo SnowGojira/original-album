@@ -52,7 +52,7 @@
                     <a href="index.html">首页</a>
                 </li>
                 <li class="list-breadcrumb-Item">
-                    <a href="photos.htmlz">摄影</a>
+                    <a href="photos.html">摄影</a>
                 </li>
                 <li class="list-breadcrumb-Item">
                     详细
@@ -62,48 +62,36 @@
     </div>
 </div>
 
-<div class="main-pc list-work" id="photoDetailWork">
+<div class="main-pc list-work" >
 
     <ul id="photoDetailTag" class="list-btn">
         <!--<li><a href="#">#<span class="Tag">0</span>#</a></li>-->
     </ul>
 
-    <div class="paper paperRoute design-detail">
-        <div class="design-detail-title"><h1>什么时候</h1></div>
+    <div id="photoDetailWork" class="paper paperRoute photo-detail">
+        <!--<div class="photo-detail-title"><h1>%title%</h1></div>-->
        <!--add the swiper-->
-
-
         <div class="product-gallery">
             <div class="product-photo-main">
                         <div class="swiper-container">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
+                            <div id="photoSwiper" class="swiper-wrapper">
+                                <!--<div class="swiper-slide">
                                     <div class="swiper-zoom-container">
-                                        <img src="img/work/architecture/berlin-resize.JPG">
+                                        <img src="%work%">
                                     </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="swiper-zoom-container">
-                                        <img src="img/work/architecture/guangzhou-resize.jpg">
-                                    </div>
-                                </div>
+                                </div>-->
                             </div>
                             <div class="swiper-pagination"></div>
                         </div>
                     </div>
             <div class="product-photos-side">
                         <div class="swiper-container">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
+                            <div id="photoSwiperSlider" class="swiper-wrapper">
+                                <!--<div class="swiper-slide">
                                     <div class="swiper-zoom-container">
-                                        <img src="img/work/architecture/berlin-resize.JPG">
+                                        <img src="%work%">
                                     </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="swiper-zoom-container">
-                                        <img src="img/work/architecture/guangzhou-resize.jpg">
-                                    </div>
-                                </div>
+                                </div>-->
                             </div>
                         </div>
                     </div>
@@ -111,17 +99,12 @@
 
         <div class="product-gallery-full-screen">
             <div class="swiper-container gallery-top">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
+                <div id="photoSwiperfull" class="swiper-wrapper">
+                    <!--<div class="swiper-slide">
                         <div class="swiper-zoom-container">
-                            <img src="img/work/architecture/berlin-resize.JPG" draggable="false" ondragstart="return false;">
+                            <img src="%work%" draggable="false" ondragstart="return false;">
                         </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="swiper-zoom-container">
-                            <img src="img/work/architecture/guangzhou-resize.jpg" draggable="false" ondragstart="return false;">
-                        </div>
-                    </div>
+                    </div>-->
 
                 </div>
 
@@ -154,7 +137,7 @@
         </div>
 
 
-        <div class="design-detail-desc"><h2>什么花痴是后山的</h2></div>
+        <!--<div class="design-detail-desc"><h2>%desc%</h2></div>-->
     </div>
 
 </div>
@@ -171,22 +154,30 @@
 <script>
 
     //load the data
-    var designDetails='<div class="paper paperRoute design-detail"><div class="design-detail-title"><h1>%title%</h1> <img style="width:100%;margin-top: 3rem;" src="%work%"/> <div class="design-detail-desc"><h2>%desc%</h2></div> </div>';
-    var designTag='<li><a href="#"><span class="Tag">%data%</span></a></li>';
+    var photoZoomDetails='<div class="swiper-slide"> <div class="swiper-zoom-container"> <img src="%work%" draggable="false" ondragstart="return false;"> </div> </div>';
+    var photoDetails='<div class="swiper-slide"><div class="swiper-zoom-container"><img src="%work%"></div> </div>';
+    var photoTitle='<div class="photo-detail-title"><h1>%title%</h1></div>';
+    var photoDesc='<div class="design-detail-desc"><h2>%desc%</h2></div>';
+    var photoTag='<li><a href="#"><span class="Tag">%data%</span></a></li>';
     window.onload=function(){
-        var title=localStorage.getItem('design-title');
-        var work=localStorage.getItem('design-work');
-        var desc=localStorage.getItem('design-desc');
-        var tag=localStorage.getItem('design-tag').split(",");
+        var title=localStorage.getItem('photo-title');
+        var work=localStorage.getItem('photo-work');
+        var desc=localStorage.getItem('photo-desc');
+        var tag=localStorage.getItem('photo-tag').split(",");
         Replace(title,work,desc);
         for(var i=0;i<tag.length;i++){
-            $('#designDetailTag').append(designTag.replace("%data%",tag[i]));
+            $('#photoDetailTag').append(photoTag.replace("%data%",tag[i]));
         }
 
     }
 
-    function Replace(data1,data2,data3){
-        $('#designDetailWork').append(designDetails.replace("%title%",data1).replace("%work%",data2).replace("%desc%",data3));
+    function Replace(title,work,desc){
+        $('#photoDetailWork').prepend(photoTitle.replace("%title%",title));
+        $('#photoSwiper').append(photoDetails.replace("%work%",work));
+        $('#photoSwiperSlider').append(photoDetails.replace("%work%",work));
+        $('#photoSwiperfull').append(photoZoomDetails.replace("%work%",work));
+        $('#photoDetailWork').append(photoDesc.replace("%desc%",desc));
+
     }
 
     //add the swiper's logic

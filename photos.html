@@ -18,6 +18,10 @@
     <link href="css/main.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
 
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <!--<script src="js/iscroll.js"></script>-->
+
 </head>
 <body>
 <div class="nav-header">
@@ -86,20 +90,30 @@
 
     </ul>
 
+    <div class="loading">
+        <svg id="load" x="0px" y="0px" viewBox="0 0 150 150"> <circle id="loading-inner" cx="75" cy="75" r="60"/> </svg>
+        <div class="main-design">Designed by Assemble</div>
+    </div>
+
+    <div id="endHint" style="display:none;margin-top: -14rem;" class="main-design">Completed</div>
+
 </div>
 
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="js/isotope.pkgd.min.js"></script>
 <script src="js/objs.js"></script>
 <script src="js/main.js"></script>
 <script>
-    var card='<li id="card%data1%" class="work-col "><div class="paper paper-work"><img class="card-img" src="%data2%"/><div class="work-title"><h4><span>%data3%</span></h4></div></div></li>'
+    var card='<li id="card%data1%" class="work-col "><div class="paper paper-work"><img class="card-img" src="%data2%"/><div class="work-title"><h4><span>%data3%</span></h4></div></div></li>';
+    var initNum=20;
+    var maxNum=photoSet.length;
+    var photo_filters = {};
 
+    var ReplaceObj;
+    var PhotoEvent=new EventObj(photoSet);
     window.onload=function () {
-        Reset(photoSet);
+        PhotoEvent.reset();
+//        Reset(photoSet);
     };
     ///////////////////////////////////
-    var photo_filters = {};
 
     $('.list-filter').on( 'click', '.list-filter-item', function() {
         var $this = $(this);
@@ -120,23 +134,55 @@
         var iso = $grid.data('isotope');
         var num=iso.filteredItems.length;
         $('.Result').text(num);
-//        console.log(num);
+        if (num<initNum){
+            console.log("filter num被调用");
+            $('.loading').css("opacity",0);
+            scrollDownRefresh(false,null);
+        }else{
+            scrollDownRefresh(true,photoSet);
+        }
+
+//
 
     });
 
-
-
     ///////////////////////////////////
 
-
     function Reset(dataSet){
-        $('.Result').text(dataSet.length);
+        $('.Result').text(maxNum);
         $('.work-col').remove();
-        for(var j=0;j<dataSet.length;j++){
-            Replace(j,dataSet[j].ava,dataSet[j].title);
-            for(var m=0;m<dataSet[j].tag.length;m++){
-                $('#card'+j).addClass(dataSet[j].tag[m]);
+        $('#endHint').hide();
+
+        if(dataSet[0]!=null){
+            for(var j=0;j<=initNum;j++){
+                if(dataSet[j]!=null){
+
+                    Replace(j,dataSet[j].ava,dataSet[j].title);
+                    for(var m=0;m<dataSet[j].tag.length;m++){
+                        $('#card'+j).addClass(dataSet[j].tag[m]);
+                    }
+
+
+                }else{
+                    console.log("#load opacity = 0");
+                    $('.loading').css("opacity",0);
+                }
             }
+
+        }else{
+            console.log("#load opacity = 0");
+            $('.loading').css("opacity",0);
+        }
+
+        PhotoEvent.gotoDetail();
+
+        if (dataSet.length<initNum){
+            scrollDownRefresh(false,null);
+            console.log("scrollDownRefresh false 调用");
+            $('.loading').css("opacity",0);
+        }else{
+            console.log("scrollDownRefresh true 调用");
+            scrollDownRefresh(true,photoSet);
         }
     }
 
@@ -144,18 +190,77 @@
     function Replace(data1,data2,data3){
         $('.resultItem').append(card.replace("%data1%",data1).replace("%data2%",data2).replace("%data3%",data3));
     }
-    function gotoPhotoDetail() {
+
+    /*function gotoPhotoDetail() {
 
         $("[id^=card]").click( function () {
             var id=parseInt($(this).attr("id").split("card")[1]);
-
-            localStorage.setItem('design-title', designSet[id].title);
-            localStorage.setItem('design-tag', designSet[id].tag);
-            localStorage.setItem('design-work', designSet[id].work);
-            localStorage.setItem('design-desc', designSet[id].desc);
-            window.location.href="design-detail.html";
+            console.log('card'+id);
+            localStorage.setItem('photo-title', photoSet[id].title);
+            localStorage.setItem('photo-tag', photoSet[id].tag);
+            localStorage.setItem('photo-work', photoSet[id].work);
+            localStorage.setItem('photo-desc', photoSet[id].desc);
+            window.location.href="photos-detail.html";
 
         });
+    }*/
+
+    /////////////////////////////////////////////////////
+    function scrollDownRefresh(abled,dataSet){
+        var range = 50;             //距下边界长度/单位px
+        var pace = 8;
+        var totalheight = 0;
+//        var index=20;
+        if(abled){
+            $(window).scroll(function(){
+                var srollPos = $(window).scrollTop();
+                //滚动条距顶部距离(页面超出窗口的高度)
+
+                console.log("scroll执行了");
+
+                totalheight = parseFloat($(window).height()) + parseFloat(srollPos);
+
+
+                if(($(document).height()-range) <= totalheight){
+                    $('.loading').css("opacity",1);
+                    setTimeout(function () {
+                        $('.loading').css("opacity",0);
+                        if(initNum<maxNum){
+                            for(var i=0;i<pace;i++){
+                                initNum=initNum+1;
+                                if(dataSet[initNum] != null){
+                                    console.log('pace:'+initNum);
+                                    Replace(initNum,dataSet[initNum].ava,dataSet[initNum].title);
+                                    for(var m=0;m<dataSet[initNum].tag.length;m++){
+                                        $('#card'+initNum).addClass(dataSet[initNum].tag[m]);
+                                    }
+
+                                    PhotoEvent.gotoDetail()
+                                }else{
+                                    console.log('break tag');
+                                    $('.loading').css("opacity",0);
+                                    $('#endHint').show();
+                                }
+
+
+                            }
+                        }else{
+                            console.log('reach bottom');
+                            $('.loading').css("opacity",0);
+                            $('#endHint').show();
+                        }
+
+
+                    },1000);
+
+                }
+
+
+            });
+        }else{
+            console.log("scrollDownRefresh 没有执行");
+        }
+
     }
 
 </script>

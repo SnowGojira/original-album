@@ -231,7 +231,8 @@ body {
 }
 
 .index-content{
-    margin-top: 17.3rem;
+    margin-top: -1.7rem;
+    min-height: 120vh;
 }
 .nav-main_inner{
     display: flex;
@@ -332,7 +333,7 @@ body {
     -ms-flex-align: start;
     align-items: flex-start;
 }
-.catalog-item{
+.list-item{
     cursor: pointer;
     color: #fff;
     font-size: 0.8rem;
@@ -343,7 +344,7 @@ body {
     margin:8px 0;
     width: 100%;
 }
-.catalog-item:hover{
+.list-item:hover{
     color:#2dbcfc ;
 }
 
@@ -516,7 +517,7 @@ body {
     text-align: center;
 
 }
-.loading {
+.pre-loading {
     margin-top: 41vh;
 }
 .percentage{
@@ -577,6 +578,7 @@ body {
     right:0;
     bottom: 0;
     position: relative;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
 
 }
 
@@ -927,7 +929,7 @@ body {
 }
 
 .product-gallery .product-photo-main .swiper-container {
-    height: 73vh;
+    height: 70vh;
 }
 
 .product-gallery .product-photos-side .swiper-slide {
@@ -1109,4 +1111,88 @@ body:hover .gallery-nav {
     float: left;
     width: auto;
     line-height: 24px;
+}
+
+.photo-detail-title{
+    width: 100%;
+    text-align: left;
+    font-size:1.7rem;
+    font-weight: bold;
+    margin-top: -3rem;
+    margin-bottom: 2rem;
+}
+
+.photo-detail{
+    margin-top:4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: center;
+}
+
+/*loading refresh*/
+.loading {
+    margin: 50px auto;
+    width: 100%;
+    text-align: center;
+    transition: all 2s;
+}
+.loading > h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    font-weight: 300;
+    color: #666666;
+}
+
+#load {
+    width: 3rem;
+    animation: loading 4s linear infinite;
+}
+#load #loading-inner {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 325;
+    stroke-width: 10;
+    stroke-miterlimit: 10;
+    stroke-linecap: round;
+    animation: loading-circle 2s linear infinite, color-change 12s linear infinite;
+    stroke: #4CBDEC;
+    fill: transparent;
+    transition: stroke-color 2s;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes loading-circle {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: -650;
+    }
+}
+@keyframes color-change {
+    0% {
+        stroke: #4CBDEC;
+    }
+    20% {
+        stroke: #955AA3;
+    }
+    40% {
+        stroke: #E766A5;
+    }
+    60% {
+        stroke: #F9A120;
+    }
+    80% {
+        stroke: #ECD813;
+    }
+    100% {
+        stroke: #4DBC93;
+    }
 }

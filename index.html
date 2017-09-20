@@ -24,7 +24,7 @@
 <div class="preload none-display">
     <link href='https://fonts.googleapis.com/css?family=Cabin+Condensed:700' rel='stylesheet' type='text/css'>
 
-    <svg class="loading" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    <svg class="preloading" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="100vw" height="3.5rem" viewBox="0 0 574.558 120" enable-background="new 0 0 574.558 120" xml:space="preserve">
   <defs>
     <pattern id="water" width=".25" height="1.1" patternContentUnits="objectBoundingBox">
@@ -81,39 +81,39 @@
             <div class="listSelect only-pc">
                 <div id="listTag" class="listSelectItem">全部标签</div>
                 <div class="overlay overlay-filter-tag">
-                    <ul class="list-filter">
-                        <li data-value="全部标签" class="list-filter-item tag-item">全部标签</li>
-                        <li data-value="获奖作品" class="list-filter-item tag-item">获奖作品</li>
-                        <li data-value="场所标本" class="list-filter-item tag-item">场所标本</li>
-                        <li data-value="对等空间" class="list-filter-item tag-item">对等空间</li>
-                        <li data-value="二人世界" class="list-filter-item tag-item">二人世界</li>
-                        <li data-value="卡片计划" class="list-filter-item tag-item">卡片计划</li>
-                        <li data-value="儿童" class="list-filter-item tag-item">儿童</li>
-                        <li data-value="人文" class="list-filter-item tag-item">人文</li>
-                        <li data-value="建筑" class="list-filter-item tag-item">建筑</li>
-                        <li data-value="几何" class="list-filter-item tag-item">几何</li>
+                    <ul class="list-filter" data-filter-group="tag">
+                        <li data-value="全部标签" data-filter="" class="list-filter-item tag-item">全部标签</li>
+                        <li data-value="获奖作品" data-filter=".获奖作品" class="list-filter-item tag-item">获奖作品</li>
+                        <li data-value="场所标本" data-filter=".场所标本" class="list-filter-item tag-item">场所标本</li>
+                        <li data-value="对等空间" data-filter=".对等空间" class="list-filter-item tag-item">对等空间</li>
+                        <li data-value="二人世界" data-filter=".二人世界" class="list-filter-item tag-item">二人世界</li>
+                        <li data-value="卡片计划" data-filter=".卡片计划" class="list-filter-item tag-item">卡片计划</li>
+                        <li data-value="儿童" data-filter=".儿童" class="list-filter-item tag-item">儿童</li>
+                        <li data-value="人文" data-filter=".人文" class="list-filter-item tag-item">人文</li>
+                        <li data-value="建筑" data-filter=".建筑" class="list-filter-item tag-item">建筑</li>
+                        <li data-value="几何" data-filter=".几何" class="list-filter-item tag-item">几何</li>
 
                     </ul>
                 </div>
                 <div id="listYear" class="listSelectItem">全部年份</div>
                 <div class="overlay overlay-filter-year">
-                    <ul class="list-filter">
-                        <li data-value="全部年份" class="list-filter-item year-item">全部年份</li>
-                        <li data-value="2017" class="list-filter-item year-item">2017</li>
-                        <li data-value="2016" class="list-filter-item year-item">2016</li>
-                        <li data-value="2015" class="list-filter-item year-item">2015</li>
-                        <li data-value="2013" class="list-filter-item year-item">2013</li>
+                    <ul class="list-filter" data-filter-group="year">
+                        <li data-value="全部年份" data-filter="" class="list-filter-item year-item">全部年份</li>
+                        <li data-value="2017" data-filter=".2017" class="list-filter-item year-item">2017</li>
+                        <li data-value="2016" data-filter=".2016" class="list-filter-item year-item">2016</li>
+                        <li data-value="2015" data-filter=".2015" class="list-filter-item year-item">2015</li>
+                        <li data-value="2013" data-filter=".2013" class="list-filter-item year-item">2013</li>
                     </ul>
                 </div>
             </div>
             <div class="listSelect only-pc">
                 <div id="listCatalog" class="listSelectItem">全部类别</div>
                 <div class="overlay overlay-filter-catalog">
-                    <ul class="list-filter list-filter-center">
-                        <li data-value="全部类别" class="catalog-item">全部类别</li>
-                        <li data-value="摄影" class="catalog-item">摄影</li>
-                        <li data-value="设计" class="catalog-item">设计</li>
-                        <li data-value="动态" class="catalog-item">动态</li>
+                    <ul class="list-filter list-filter-center" data-filter-group="catalog">
+                        <li id="allSet" data-value="全部类别" data-filter="" class="list-item catalog-list-item">全部类别</li>
+                        <li id="photoSet" data-value="摄影" data-filter=".摄影" class="list-item catalog-list-item">摄影</li>
+                        <li id="designSet" data-value="设计" data-filter=".设计" class="list-item catalog-list-item">设计</li>
+                        <li id="eventSet" data-value="动态" data-filter=".动态" class="list-item catalog-list-item">动态</li>
                     </ul>
                 </div>
             </div>
@@ -130,12 +130,22 @@
 
     </ul>
 
+    <div class="loading">
+        <svg id="load" x="0px" y="0px" viewBox="0 0 150 150"> <circle id="loading-inner" cx="75" cy="75" r="60"/> </svg>
+        <div class="main-design">Designed by Assemble</div>
+    </div>
+
+    <div id="endHint" style="display:none;margin-top: -14rem;" class="main-design">Completed</div>
+
 </div>
+
+
 
 
 
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/p5.js"></script>
+<script src="js/isotope.pkgd.min.js"></script>
 <script src="js/objs.js"></script>
 <script src="js/main.js"></script>
 <script>
@@ -146,8 +156,7 @@
 //        var scroll = 0;
         $(window).scroll(function(){
 
-            $(window).scrollTop() >= 200 ? headerEmt.show() : headerEmt.hide();
-            $(window).scrollTop() >= 200 ? headerCan.hide() : headerCan.show();
+            $(window).scrollTop() >= windowHeight ? headerEmt.show() : headerEmt.hide();
 //
         })
     }
@@ -157,58 +166,170 @@
 
     window.onload=function () {
         Reset(allSet);
+
+        $('#allSet').click(function () {
+            Reset(allSet);
+        });
+
+        $('#photoSet').click(function(){
+            Reset(photoSet);
+        });
+
+        $('#designSet').click(function () {
+            Reset(designSet);
+        });
+
+        $('#eventSet').click(function () {
+            Reset(eventSet);
+        });
+
+
+
     };
+
     ///////////////////////////////////
-    /*$('.tag-item').click(function () {
-     Reset(designSet);
-     });
 
-     $('#yearAll').click(function(){
-     Reset(designSet);
-     });
-     $('#year2017').click(function () {
-     Refresh(designSet,2017);
-     });
-
-     $('#year2016').click(function () {
-     Refresh(designSet,2016);
-     });
-
-     $('#year2015').click(function () {
-     Refresh(designSet,2015);
-     });
-
-     $('#year2013').click(function () {
-     Refresh(designSet,2013);
-     });*/
-    ///////////////////////////////////
-    function Refresh(dataSet,para1){
-        $('.work-col').remove();
-        var i=0;
-        for(var j=0;j<dataSet.length;j++){
-            Replace(j,dataSet[j].ava,dataSet[j].title);
-            for(var m=0;m<dataSet[j].tag.length;m++){
-                $('#card'+j).addClass(dataSet[j].tag[m]);
-                $('#card'+j).addClass("none-display");
-            }
-            if(dataSet[j].tag[0]==para1){
-                $('#card'+j).show();
-                i++;
-            }
-
-            $('.Result').text(i);
+    var index_filters = {};
+    var filter_num;
+    $('.list-filter').on( 'click', '.list-filter-item', function() {
+        var $this = $(this);
+        // get group key
+        var $buttonGroup = $this.parents('.list-filter');
+        var filterGroup = $buttonGroup.attr('data-filter-group');
+        // set filter for group
+        index_filters[ filterGroup ] = $this.attr('data-filter');
+        // combine filters
+        var filterValue = '';
+        for ( var prop in index_filters ) {
+            filterValue += index_filters[ prop ];
         }
-    }
+        console.log(filterValue);
+        // set filter for Isotope
+        $('.resultItem').isotope({ filter:filterValue});
+        var $grid=$('.resultItem').isotope({ filter:filterValue});
+        var iso = $grid.data('isotope');
+        filter_num=iso.filteredItems.length;
+
+        $('.Result').text(filter_num);
+//        console.log(num);
+
+    });
+
+    ///////////////////////////////////
+    var initNum=20;
+    var maxNum=allSet.length;
     function Reset(dataSet){
         $('.Result').text(dataSet.length);
         $('.work-col').remove();
-        for(var j=0;j<dataSet.length;j++){
-            Replace(j,dataSet[j].ava,dataSet[j].title);
+        $('#endHint').hide();
+        if(dataSet[0]!=null){
+            for(var j=0;j<=initNum;j++){
+                if(dataSet[j]!=null){
+                    Replace(j,dataSet[j].ava,dataSet[j].title);
+                    for(var m=0;m<dataSet[j].tag.length;m++){
+                        $('#card'+j).addClass(dataSet[j].tag[m]);
+                    }
+                }else{
+                    console.log("#load opacity = 0");
+                    $('.loading').css("opacity",0);
+                }
+            }
+
+        }else{
+            console.log("#load opacity = 0");
+            $('.loading').css("opacity",0);
         }
+
+
+        gotoDetail(dataSet);
+
+        scrollDownRefresh(dataSet);
     }
+
     function Replace(data1,data2,data3){
+        console.log("Replace执行");
         $('.resultItem').append(card.replace("%data1%",data1).replace("%data2%",data2).replace("%data3%",data3));
     }
+
+    function gotoDetail(dataSet) {
+
+        $("[id^=card]").click( function () {
+            var id=parseInt($(this).attr("id").split("card")[1]);
+            console.log('card'+id);
+            if(dataSet[id].catalog=='摄影'){
+                localStorage.setItem('photo-title', dataSet[id].title);
+                localStorage.setItem('photo-tag', dataSet[id].tag);
+                localStorage.setItem('photo-work', dataSet[id].work);
+                localStorage.setItem('photo-desc', dataSet[id].desc);
+                window.location.href="photos-detail.html";
+            }else{
+                localStorage.setItem('design-title', dataSet[id].title);
+                localStorage.setItem('design-tag', dataSet[id].tag);
+                localStorage.setItem('design-work', dataSet[id].work);
+                localStorage.setItem('design-desc', dataSet[id].desc);
+                window.location.href="design-detail.html";
+            }
+
+
+        });
+    }
+
+    /////////////////////////////////////////////////////
+    function scrollDownRefresh(dataSet){
+        var range = 50;             //距下边界长度/单位px
+        var pace = 8;
+        var totalheight = 0;
+//        var index=20;
+
+        $(window).scroll(function(){
+            console.log("scroll Down Refresh 执行");
+            var srollPos = $(window).scrollTop();
+            //滚动条距顶部距离(页面超出窗口的高度)
+
+//            console.log('浏览器的高度：'+$(window).height());
+
+            totalheight = parseFloat($(window).height()) + parseFloat(srollPos);
+            console.log("scroll down 接收的"+dataSet.length);
+
+            if(($(document).height()-range) <= totalheight){
+                $('.loading').css("opacity",1);
+                setTimeout(function () {
+                    $('.loading').css("opacity",0);
+                    if(initNum<maxNum){
+                        for(var i=0;i<pace;i++){
+                            initNum=initNum+1;
+                            if(dataSet[initNum] != null){
+                                console.log('pace:'+initNum);
+                                Replace(initNum,dataSet[initNum].ava,dataSet[initNum].title);
+                                for(var m=0;m<dataSet[initNum].tag.length;m++){
+                                    $('#card'+initNum).addClass(dataSet[initNum].tag[m]);
+                                }
+
+                                gotoDetail(dataSet);
+                            }else{
+                                console.log('break tag');
+                                $('.loading').css("opacity",0);
+                                $('#endHint').show();
+                            }
+
+
+                        }
+                    }else{
+                        console.log('reach bottom');
+                        $('.loading').css("opacity",0);
+                        $('#endHint').show();
+                    }
+
+
+                },1000);
+
+            }
+
+
+        });
+
+    }
+
 </script>
 
 </body>

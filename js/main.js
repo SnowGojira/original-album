@@ -194,7 +194,7 @@ $('.year-item').click(function () {
     $('#listYear').text(textValue);
 });
 
-$('.catalog-item').click(function () {
+$('.catalog-list-item').click(function () {
     $('.overlay-filter-catalog').hide();
     var textValue=$(this).data('value');
     $('#listCatalog').text(textValue);
@@ -336,3 +336,136 @@ $('#tlfqr').click(function(){
     $('.fotos_tlf').show();
     $('#tlf_contact').show()
 });
+
+/*******************下拉刷新的逻辑重新整理********************/
+
+// window.refreshObj=new Object();
+
+// var card='<li id="card%data1%" class="work-col "><div class="paper paper-work"><img class="card-img" src="%data2%"/><div class="work-title"><h4><span>%data3%</span></h4></div></div></li>'
+
+function EventObj(dataSet) {
+    this.dataSet=dataSet;
+}
+
+EventObj.prototype={
+    constructor:EventObj,
+    card:'<li id="card%data1%" class="work-col "><div class="paper paper-work"><img class="card-img" src="%data2%"/><div class="work-title"><h4><span>%data3%</span></h4></div></div></li>',
+    getDataset:function () {
+        return this.dataSet;
+    },
+    gotoDetail:function () {
+        var dataSet=this.getDataset();
+        $(".work-col").click( function () {
+            // console.log(dataSet);
+            var id=parseInt($(this).attr("id").split("card")[1]);
+            console.log(id);
+
+            if(dataSet[id].catalog=='摄影'){
+                localStorage.setItem('photo-title', dataSet[id].title);
+                localStorage.setItem('photo-tag', dataSet[id].tag);
+                localStorage.setItem('photo-work', dataSet[id].work);
+                localStorage.setItem('photo-desc', dataSet[id].desc);
+                window.location.href="photos-detail.html";
+            }else{
+                localStorage.setItem('design-title', dataSet[id].title);
+                localStorage.setItem('design-tag', dataSet[id].tag);
+                localStorage.setItem('design-work', dataSet[id].work);
+                localStorage.setItem('design-desc', dataSet[id].desc);
+                window.location.href="design-detail.html";
+            }
+        });
+    },
+    reset:function () {
+        $('.Result').text(maxNum);
+        $('.work-col').remove();
+        $('#endHint').hide();
+
+        var dataSet=this.getDataset();
+
+        if(dataSet[0]!=null){
+            for(var j=0;j<=initNum;j++){
+                if(dataSet[j]!=null){
+                    $('.resultItem').append(this.card.replace("%data1%",dataSet[j].id).replace("%data2%",dataSet[j].ava).replace("%data3%",dataSet[j].title));
+                    for(var m=0;m<dataSet[j].tag.length;m++){
+                        $('#card'+j).addClass(dataSet[j].tag[m]);
+                    }
+
+                }else{
+                    console.log("#load opacity = 0");
+                    $('.loading').css("opacity",0);
+                }
+            }
+
+        }else{
+            console.log("#load opacity = 0");
+            $('.loading').css("opacity",0);
+        }
+
+        $(".work-col").click( function () {
+            // console.log(dataSet);
+            var id=parseInt($(this).attr("id").split("card")[1]);
+            console.log(id);
+
+            if(dataSet[id].catalog=='摄影'){
+                localStorage.setItem('photo-title', dataSet[id].title);
+                localStorage.setItem('photo-tag', dataSet[id].tag);
+                localStorage.setItem('photo-work', dataSet[id].work);
+                localStorage.setItem('photo-desc', dataSet[id].desc);
+                window.location.href="photos-detail.html";
+            }else{
+                localStorage.setItem('design-title', dataSet[id].title);
+                localStorage.setItem('design-tag', dataSet[id].tag);
+                localStorage.setItem('design-work', dataSet[id].work);
+                localStorage.setItem('design-desc', dataSet[id].desc);
+                window.location.href="design-detail.html";
+            }
+        });
+
+        /*if (dataSet.length<initNum){
+            scrollDownRefresh(false,null);
+            console.log("scrollDownRefresh false 调用");
+            $('.loading').css("opacity",0);
+        }else{
+            console.log("scrollDownRefresh true 调用");
+            scrollDownRefresh(true,photoSet);
+        }*/
+    }
+}
+
+// function Reset(dataSet){
+//     $('.Result').text(maxNum);
+//     $('.work-col').remove();
+//     $('#endHint').hide();
+//
+//     if(dataSet[0]!=null){
+//         for(var j=0;j<=initNum;j++){
+//             if(dataSet[j]!=null){
+//
+//                 Replace(j,dataSet[j].ava,dataSet[j].title);
+//                 for(var m=0;m<dataSet[j].tag.length;m++){
+//                     $('#card'+j).addClass(dataSet[j].tag[m]);
+//                 }
+//
+//
+//             }else{
+//                 console.log("#load opacity = 0");
+//                 $('.loading').css("opacity",0);
+//             }
+//         }
+//
+//     }else{
+//         console.log("#load opacity = 0");
+//         $('.loading').css("opacity",0);
+//     }
+//
+//     PhotoEvent.gotoDetail();
+//
+//     if (dataSet.length<initNum){
+//         scrollDownRefresh(false,null);
+//         console.log("scrollDownRefresh false 调用");
+//         $('.loading').css("opacity",0);
+//     }else{
+//         console.log("scrollDownRefresh true 调用");
+//         scrollDownRefresh(true,photoSet);
+//     }
+// }

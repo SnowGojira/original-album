@@ -117,44 +117,9 @@
 
     });
 
-       /* $('.tag-item').click(function () {
-            Reset(designSet);
-        });
-        $('#yearAll').click(function(){
-            Reset(designSet);
-        });
-        $('#year2017').click(function () {
-            Refresh(designSet,2017);
-        });
-        $('#year2016').click(function () {
-            Refresh(designSet,2016);
-        });
-        $('#year2015').click(function () {
-            Refresh(designSet,2015);
-        });
-        $('#year2013').click(function () {
-            Refresh(designSet,2013);
-        });*/
+
         ///////////////////////////////////
 
-
-    function Refresh(dataSet,para1){
-        $('.work-col').remove();
-        var i=0;
-        for(var j=0;j<dataSet.length;j++){
-            Replace(j,dataSet[j].ava,dataSet[j].title);
-
-            if(dataSet[j].tag[0]==para1){
-                i++;
-            }else{
-                $('#card'+j).hide();
-            }
-
-            $('.Result').text(i);
-        }
-
-        gotoDesignDetail();
-    }
     function Reset(dataSet){
         $('.Result').text(dataSet.length);
         $('.work-col').remove();
