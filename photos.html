@@ -81,7 +81,7 @@
 
 </div>
 
-<div class="main-pc list-work">
+<div id="main" class="main-pc list-work">
     <ul class="list-btn">
         <li><a href="#">#<span class="Result">0</span>个结果#</a></li>
     </ul>
@@ -111,6 +111,7 @@
     var PhotoEvent=new EventObj(photoSet);
     window.onload=function () {
         PhotoEvent.reset();
+        scrollDownRefresh(true,photoSet);
 //        Reset(photoSet);
     };
     ///////////////////////////////////
@@ -134,102 +135,35 @@
         var iso = $grid.data('isotope');
         var num=iso.filteredItems.length;
         $('.Result').text(num);
-        if (num<initNum){
-            console.log("filter num被调用");
-            $('.loading').css("opacity",0);
-            scrollDownRefresh(false,null);
-        }else{
-            scrollDownRefresh(true,photoSet);
-        }
 
-//
 
     });
 
-    ///////////////////////////////////
 
-   /* function Reset(dataSet){
-        $('.Result').text(maxNum);
-        $('.work-col').remove();
-        $('#endHint').hide();
-
-        if(dataSet[0]!=null){
-            for(var j=0;j<=initNum;j++){
-                if(dataSet[j]!=null){
-
-                    Replace(j,dataSet[j].ava,dataSet[j].title);
-                    for(var m=0;m<dataSet[j].tag.length;m++){
-                        $('#card'+j).addClass(dataSet[j].tag[m]);
-                    }
-
-
-                }else{
-                    console.log("#load opacity = 0");
-                    $('.loading').css("opacity",0);
-                }
-            }
-
-        }else{
-            console.log("#load opacity = 0");
-            $('.loading').css("opacity",0);
-        }
-
-        PhotoEvent.gotoDetail();
-
-        if (dataSet.length<initNum){
-            scrollDownRefresh(false,null);
-            console.log("scrollDownRefresh false 调用");
-            $('.loading').css("opacity",0);
-        }else{
-            console.log("scrollDownRefresh true 调用");
-            scrollDownRefresh(true,photoSet);
-        }
-    }*/
-
-
-    /*function Replace(data1,data2,data3){
-        $('.resultItem').append(card.replace("%data1%",data1).replace("%data2%",data2).replace("%data3%",data3));
-    }*/
-
-    /*function gotoPhotoDetail() {
-
-        $("[id^=card]").click( function () {
-            var id=parseInt($(this).attr("id").split("card")[1]);
-            console.log('card'+id);
-            localStorage.setItem('photo-title', photoSet[id].title);
-            localStorage.setItem('photo-tag', photoSet[id].tag);
-            localStorage.setItem('photo-work', photoSet[id].work);
-            localStorage.setItem('photo-desc', photoSet[id].desc);
-            window.location.href="photos-detail.html";
-
-        });
-    }*/
-
-    /////////////////////////////////////////////////////
     function scrollDownRefresh(abled,dataSet){
-        var range = 50;             //距下边界长度/单位px
         var pace = 8;
         var totalheight = 0;
 //        var index=20;
         if(abled){
             $(window).scroll(function(){
-                var srollPos = $(window).scrollTop();
-                //滚动条距顶部距离(页面超出窗口的高度)
 
-                console.log("scroll执行了");
+                var scrollPos = $(window).scrollTop();//滚动条距顶部距离(页面超出窗口的高度)
+                var viewH=$(this).height();
 
-                totalheight = parseFloat($(window).height()) + parseFloat(srollPos);
+                totalheight = parseFloat(viewH) + parseFloat(scrollPos);
 
 
-                if(($(document).height()-range) <= totalheight){
+                if($(document).height()*0.95 <= totalheight){
+
                     $('.loading').css("opacity",1);
                     setTimeout(function () {
+                        console.log("setTimeOut执行");
                         $('.loading').css("opacity",0);
-                        if(initNum<maxNum){
+                        if(initNum<dataSet.length){
                             for(var i=0;i<pace;i++){
                                 initNum=initNum+1;
                                 if(dataSet[initNum] != null){
-                                    console.log('pace:'+initNum);
+                                    console.log('initNum Step:'+initNum);
                                     Replace(initNum,dataSet[initNum].ava,dataSet[initNum].title);
                                     for(var m=0;m<dataSet[initNum].tag.length;m++){
                                         $('#card'+initNum).addClass(dataSet[initNum].tag[m]);
@@ -261,6 +195,11 @@
             console.log("scrollDownRefresh 没有执行");
         }
 
+    }
+
+    function Replace(data1,data2,data3){
+        console.log("Replace执行");
+        $('.resultItem').append(card.replace("%data1%",data1).replace("%data2%",data2).replace("%data3%",data3));
     }
 
 </script>
