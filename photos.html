@@ -69,7 +69,7 @@
                 <div id="listYear" class="listSelectItem">全部年份</div>
                 <div class="overlay overlay-filter-year">
                     <ul class="list-filter" data-filter-group="year">
-                        <li id="yearAll" data-value="全部年份" data-filter="" class="list-filter-item year-item">全部年份</li>
+                        <li id="yearAll" data-value="全部年份" data-filter="" class="list-filter-item year-item ">全部年份</li>
                         <li id="year2016" data-value="2016" data-filter=".2016" class="list-filter-item year-item">2016</li>
                         <li id="year2015" data-value="2015" data-filter=".2015" class="list-filter-item year-item">2015</li>
                         <li id="year2013" data-value="2013" data-filter=".2013" class="list-filter-item year-item">2013</li>
@@ -102,105 +102,22 @@
 <script src="js/objs.js"></script>
 <script src="js/main.js"></script>
 <script>
-    var card='<li id="card%data1%" class="work-col "><div class="paper paper-work"><img class="card-img" src="%data2%"/><div class="work-title"><h4><span>%data3%</span></h4></div></div></li>';
-    var initNum=20;
-    var maxNum=photoSet.length;
-    var photo_filters = {};
+//    var card='<li id="card%data1%" class="work-col "><div class="paper paper-work"><img class="card-img" src="%data2%"/><div class="work-title"><h4><span>%data3%</span></h4></div></div></li>';
 
-    var ReplaceObj;
     var PhotoEvent=new EventObj(photoSet);
-    window.onload=function () {
-        PhotoEvent.reset();
-        scrollDownRefresh(true,photoSet);
-//        Reset(photoSet);
-    };
+    /*window.onload=function () {
+
+
+    };*/
     ///////////////////////////////////
-
-    $('.list-filter').on( 'click', '.list-filter-item', function() {
-        var $this = $(this);
-        // get group key
-        var $buttonGroup = $this.parents('.list-filter');
-        var filterGroup = $buttonGroup.attr('data-filter-group');
-        // set filter for group
-        photo_filters[ filterGroup ] = $this.attr('data-filter');
-        // combine filters
-        var filterValue = '';
-        for ( var prop in photo_filters ) {
-            filterValue += photo_filters[ prop ];
-        }
-        console.log(filterValue);
-        // set filter for Isotope
-        $('.resultItem').isotope({ filter:filterValue});
-        var $grid=$('.resultItem').isotope({ filter:filterValue});
-        var iso = $grid.data('isotope');
-        var num=iso.filteredItems.length;
-        $('.Result').text(num);
-
-
+    PhotoEvent.reset();
+    PhotoEvent.filterItem();
+    $('#tagAll').click(function(){
+        document.location.reload();
     });
 
 
-    function scrollDownRefresh(abled,dataSet){
-        var pace = 8;
-        var totalheight = 0;
-//        var index=20;
-        if(abled){
-            $(window).scroll(function(){
 
-                var scrollPos = $(window).scrollTop();//滚动条距顶部距离(页面超出窗口的高度)
-                var viewH=$(this).height();
-
-                totalheight = parseFloat(viewH) + parseFloat(scrollPos);
-
-
-                if($(document).height()*0.95 <= totalheight){
-
-                    $('.loading').css("opacity",1);
-                    setTimeout(function () {
-                        console.log("setTimeOut执行");
-                        $('.loading').css("opacity",0);
-                        if(initNum<dataSet.length){
-                            for(var i=0;i<pace;i++){
-                                initNum=initNum+1;
-                                if(dataSet[initNum] != null){
-                                    console.log('initNum Step:'+initNum);
-                                    Replace(initNum,dataSet[initNum].ava,dataSet[initNum].title);
-                                    for(var m=0;m<dataSet[initNum].tag.length;m++){
-                                        $('#card'+initNum).addClass(dataSet[initNum].tag[m]);
-                                    }
-
-                                    PhotoEvent.gotoDetail()
-                                }else{
-                                    console.log('break tag');
-                                    $('.loading').css("opacity",0);
-                                    $('#endHint').show();
-                                }
-
-
-                            }
-                        }else{
-                            console.log('reach bottom');
-                            $('.loading').css("opacity",0);
-                            $('#endHint').show();
-                        }
-
-
-                    },1000);
-
-                }
-
-
-            });
-        }else{
-            console.log("scrollDownRefresh 没有执行");
-        }
-
-    }
-
-    function Replace(data1,data2,data3){
-        console.log("Replace执行");
-        $('.resultItem').append(card.replace("%data1%",data1).replace("%data2%",data2).replace("%data3%",data3));
-    }
 
 </script>
 </body>

@@ -162,173 +162,40 @@
     }
     header();
 
-    var card='<li id="card%data1%" class="work-col "><div class="paper paper-work"><img class="card-img" src="%data2%"/><div class="work-title"><h4><span>%data3%</span></h4></div></div></li>'
-
+//    var card='<li id="card%data1%" class="work-col "><div class="paper paper-work"><img class="card-img" src="%data2%"/><div class="work-title"><h4><span>%data3%</span></h4></div></div></li>'
+    var AllEvent=new EventObj(allSet);
+    var photoEvent=new EventObj(photoSet);
+    var designEvent=new EventObj(designSet);
+    var eveEvent=new EventObj(eventSet);
     window.onload=function () {
-        Reset(allSet);
-
-        $('#allSet').click(function () {
-            Reset(allSet);
-        });
-
-        $('#photoSet').click(function(){
-            Reset(photoSet);
-        });
-
-        $('#designSet').click(function () {
-            Reset(designSet);
-        });
-
-        $('#eventSet').click(function () {
-            Reset(eventSet);
-        });
-
 
 
     };
 
-    ///////////////////////////////////
 
-    var index_filters = {};
-    var filter_num;
-    $('.list-filter').on( 'click', '.list-filter-item', function() {
-        var $this = $(this);
-        // get group key
-        var $buttonGroup = $this.parents('.list-filter');
-        var filterGroup = $buttonGroup.attr('data-filter-group');
-        // set filter for group
-        index_filters[ filterGroup ] = $this.attr('data-filter');
-        // combine filters
-        var filterValue = '';
-        for ( var prop in index_filters ) {
-            filterValue += index_filters[ prop ];
-        }
-        console.log(filterValue);
-        // set filter for Isotope
-        $('.resultItem').isotope({ filter:filterValue});
-        var $grid=$('.resultItem').isotope({ filter:filterValue});
-        var iso = $grid.data('isotope');
-        filter_num=iso.filteredItems.length;
+    AllEvent.reset();
 
-        $('.Result').text(filter_num);
-//        console.log(num);
-
+    $('#allSet').click(function () {
+        AllEvent.reset();
     });
 
-    ///////////////////////////////////
-    var initNum=20;
-    var maxNum=allSet.length;
-    function Reset(dataSet){
-        $('.Result').text(dataSet.length);
-        $('.work-col').remove();
-        $('#endHint').hide();
-        if(dataSet[0]!=null){
-            for(var j=0;j<=initNum;j++){
-                if(dataSet[j]!=null){
-                    Replace(j,dataSet[j].ava,dataSet[j].title);
-                    for(var m=0;m<dataSet[j].tag.length;m++){
-                        $('#card'+j).addClass(dataSet[j].tag[m]);
-                    }
-                }else{
-                    console.log("#load opacity = 0");
-                    $('.loading').css("opacity",0);
-                }
-            }
+    $('#photoSet').click(function(){
+        photoEvent.reset();
+    });
 
-        }else{
-            console.log("#load opacity = 0");
-            $('.loading').css("opacity",0);
-        }
+    $('#designSet').click(function () {
+        designEvent.reset();
+    });
 
+    $('#eventSet').click(function () {
+        eveEvent.reset();
+    });
+    AllEvent.filterItem();
 
-        gotoDetail(dataSet);
+    $('#tagAll').click(function(){
+        document.location.reload();
+    });
 
-        scrollDownRefresh(dataSet);
-    }
-
-    function Replace(data1,data2,data3){
-        console.log("Replace执行");
-        $('.resultItem').append(card.replace("%data1%",data1).replace("%data2%",data2).replace("%data3%",data3));
-    }
-
-    function gotoDetail(dataSet) {
-
-        $("[id^=card]").click( function () {
-            var id=parseInt($(this).attr("id").split("card")[1]);
-            console.log('card'+id);
-            if(dataSet[id].catalog=='摄影'){
-                localStorage.setItem('photo-title', dataSet[id].title);
-                localStorage.setItem('photo-tag', dataSet[id].tag);
-                localStorage.setItem('photo-work', dataSet[id].work);
-                localStorage.setItem('photo-desc', dataSet[id].desc);
-                window.location.href="photos-detail.html";
-            }else{
-                localStorage.setItem('design-title', dataSet[id].title);
-                localStorage.setItem('design-tag', dataSet[id].tag);
-                localStorage.setItem('design-work', dataSet[id].work);
-                localStorage.setItem('design-desc', dataSet[id].desc);
-                window.location.href="design-detail.html";
-            }
-
-
-        });
-    }
-
-    /////////////////////////////////////////////////////
-    function scrollDownRefresh(dataSet){
-        var range = 50;             //距下边界长度/单位px
-        var pace = 8;
-        var totalheight = 0;
-//        var index=20;
-
-        $(window).scroll(function(){
-            console.log("scroll Down Refresh 执行");
-            var srollPos = $(window).scrollTop();
-            //滚动条距顶部距离(页面超出窗口的高度)
-
-//            console.log('浏览器的高度：'+$(window).height());
-
-            totalheight = parseFloat($(window).height()) + parseFloat(srollPos);
-            console.log("scroll down 接收的"+dataSet.length);
-
-            if(($(document).height()-range) <= totalheight){
-                $('.loading').css("opacity",1);
-                setTimeout(function () {
-                    $('.loading').css("opacity",0);
-                    if(initNum<maxNum){
-                        for(var i=0;i<pace;i++){
-                            initNum=initNum+1;
-                            if(dataSet[initNum] != null){
-                                console.log('pace:'+initNum);
-                                Replace(initNum,dataSet[initNum].ava,dataSet[initNum].title);
-                                for(var m=0;m<dataSet[initNum].tag.length;m++){
-                                    $('#card'+initNum).addClass(dataSet[initNum].tag[m]);
-                                }
-
-                                gotoDetail(dataSet);
-                            }else{
-                                console.log('break tag');
-                                $('.loading').css("opacity",0);
-                                $('#endHint').show();
-                            }
-
-
-                        }
-                    }else{
-                        console.log('reach bottom');
-                        $('.loading').css("opacity",0);
-                        $('#endHint').show();
-                    }
-
-
-                },1000);
-
-            }
-
-
-        });
-
-    }
 
 </script>
 

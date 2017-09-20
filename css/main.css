@@ -408,6 +408,12 @@ body {
     padding-bottom: 2rem;
     padding-right:1rem ;
     cursor: pointer;
+
+    /*position: absolute;*/
+    /*left: 0px;*/
+    /*top: 0px;*/
+
+
 }
 .paper-work{
     width: 100%;

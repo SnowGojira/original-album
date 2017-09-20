@@ -341,7 +341,7 @@ $('#tlfqr').click(function(){
 
 // window.refreshObj=new Object();
 
-// var card='<li id="card%data1%" class="work-col "><div class="paper paper-work"><img class="card-img" src="%data2%"/><div class="work-title"><h4><span>%data3%</span></h4></div></div></li>'
+var card='<li id="card%data1%" class="work-col "><div class="paper paper-work"><img class="card-img" src="%data2%"/><div class="work-title"><h4><span>%data3%</span></h4></div></div></li>'
 
 function EventObj(dataSet) {
     this.dataSet=dataSet;
@@ -349,9 +349,13 @@ function EventObj(dataSet) {
 
 EventObj.prototype={
     constructor:EventObj,
+    initNum:20,
     card:'<li id="card%data1%" class="work-col "><div class="paper paper-work"><img class="card-img" src="%data2%"/><div class="work-title"><h4><span>%data3%</span></h4></div></div></li>',
     getDataset:function () {
         return this.dataSet;
+    },
+    getDetail:function () {
+        return this.gotoDetail();
     },
     gotoDetail:function () {
         var dataSet=this.getDataset();
@@ -376,11 +380,12 @@ EventObj.prototype={
         });
     },
     reset:function () {
-        $('.Result').text(maxNum);
+        var dataSet=this.getDataset();
+
+        $('.Result').text(dataSet.length);
         $('.work-col').remove();
         $('#endHint').hide();
-
-        var dataSet=this.getDataset();
+        var initNum=this.initNum;
 
         if(dataSet[0]!=null){
             for(var j=0;j<=initNum;j++){
@@ -421,6 +426,118 @@ EventObj.prototype={
             }
         });
 
+        this.getscrollDown();
+    },
+    scrollDownRefresh:function (){
+        var pace = 8;
+        var totalheight = 0;
+        var dataSet=this.getDataset();
+        var initNum=20;
 
+
+        $(window).scroll(function(){
+
+                var scrollPos = $(window).scrollTop();//滚动条距顶部距离(页面超出窗口的高度)
+                var viewH=$(this).height();
+                totalheight = parseFloat(viewH) + parseFloat(scrollPos);
+
+                if($(document).height()*0.95 <= totalheight){
+
+                    $('.loading').css("opacity",1);
+                    setTimeout(function () {
+                        console.log("setTimeOut执行");
+                        $('.loading').css("opacity",0);
+                        if(initNum<dataSet.length){
+                            for(var i=0;i<pace;i++){
+                                initNum=initNum+1;
+                                if(dataSet[initNum] != null){
+                                    console.log('initNum Step:'+initNum);
+                                    $('.resultItem').append(this.card.replace("%data1%",dataSet[initNum].id).replace("%data2%",dataSet[initNum].ava).replace("%data3%",dataSet[initNum].title));
+                                    for(var m=0;m<dataSet[initNum].tag.length;m++){
+                                        $('#card'+initNum).addClass(dataSet[initNum].tag[m]);
+                                    }
+
+                                    $(".work-col").click( function () {
+                                        // console.log(dataSet);
+                                        var id=parseInt($(this).attr("id").split("card")[1]);
+                                        console.log(id);
+
+                                        if(dataSet[id].catalog=='摄影'){
+                                            localStorage.setItem('photo-title', dataSet[id].title);
+                                            localStorage.setItem('photo-tag', dataSet[id].tag);
+                                            localStorage.setItem('photo-work', dataSet[id].work);
+                                            localStorage.setItem('photo-desc', dataSet[id].desc);
+                                            window.location.href="photos-detail.html";
+                                        }else{
+                                            localStorage.setItem('design-title', dataSet[id].title);
+                                            localStorage.setItem('design-tag', dataSet[id].tag);
+                                            localStorage.setItem('design-work', dataSet[id].work);
+                                            localStorage.setItem('design-desc', dataSet[id].desc);
+                                            window.location.href="design-detail.html";
+                                        }
+                                    });
+                                }else{
+
+                                }
+
+                            }
+                        }else{
+                            console.log('reach bottom');
+                            $('.loading').css("opacity",0);
+                            $('#endHint').show();
+                        }
+
+
+                    },1000);
+
+                }
+
+            });
+
+    },
+    getscrollDown:function () {
+        return this.scrollDownRefresh();
+    },
+    filterItem:function () {
+        var photo_filters = {};
+
+
+        $('.list-filter').on( 'click', '.list-filter-item', function() {
+
+            var $this = $(this);
+
+            // get group key
+            var $buttonGroup = $this.parents('.list-filter');
+            var filterGroup = $buttonGroup.attr('data-filter-group');
+            // set filter for group
+            photo_filters[ filterGroup ] = $this.attr('data-filter');
+            // combine filters
+            var filterValue = '';
+            var filters=[];
+            for ( var prop in photo_filters ) {
+                filterValue += photo_filters[ prop ];
+                filters.push(photo_filters[prop]);
+                console.log("filterValue: "+photo_filters[prop]);
+            }
+
+
+            // set filter for Isotope
+            $('.resultItem').isotope({ filter:filterValue});
+            var $grid=$('.resultItem').isotope({ filter:filterValue});
+            var iso = $grid.data('isotope');
+            var num=iso.filteredItems.length;
+            $('.Result').text(num);
+
+            if (num>photoSet.initNum){
+
+                // document.location.reload();
+
+            }else{
+                $(".loading").css("opacity",0);
+                $(window).off('scroll');
+
+            }
+
+        });
     }
 };
