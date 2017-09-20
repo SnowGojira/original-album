@@ -421,51 +421,6 @@ EventObj.prototype={
             }
         });
 
-        /*if (dataSet.length<initNum){
-            scrollDownRefresh(false,null);
-            console.log("scrollDownRefresh false 调用");
-            $('.loading').css("opacity",0);
-        }else{
-            console.log("scrollDownRefresh true 调用");
-            scrollDownRefresh(true,photoSet);
-        }*/
-    }
-}
 
-// function Reset(dataSet){
-//     $('.Result').text(maxNum);
-//     $('.work-col').remove();
-//     $('#endHint').hide();
-//
-//     if(dataSet[0]!=null){
-//         for(var j=0;j<=initNum;j++){
-//             if(dataSet[j]!=null){
-//
-//                 Replace(j,dataSet[j].ava,dataSet[j].title);
-//                 for(var m=0;m<dataSet[j].tag.length;m++){
-//                     $('#card'+j).addClass(dataSet[j].tag[m]);
-//                 }
-//
-//
-//             }else{
-//                 console.log("#load opacity = 0");
-//                 $('.loading').css("opacity",0);
-//             }
-//         }
-//
-//     }else{
-//         console.log("#load opacity = 0");
-//         $('.loading').css("opacity",0);
-//     }
-//
-//     PhotoEvent.gotoDetail();
-//
-//     if (dataSet.length<initNum){
-//         scrollDownRefresh(false,null);
-//         console.log("scrollDownRefresh false 调用");
-//         $('.loading').css("opacity",0);
-//     }else{
-//         console.log("scrollDownRefresh true 调用");
-//         scrollDownRefresh(true,photoSet);
-//     }
-// }
+    }
+};

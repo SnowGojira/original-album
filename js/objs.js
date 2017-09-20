@@ -5,7 +5,7 @@ var photoSet=[];
 var eventSet=[];
 var allSet=[];
 obj1={
-    id:1,
+    id:0,
     title:"韩国，首尔",
     desc:"模拟博物馆，阿尔瓦罗·西扎作品。",
     tag:["2015","建筑"],
@@ -18,7 +18,7 @@ obj1={
 photoSet.push(obj1);
 
 obj2={
-    id:2,
+    id:1,
     title:"西班牙",
     desc:"手机摄影。",
     tag:["2016","建筑"],
@@ -31,7 +31,7 @@ obj2={
 photoSet.push(obj2);
 
 obj3={
-    id:3,
+    id:2,
     title:"德国，柏林",
     desc:"犹太人纪念碑。手机摄影。",
     tag:["2016","建筑"],
@@ -44,7 +44,7 @@ obj3={
 photoSet.push(obj3);
 
 obj4={
-    id:4,
+    id:3,
     title:"日本，高松",
     desc:"高松筑港。手机摄影。",
     tag:["2016","建筑"],
@@ -57,7 +57,7 @@ obj4={
 photoSet.push(obj4);
 
 obj5={
-    id:5,
+    id:4,
     title:"日本，丰岛",
     desc:"丰岛美术馆。手机摄影。",
     tag:["2016","建筑"],
@@ -69,7 +69,7 @@ obj5={
 photoSet.push(obj5);
 
 obj6={
-    id:6,
+    id:5,
     title:"日本，东京",
     desc:"手机摄影。",
     tag:["2015","建筑"],
@@ -81,7 +81,7 @@ obj6={
 photoSet.push(obj6);
 
 obj7={
-    id:7,
+    id:6,
     title:"中国，深圳",
     desc:"港深双年展。手机摄影。",
     tag:["2013","建筑"],
@@ -93,7 +93,7 @@ obj7={
 photoSet.push(obj7);
 
 obj8={
-    id:8,
+    id:7,
     title:"中国，广州",
     desc:"广州大剧院。手机摄影。",
     tag:["2013","建筑"],
@@ -105,7 +105,7 @@ obj8={
 photoSet.push(obj8);
 
 obj9={
-    id:9,
+    id:8,
     title:"中国，深圳",
     desc:"港深双年展。手机摄影。",
     tag:["2013","建筑"],
@@ -117,7 +117,7 @@ obj9={
 photoSet.push(obj9);
 
 obj10={
-    id:10,
+    id:9,
     title:"葡萄牙，里斯本",
     desc:"光影。手机摄影。",
     tag:["2016","建筑"],
@@ -129,7 +129,7 @@ obj10={
 photoSet.push(obj10);
 
 obj11={
-    id:11,
+    id:10,
     title:"土耳其，伊斯坦布尔",
     desc:"街巷。手机摄影。",
     tag:["2015","建筑"],
@@ -141,7 +141,7 @@ obj11={
 photoSet.push(obj11);
 
 obj12={
-    id:12,
+    id:11,
     title:"土耳其，伊斯坦布尔",
     desc:"手机摄影。",
     tag:["2015","儿童"],
@@ -153,7 +153,7 @@ obj12={
 photoSet.push(obj12);
 
 obj13={
-    id:13,
+    id:12,
     title:"土耳其，马尔丁",
     desc:"手机摄影。",
     tag:["2015","儿童"],
@@ -165,7 +165,7 @@ obj13={
 photoSet.push(obj13);
 
 obj14={
-    id:14,
+    id:13,
     title:"土耳其，伊斯坦布尔",
     desc:"手机摄影。",
     tag:["2015","儿童"],
@@ -177,7 +177,7 @@ obj14={
 photoSet.push(obj14);
 
 obj15={
-    id:15,
+    id:14,
     title:"土耳其，马尔丁",
     desc:"手机摄影。",
     tag:["2015","儿童"],
@@ -189,7 +189,7 @@ obj15={
 photoSet.push(obj15);
 
 obj16={
-    id:16,
+    id:15,
     title:"土耳其，伊斯坦布尔",
     desc:"手机摄影。",
     tag:["2015","儿童"],
@@ -201,7 +201,7 @@ obj16={
 photoSet.push(obj16);
 
 obj17={
-    id:17,
+    id:16,
     title:"土耳其，伊斯坦布尔",
     desc:"手机摄影。",
     tag:["2015","儿童"],
@@ -213,7 +213,7 @@ obj17={
 photoSet.push(obj17);
 
 obj18={
-    id:18,
+    id:17,
     title:"土耳其，马尔丁",
     desc:"手机摄影。",
     tag:["2015","儿童"],
@@ -225,7 +225,7 @@ obj18={
 photoSet.push(obj18);
 
 obj19={
-    id:19,
+    id:18,
     title:"土耳其，伊斯坦布尔",
     desc:"手机摄影。",
     tag:["2015","儿童"],
@@ -237,7 +237,7 @@ obj19={
 photoSet.push(obj19);
 
 obj20={
-    id:20,
+    id:19,
     title:"土耳其，伊斯坦布尔",
     desc:"手机摄影。",
     tag:["2015","儿童"],
@@ -249,7 +249,7 @@ obj20={
 photoSet.push(obj20);
 
 obj21={
-    id:21,
+    id:20,
     title:"土耳其，马尔丁",
     desc:"手机摄影。",
     tag:["2015","儿童"],
@@ -261,7 +261,7 @@ obj21={
 photoSet.push(obj21);
 
 obj22={
-    id:22,
+    id:21,
     title:"德国，柏林",
     desc:"手机摄影。",
     tag:["2016","几何"],
@@ -273,7 +273,7 @@ obj22={
 photoSet.push(obj22);
 
 obj23={
-    id:23,
+    id:22,
     title:"德国，柏林",
     desc:"手机摄影。",
     tag:["2016","几何"],
@@ -285,7 +285,7 @@ obj23={
 photoSet.push(obj23);
 
 obj24={
-    id:24,
+    id:23,
     title:"德国，柏林",
     desc:"手机摄影。",
     tag:["2016","几何"],
@@ -297,7 +297,7 @@ obj24={
 photoSet.push(obj24);
 
 obj25={
-    id:25,
+    id:24,
     title:"德国，柏林",
     desc:"手机摄影。",
     tag:["2016","几何"],
@@ -309,7 +309,7 @@ obj25={
 photoSet.push(obj25);
 
 obj26={
-    id:26,
+    id:25,
     title:"德国，柏林",
     desc:"手机摄影。",
     tag:["2016","几何"],
@@ -321,7 +321,7 @@ obj26={
 photoSet.push(obj26);
 
 obj27={
-    id:27,
+    id:26,
     title:"德国，柏林",
     desc:"手机摄影。",
     tag:["2016","几何"],
@@ -333,7 +333,7 @@ obj27={
 photoSet.push(obj27);
 
 obj28={
-    id:28,
+    id:27,
     title:"德国，柏林",
     desc:"手机摄影。",
     tag:["2016","几何"],
@@ -345,7 +345,7 @@ obj28={
 photoSet.push(obj28);
 
 obj29={
-    id:29,
+    id:28,
     title:"德国，柏林",
     desc:"手机摄影。",
     tag:["2016","几何"],
@@ -357,7 +357,7 @@ obj29={
 photoSet.push(obj29);
 
 obj30={
-    id:30,
+    id:29,
     title:"德国，柏林",
     desc:"手机摄影。",
     tag:["2016","几何"],
@@ -369,7 +369,7 @@ obj30={
 photoSet.push(obj30);
 
 obj31={
-    id:31,
+    id:30,
     title:"德国，柏林",
     desc:"手机摄影。",
     tag:["2016","几何"],
@@ -381,7 +381,7 @@ obj31={
 photoSet.push(obj31);
 
 obj32={
-    id:32,
+    id:31,
     title:"德国，柏林",
     desc:"手机摄影。",
     tag:["2016","几何"],
@@ -393,7 +393,7 @@ obj32={
 photoSet.push(obj32);
 
 obj33={
-    id:33,
+    id:32,
     title:"德国，柏林",
     desc:"手机摄影。",
     tag:["2016","几何"],
@@ -405,7 +405,7 @@ obj33={
 photoSet.push(obj33);
 
 obj34={
-    id:34,
+    id:33,
     title:"德国，柏林",
     desc:"手机摄影。",
     tag:["2016","几何"],
@@ -417,7 +417,7 @@ obj34={
 photoSet.push(obj34);
 
 obj35={
-    id:35,
+    id:34,
     title:"德国，柏林",
     desc:"手机摄影。",
     tag:["2016","几何"],
@@ -429,7 +429,7 @@ obj35={
 photoSet.push(obj35);
 
 obj36={
-    id:36,
+    id:35,
     title:"德国，柏林",
     desc:"手机摄影。",
     tag:["2016","几何"],
@@ -441,7 +441,7 @@ obj36={
 photoSet.push(obj36);
 
 obj37={
-    id:37,
+    id:36,
     title:"德国，柏林",
     desc:"手机摄影。",
     tag:["2016","几何"],
@@ -453,7 +453,7 @@ obj37={
 photoSet.push(obj37);
 
 obj38={
-    id:38,
+    id:37,
     title:"德国，柏林",
     desc:"手机摄影。",
     tag:["2016","几何"],
