@@ -65,7 +65,30 @@
         <div class="follow-close-btn" id="follow-close"><img src="img/cross.png"></div>
     </div>
 
+    <!--在手机端显示的menu-->
+    <div class="nav-menu">
+        <div class="close_icon"><img id="close_btn" src="img/close_icon.png"></div>
+        <ul class="nav-menu-list">
+            <li class="menu-nav-item" style="margin-top: 2rem;"><a href="index.html">HOME</a></li>
+            <li class="menu-nav-item"><a href="photos.html">PHOTO</a></li>
+            <li class="menu-nav-item"><a href="design.html">DESIGN</a></li>
+            <li class="menu-nav-item"><a href="events.html">EVENT</a></li>
+            <li class="menu-nav-item"><a href="team.html">TEAM</a></li>
+            <li class="menu-nav-item"><a href="contact.html">CONTACT</a></li>
+        </ul>
+        <div class="menu-desc">FOLLOW US 关注我们</div>
+        <div class="menu-follow">
+            <ul class="menu-list-follow">
+                <li class="menu-list-follow-item menu-weixin-follow"><a href="https://mp.weixin.qq.com/s/B4oewsJ_dNngqldqoY_KAw"></a></li>
+                <li class="menu-list-follow-item menu-weibo-follow"><a href="https://weibo.com/originalalbum"></a></li>
+                <li class="menu-list-follow-item menu-zhihu-follow"><a href="https://www.zhihu.com/people/oalbum/answers"></a></li>
+                <li class="menu-list-follow-item menu-lofter-follow"><a href="http://o-album.lofter.com/"></a></li>
+            </ul>
+        </div>
+    </div>
+     <!--在PC端显示的Menu-->
     <div class="nav-pc">
+        <img id="menu_btn" src="img/menu_icon.png">
         <div class="nav-pc_logo"><a href="index.html"></a></div>
         <ul class="list-nav">
             <li class="list-nav-item"><a href="photos.html">PHOTO</a></li>
@@ -76,6 +99,8 @@
         </ul>
         <div class="nav-btn"><div class="nav-btn-text" id="follow-open">FOLLOW US</div></div>
     </div>
+
+    <!--搜索栏-->
     <div class="nav-pc nav-search index-search none-display">
         <div class="nav-main_inner">
             <div class="listSelect only-pc">
@@ -120,7 +145,13 @@
         </div>
     </div>
 </div>
-<div id="canvasHolder"></div>
+
+<!--canvas栏目-->
+<div id="canvasHolder">
+    <canvas id="canvas-interactive"></canvas>
+   </div>
+
+<!--显示区域-->
 <div class="main-pc index-content">
     <ul class="list-btn">
         <li><a href="#">#<span class="Result">0</span>个结果#</a></li>
@@ -144,21 +175,29 @@
 
 
 <script src="js/jquery-3.2.1.min.js"></script>
-<script src="js/p5.js"></script>
+<!--<script src="js/p5.js"></script>-->
 <script src="js/isotope.pkgd.min.js"></script>
 <script src="js/objs.js"></script>
+<script src="js/logoEffects.js"></script>
 <script src="js/main.js"></script>
 <script>
+
     function header(){
         var headerEmt = $('.index-search');
         var headerCan = $('#canvasHolder');
 
 //        var scroll = 0;
+        var windowWidth = window.innerWidth;
+        var windowHeight= window.innerHeight;
+
+        var width = window.innerWidth;
+        var height = window.innerHeight;
         $(window).scroll(function(){
 
             $(window).scrollTop() >= windowHeight ? headerEmt.show() : headerEmt.hide();
+            console.log("scroll event start");
 //
-        })
+        });
     }
     header();
 

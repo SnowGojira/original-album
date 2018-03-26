@@ -17,13 +17,28 @@ ol,ul{
     display: none;
 }
 /*公共的属性*/
+h4{
+    letter-spacing: 2px;
+}
 body {
     position: relative;
     color: #000;
     background: url(../img/bg.png) repeat;
     -webkit-font-smoothing: antialiased;
+    font-family: PingFang SC Regular,Microsoft YaHei,Hiragino Sans GB,"微软雅黑 Light","Arial Narrow",WenQuanYi Micro Hei,Arial,sans-serif;
 }
 
+.icon{
+    text-align: right;
+    margin-right: 1.5rem;
+    font-size: 0.3rem;
+    margin-top:0.8rem;
+}
+.icon img{
+    width:0.8rem !important;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+}
 .nav-header{
     width: 100%;
     height: 6.6rem;
@@ -37,8 +52,12 @@ body {
     width: 100%;
     height: 6.6rem;
     background-color: #ffffff;
-    box-shadow: 0px 2px 5px #f3f3f3;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.1);
 
+}
+
+.nav-mobile{
+    display: none;
 }
 
 .nav-pc_logo{
@@ -191,6 +210,14 @@ body {
     background-image: url(../img/lofter.png);
 }
 
+.nav-menu{
+    display: none;
+}
+#menu_btn{
+    display: none;
+    width:1rem;
+    margin:2rem;
+}
 .nav-copyright{
     top:4.2rem;
     right: 9%;
@@ -220,11 +247,11 @@ body {
 
 .nav-search{
     height: 3.8rem;
-    background-color: #ebebeb;
+    background-color: #fafafa;
     position: relative;
     z-index: 2;
     width: 100%;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    /*box-shadow: 0 0 5px rgba(0,0,0,0.1);*/
 }
 .index-search{
     transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
@@ -442,7 +469,7 @@ body {
     width: 100%;
     text-align: left;
     margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     margin-left: 0.7rem;
     font-size: 0.8rem;
     font-weight: bold;
@@ -482,7 +509,7 @@ body {
     white-space: normal;
 }
 .paperRoute_wrapper{
-    width:800px;
+    width:88%;
     margin: 0 auto;
 }
 
@@ -577,15 +604,35 @@ body {
 /*首页canvas 效果测试*/
 
 #canvasHolder{
-    width: 100%;
-    height: 100%;
-    top: 2rem;
+    /*width: 100vw;
+    height: 100vh;
+    !*top: 2rem;
     left:0;
     right:0;
-    bottom: 0;
+    bottom: 0;*!
     position: relative;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    background-color: #1a162a;*/
 
+    margin: 0px;
+    position: relative;
+    background-color: #189ae5;
+    width: 100vw;
+    height:100vh;
+    text-align: center;
+    top: 2rem;
+    /*box-shadow: 0 0 5px rgba(0,0,0,0.1);*/
+}
+
+canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+#defaktoLogo {
+    display: none;
 }
 
 /*ava 页面12*/
@@ -598,7 +645,9 @@ body {
 }
 .team-passage{
     margin-top: 2rem;
-    line-height: 130%;
+    line-height: 200%;
+    letter-spacing: 0.3rem;
+
 }
 .list-btn{
     position: relative;
@@ -613,11 +662,11 @@ body {
     position: relative;
     min-width:120px;
     padding:0 20px;
-    height: 40px;
+    height: 30px;
     background-color: #f3f3f3;
-    line-height: 40px;
-    font-size: 1rem;
-    border-radius: 4px;
+    line-height: 30px;
+    font-size: 0.8rem;
+    border-radius: 10px;
     text-align: center;
     background-position: 90% 50%;
     background-repeat: no-repeat;
@@ -639,10 +688,10 @@ body {
 .team-profile{
     position:relative;
     float:left;
-    width:-moz-calc((100% - 20px)/3);
-    width:-webkit-calc((100% - 20px)/3);
-    width: calc((100% - 40px)/3);
-    margin-right:20px;
+    width:-moz-calc((100% - 4rem)/3);
+    width:-webkit-calc((100% - 4rem)/3);
+    width: calc((100% - 4rem)/3);
+    margin-right:2rem;
 
 }
 .team-profile-content{
@@ -674,7 +723,7 @@ body {
 
 .fotos_hs{
     position:absolute;
-    left: 100px;
+    left: 8rem;
     top:-60px;
     width:270px;
     height:300px;
@@ -689,7 +738,7 @@ body {
     width:100%;
     height:100%;
     background-image: url(../img/hs3.png);
-    background-size: 19rem;
+    background-size: 17rem;
     background-position: 50% 100%;
     background-repeat: no-repeat;
 }
@@ -702,7 +751,7 @@ body {
     width:100%;
     height:100%;
     background-image: url(../img/hs2.png);
-    background-size: 19rem;
+    background-size: 17rem;
     background-position: 50% 100%;
     background-repeat: no-repeat;
 }
@@ -715,7 +764,7 @@ body {
     width:100%;
     height:100%;
     background-image: url(../img/hs1.png);
-    background-size: 19rem;
+    background-size: 17rem;
     background-position: 50% 100%;
     background-repeat: no-repeat;
 }
@@ -725,7 +774,7 @@ body {
 
 .fotos_tlf{
      position:absolute;
-     left: 100px;
+     left: 8rem;
      top:-60px;
      width:300px;
      height:300px;
@@ -740,7 +789,7 @@ body {
     width:100%;
     height:100%;
     background-image: url(../img/tlf1.png);
-    background-size: 19rem;
+    background-size: 17rem;
     background-position: 50% 100%;
     background-repeat: no-repeat;
 }
@@ -753,7 +802,7 @@ body {
     width:100%;
     height:100%;
     background-image: url(../img/tlf2.png);
-    background-size: 19rem;
+    background-size: 17rem;
     background-position: 50% 100%;
     background-repeat: no-repeat;
 }
@@ -766,7 +815,7 @@ body {
     width:100%;
     height:100%;
     background-image: url(../img/tlf3.png);
-    background-size: 19rem;
+    background-size: 17rem;
     background-position: 50% 100%;
     background-repeat: no-repeat;
 }
@@ -774,7 +823,7 @@ body {
 
 .fotos_zw{
     position:absolute;
-    left: 100px;
+    left: 8rem;
     top:-60px;
     width:300px;
     height:300px;
@@ -789,7 +838,7 @@ body {
     width:100%;
     height:100%;
     background-image: url(../img/zw1.png);
-    background-size: 19rem;
+    background-size: 17rem;
     background-position: 50% 100%;
     background-repeat: no-repeat;
 }
@@ -802,7 +851,7 @@ body {
     width:100%;
     height:100%;
     background-image: url(../img/zw2.png);
-    background-size: 19rem;
+    background-size: 17rem;
     background-position: 50% 100%;
     background-repeat: no-repeat;
 }
@@ -815,7 +864,7 @@ body {
     width:100%;
     height:100%;
     background-image: url(../img/zw3.png);
-    background-size: 19rem;
+    background-size: 17rem;
     background-position: 50% 100%;
     background-repeat: no-repeat;
 }
@@ -825,7 +874,7 @@ body {
     margin-top: 1.1rem;
     margin-left: 0.1rem;
     cursor: pointer;
-    z-index: 999;
+    z-index:10;
 }
 #hs_contact:hover{
 
@@ -867,8 +916,8 @@ body {
 }
 
 .contact-qr{
-    width: 15rem;
-    height: 15rem;
+    width: 12rem;
+    height: 12rem;
     margin-top: 2.5rem;
     margin-bottom: 2rem;
 }
@@ -1168,7 +1217,7 @@ body:hover .gallery-nav {
 
 @keyframes loading {
     0% {
-        transform: rotate(0);
+        transform: rotate(0deg);
     }
     100% {
         transform: rotate(360deg);

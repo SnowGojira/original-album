@@ -1,0 +1,340 @@
+@media screen and (max-width: 800px){
+    .main-pc{
+        clear: both;
+        position: relative;
+        width: 95%;
+        padding: 72px 0 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /*index page*/
+    .nav-menu{
+        position: fixed;
+        background-color: #b6eafe;
+        width:100%;
+        height: 100%;
+        z-index: 9999;
+    }
+    .close_icon{
+        width:100%;
+        height: 8%;
+    }
+    #close_btn{
+        width:1rem;
+        margin:2rem;
+    }
+
+
+    .nav-menu-list{
+        width: 100%;
+        height: 65%;
+        text-align: center;
+    }
+
+    .menu-nav-item{
+        font-size: 1.8rem;
+        font-family: Helvetica, Arial, sans-serif;
+        font-weight: bold;
+        letter-spacing: 0.5rem;
+        line-height: 4rem;
+
+    }
+
+    .menu-nav-item a{
+        text-decoration: none;
+        color:#0f0f0f;
+    }
+
+
+    .menu-list-follow{
+        top:2rem;
+        left:0rem;
+        width:100%;
+        text-align: center;
+        position:relative;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+    }
+
+    .menu-list-follow .menu-list-follow-item{
+        position: relative;
+        background-size: 2.8rem 2.8rem;
+        width:2.8rem;
+        height:2.8rem;
+        margin: 0 0.5rem;
+    }
+
+    .menu-list-follow .menu-list-follow-item a{
+        text-decoration: none;
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+
+    .menu-list-follow .menu-weixin-follow{
+        background-image: url(../img/weixin_menu.png);
+    }
+
+    .menu-list-follow .menu-weibo-follow{
+        background-image: url(../img/weibo_menu.png);
+    }
+
+    .menu-list-follow  .menu-zhihu-follow{
+        background-image: url(../img/zhihu_menu.png);
+    }
+
+    .menu-list-follow  .menu-lofter-follow{
+        background-image: url(../img/lofter_menu.png);
+    }
+
+    .menu-desc{
+        position: relative;
+        width: 100%;
+        height: auto;
+        text-align:center;
+        font-size: 0.8rem;
+        letter-spacing: 0.1rem;
+        font-family: PingFang SC Regular,Microsoft YaHei,Hiragino Sans GB,WenQuanYi Micro Hei,Arial,sans-serif;
+        color: #0f0f0f;
+    }
+
+
+
+
+
+    .nav-pc{
+        height: 4.6rem;
+
+    }
+
+
+
+    .nav-search {
+        opacity: 0;
+    }
+    .nav-pc_logo{
+        position: absolute;
+        left: 25.7%;
+        top:37%;
+        z-index: 100;
+        background-image: url(../img/logo-large.png);
+        background-size: 13rem 1.25rem;
+        width:13rem;
+        height:1.25rem;
+    }
+
+    #menu_btn{
+        display: inline-block;
+    }
+
+    .list-nav{
+        display: none;
+    }
+    .nav-btn{
+        display: none;
+    }
+    .work-col {
+        width: 50%;
+        padding-bottom: 1rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        cursor: pointer;
+    }
+    .index-content{
+        margin-top: -0.8rem;
+        min-height: 120vh;
+    }
+    .paper-work{
+        width: 100%;
+        margin-right: 0.5rem;
+        text-align: center;
+        border-radius: 4px;
+        box-shadow: 0 0 5px rgba(0,0,0,0.1);
+
+        transition: all 0.3s ease-out;
+    }
+    .paper-work:hover,.paper-work:focus{
+        transform: translateY(0px) scale(1) translateZ(0);
+        box-shadow: 0 0px 0px rgba(0,0,0,0),
+        0 0px 0px rgba(220, 233, 255, 0.48);
+    }
+
+    /*contact page*/
+
+    .contact-title {
+        font-size: 1.5rem;
+        letter-spacing: 0.1rem;
+        font-family: "Adobe 黑体 Std R";
+    }
+    .contact-email {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-top: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    /*team Page*/
+    .main-mobile{
+        margin-top: 1.5rem;
+    }
+    .list-work{
+        margin-top: 2rem;
+    }
+    .team-profile{
+        position:relative;
+        width:100%;
+        margin-bottom: 4rem;
+
+    }
+    .fotos_hs{
+        position:absolute;
+        left: 9.5rem;
+        top:-60px;
+        width:270px;
+        height:300px;
+        z-index: 666;
+    }
+    .foto_hs1{
+        position: absolute;
+        left: 0px;
+        top:0px;
+        left:0px;
+        bottom:0px;
+        width:100%;
+        height:100%;
+        background-image: url(../img/hs3.png);
+        background-size: 17rem;
+        background-position: 50% 100%;
+        background-repeat: no-repeat;
+    }
+    .foto_hs2{
+        position: absolute;
+        left: 0px;
+        top:0px;
+        left:0px;
+        bottom:0px;
+        width:100%;
+        height:100%;
+        background-image: url(../img/hs2.png);
+        background-size: 17rem;
+        background-position: 50% 100%;
+        background-repeat: no-repeat;
+    }
+    .foto_hs3{
+        position: absolute;
+        left: 0px;
+        top:0px;
+        left:0px;
+        bottom:0px;
+        width:100%;
+        height:100%;
+        background-image: url(../img/hs1.png);
+        background-size: 17rem;
+        background-position: 50% 100%;
+        background-repeat: no-repeat;
+    }
+
+
+
+
+    .fotos_tlf{
+        position:absolute;
+        left: 8rem;
+        top:-60px;
+        width:300px;
+        height:300px;
+        z-index: 666;
+    }
+    .foto_tlf1{
+        position: absolute;
+        left: 0px;
+        top:0px;
+        left:0px;
+        bottom:0px;
+        width:100%;
+        height:100%;
+        background-image: url(../img/tlf1.png);
+        background-size: 17rem;
+        background-position: 50% 100%;
+        background-repeat: no-repeat;
+    }
+    .foto_tlf2{
+        position: absolute;
+        left: 0px;
+        top:0px;
+        left:0px;
+        bottom:0px;
+        width:100%;
+        height:100%;
+        background-image: url(../img/tlf2.png);
+        background-size: 17rem;
+        background-position: 50% 100%;
+        background-repeat: no-repeat;
+    }
+    .foto_tlf3{
+        position: absolute;
+        left: 0px;
+        top:0px;
+        left:0px;
+        bottom:0px;
+        width:100%;
+        height:100%;
+        background-image: url(../img/tlf3.png);
+        background-size: 17rem;
+        background-position: 50% 100%;
+        background-repeat: no-repeat;
+    }
+
+
+    .fotos_zw{
+        position:absolute;
+        left: 8rem;
+        top:-60px;
+        width:300px;
+        height:300px;
+        z-index: 666;
+    }
+    .foto_zw1{
+        position: absolute;
+        left: 0px;
+        top:0px;
+        left:0px;
+        bottom:0px;
+        width:100%;
+        height:100%;
+        background-image: url(../img/zw1.png);
+        background-size: 17rem;
+        background-position: 50% 100%;
+        background-repeat: no-repeat;
+    }
+    .foto_zw2{
+        position: absolute;
+        left: 0px;
+        top:0px;
+        left:0px;
+        bottom:0px;
+        width:100%;
+        height:100%;
+        background-image: url(../img/zw2.png);
+        background-size: 17rem;
+        background-position: 50% 100%;
+        background-repeat: no-repeat;
+    }
+    .foto_zw3{
+        position: absolute;
+        left: 0px;
+        top:0px;
+        left:0px;
+        bottom:0px;
+        width:100%;
+        height:100%;
+        background-image: url(../img/zw3.png);
+        background-size: 17rem;
+        background-position: 50% 100%;
+        background-repeat: no-repeat;
+    }
+}

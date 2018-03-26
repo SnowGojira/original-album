@@ -1,142 +1,15 @@
 /**
  * Created by hakuh on 2017/9/8.
  */
-// (update: migrated to p5.js in May 2015 by Jerome Herr)
-// Jan 2009
-// http://www.abandonedart.org
-// http://www.zenbullets.com
 
-//================================= global vars
+/***********************menu的逻辑****************************/
+$('#menu_btn').click(function () {
+   $('.nav-menu').show();
+});
 
-var _A = 4.0;
-var _B = 3.0;
-var _xsin1 = 0;
-var _xsin2 = 0;
-var _xsin3 = 0;
-var _ysin1 = 0;
-var _ysin2 = 0;
-var _ysin3 = 0;
-var _pointcount = 0;
-var _x = 0;
-var _y = 0;
-
-//================================= init
-function setup() {
-    var canvas=createCanvas(windowWidth,windowHeight);
-    canvas.parent('canvasHolder');
-    smooth();
-    restart();
-}
-
-function restart() {
-
-    var canvas=createCanvas(windowWidth,windowHeight);
-    canvas.parent('canvasHolder');
-    clearBackground();
-    stroke(149,222,255);
-    _A = int(random(8)) + 1;
-    _B = int(random(8)) + 1;
-    _xsin1 = int(random(5));
-    _xsin2 = int(random(5));
-    _xsin3 = int(random(5));
-    _ysin1 = int(random(5));
-    _ysin2 = int(random(5));
-    _ysin3 = int(random(5));
-    //println(_A + " : " + _B);
-    //println(_xsin1 + " : " + _xsin2 + " : " + _xsin3);
-    //println(_ysin1 + " : " + _ysin2 + " : " + _ysin3);
-    _pointcount = 0;
-}
-
-function clearBackground() {
-    background(255);
-}
-
-function draw() {
-    for (var i = 0; i < 1000; i++) {
-        nextPoint();
-        point(_x, _y);
-        //line(_x, _y, _x, _y);
-        _pointcount++;
-    }
-    if (_pointcount > 400000) {
-        restart();
-    }
-    $('#canvasHolder').click(function () {
-        restart()
-    });
-    // if (mouseIsPressed) restart();
-}
-
-function nextPoint() {
-    var sinAx = sin(_A * _x);
-    var sinAy = sin(_A * _y);
-    var sinBx = sin(_B * _x);
-    var sinBy = sin(_B * _y);
-
-    var newx = 0;
-    var newy = 0;
-
-    if (_xsin1 == 1) {
-        newx += sinAx;
-    } else if (_xsin1 == 2) {
-        newx += sinAy;
-    } else if (_xsin1 == 3) {
-        newx += sinBx;
-    } else if (_xsin1 == 4) {
-        newx += sinBy;
-    }
-    if (_ysin1 == 1) {
-        newy += sinAx;
-    } else if (_ysin1 == 2) {
-        newy += sinAy;
-    } else if (_ysin1 == 3) {
-        newy += sinBx;
-    } else if (_ysin1 == 4) {
-        newy += sinBy;
-    }
-
-    if (_xsin2 == 1) {
-        newx += (sinAx * sinAx);
-    } else if (_xsin2 == 2) {
-        newx += (sinAy * sinAy);
-    } else if (_xsin2 == 3) {
-        newx += (sinBx * sinBx);
-    } else if (_xsin2 == 4) {
-        newx += (sinBy * sinBy);
-    }
-    if (_ysin2 == 1) {
-        newy += (sinAx * sinAx);
-    } else if (_ysin2 == 2) {
-        newy += (sinAy * sinAy);
-    } else if (_ysin2 == 3) {
-        newy += (sinBx * sinBx);
-    } else if (_ysin2 == 4) {
-        newy += (sinBy * sinBy);
-    }
-
-    if (_xsin3 == 1) {
-        newx += (sinAx * sinAx * sinAx);
-    } else if (_xsin3 == 2) {
-        newx += (sinAy * sinAy * sinAy);
-    } else if (_xsin3 == 3) {
-        newx += (sinBx * sinBx * sinBx);
-    } else if (_xsin3 == 4) {
-        newx += (sinBy * sinBy * sinBy);
-    }
-    if (_ysin3 == 1) {
-        newy += (sinAx * sinAx * sinAx);
-    } else if (_ysin3 == 2) {
-        newy += (sinAy * sinAy * sinAy);
-    } else if (_ysin3 == 3) {
-        newy += (sinBx * sinBx * sinBx);
-    } else if (_ysin3 == 4) {
-        newy += (sinBy * sinBy * sinBy);
-    }
-
-    _x = width / 3 + (newx * width/6);
-    _y = height / 3 + (newy * height/6);
-}
+$('#close_btn').click(function () {
+   $('.nav-menu').hide();
+});
 
 /***********************design page的逻辑****************************/
 
@@ -226,6 +99,7 @@ $('.fotos_hs').hover(function(){
         $('.foto_hs2').hide();
         $('.foto_hs3').hide();
         // $('.foto_hs1').show();
+        console.log("team number effect1 shows");
     }else if((times%3)==2){
         $('.foto_hs1').hide();
         $('.foto_hs2').show();
@@ -341,7 +215,7 @@ $('#tlfqr').click(function(){
 
 // window.refreshObj=new Object();
 
-var card='<li id="card%data1%" class="work-col "><div class="paper paper-work"><img class="card-img" src="%data2%"/><div class="work-title"><h4><span>%data3%</span></h4></div></div></li>'
+var card='<li id="card%data1%" class="work-col "><div class="paper paper-work"><img class="card-img" src="%data2%"/><div class="work-title"><h4><span>%data3%</span></h4>   <div class="icon"><img src="img/icon_thumb.png">1111 <img src="img/icon_eye.png">110</div> </div></div></li>';
 
 function EventObj(dataSet) {
     this.dataSet=dataSet;
@@ -350,7 +224,8 @@ function EventObj(dataSet) {
 EventObj.prototype={
     constructor:EventObj,
     initNum:20,
-    card:'<li id="card%data1%" class="work-col "><div class="paper paper-work"><img class="card-img" src="%data2%"/><div class="work-title"><h4><span>%data3%</span></h4></div></div></li>',
+    // card:'<li id="card%data1%" class="work-col "><div class="paper paper-work"><img class="card-img" src="%data2%"/><div class="work-title"><h4><span>%data3%</span></h4>  <div class="icon"><img src="img/icon_thumb.png">1111 <img src="img/icon_eye.png">110</div> </div></div></li>',
+    card:card,
     getDataset:function () {
         return this.dataSet;
     },
