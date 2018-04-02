@@ -84,7 +84,7 @@
     </div>
 </div>
 
-<div class="main-pc list-work" id="designDetailWork">
+<div class="main-pc list-work article-detail" id="designDetailWork">
 
     <ul id="designDetailTag" class="list-btn">
         <!--<li><a href="#">#<span class="Tag">0</span>#</a></li>-->
@@ -108,7 +108,7 @@
 <script src="js/main.js"></script>
 <script>
     //引入数据
-    var designDetails='<div class="paper paperRoute design-detail"><div class="design-detail-title"><h1>%title%</h1> <img style="width:100%;margin-top: 3rem;" src="%work%"/> <div class="design-detail-desc"><h2>%desc%</h2></div> </div>';
+    var designDetails='<div class="paper paperRoute richmedia-detail"><div class="richmedia-detail-header"><h1 class="richmedia-detail-title">%title%</h1></div> <div class="richmedia-detail-article"><img class="richmedia-detail-img" src="%work%"/> <p class="richmedia-detail-desc">%desc%</p></div> ';
     var designTag='<li><a href="#"><span class="Tag">%data%</span></a></li>';
     window.onload=function(){
         var title=localStorage.getItem('design-title');

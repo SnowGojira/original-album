@@ -103,7 +103,9 @@
     }
 
 
-
+    .project-status{
+        float: left;
+    }
 
 
     .nav-pc{
@@ -114,7 +116,7 @@
 
 
     .nav-search {
-        opacity: 0;
+
     }
     .nav-pc_logo{
         position: absolute;
@@ -336,5 +338,53 @@
         background-size: 17rem;
         background-position: 50% 100%;
         background-repeat: no-repeat;
+    }
+
+    /*article detail page*/
+
+
+    .richmedia-detail{
+        margin-top:2rem;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+        line-height: 2.0;
+        font-family: PingFang SC Regular,Microsoft YaHei,Hiragino Sans GB,"微软雅黑 Light","Arial Narrow",WenQuanYi Micro Hei,Arial,sans-serif;
+        letter-spacing: 1px;
+
+    }
+    .richmedia-detail-title{
+        font-size:1.6rem;
+        font-weight: bold;
+        line-height: 1.6;
+
+    }
+
+    .richmedia-detail-header{
+        padding:0 1rem;
+    }
+
+    .richmedia-detail-sub{
+        margin:1.3rem 1rem;
+        border-left: 4px solid #97ddfc;
+        font-size: 1.3rem;
+    }
+
+    .richmedia-detail-desc{
+        margin: auto 1rem;
+        font-size: 0.9rem;
+    }
+
+    .richmedia-detail-href{
+        margin: auto 1rem;
+        font-size: 0.9rem;
+    }
+    .richmedia-detail-share{
+        margin: 3rem 1rem 0 1rem;
+    }
+    .richmedia-detail-share  img{
+        width:3rem;
+        height: 3rem;
+        margin-left: 0.4rem;
     }
 }

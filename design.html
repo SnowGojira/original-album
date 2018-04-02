@@ -105,14 +105,41 @@
 
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/isotope.pkgd.min.js"></script>
+<script src="js/API.js"></script>
 <script src="js/objs.js"></script>
 <script src="js/main.js"></script>
+
 <script>
 
     window.onload=function () {
+
+        /*实验ajax*/
+        getURL();
+
         Reset(designSet);
     };
-        ///////////////////////////////////
+
+    function getURL() {
+        console.log("designURL"+designURL);
+        $.ajax({
+            type : "GET",
+            url : designURL,
+            data : {},//数据，这里使用的是Json格式进行传输
+            success : function(result) {//返回数据根据结果进行相应的处理
+                if ( result.success ) {
+                    console.log("数据成功:"+result);
+                } else {
+                    console.log("数据取得失败"+result);
+
+                }
+            },
+        });
+    }
+
+
+
+
+    /////////////////////////////////
     var filters = {};
 
     $('.list-filter').on( 'click', '.list-filter-item', function() {
