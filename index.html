@@ -13,6 +13,8 @@
     <title>原画册</title>
 
     <!--引用样式部分-->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/reset.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
@@ -156,8 +158,8 @@
     <ul class="list-btn">
         <li><a href="#">#<span class="Result">0</span>个结果#</a></li>
     </ul>
-    <ul class="list-event resultItem">
 
+    <ul class="list-event resultItem">
 
     </ul>
 
@@ -181,7 +183,7 @@
 <script src="js/logoEffects.js"></script>
 <script src="js/main.js"></script>
 <script>
-
+    /*滑动显示隐藏筛选选项*/
     function header(){
         var headerEmt = $('.index-search');
         var headerCan = $('#canvasHolder');
@@ -201,19 +203,20 @@
     }
     header();
 
-//    var card='<li id="card%data1%" class="work-col "><div class="paper paper-work"><img class="card-img" src="%data2%"/><div class="work-title"><h4><span>%data3%</span></h4></div></div></li>'
+
+    /*假数据加载*/
     var AllEvent=new EventObj(allSet);
     var photoEvent=new EventObj(photoSet);
     var designEvent=new EventObj(designSet);
     var eveEvent=new EventObj(eventSet);
     window.onload=function () {
 
-
     };
-
 
     AllEvent.reset();
 
+
+    /*数据的假性选择*/
     $('#allSet').click(function () {
         AllEvent.reset();
     });

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="text"></div>
+
+
+</body>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/axios.min.js"></script>
+<script src="js/isotope.pkgd.min.js"></script>
+<script src="js/API.js"></script>
+<script src="js/objs.js"></script>
+<script src="js/main.js"></script>
+<script>
+    var URL="http://120.77.83.209:8800/api/category/list";
+    var URL1="https://lj7jdv5khk.execute-api.ap-southeast-1.amazonaws.com/staging/designs";
+
+   /* $.getJSON(URL1,function (data) {
+        console.log(data);
+        $("#text").text(data);
+    })*/
+
+    axios.get(URL)
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+</script>
+</html>

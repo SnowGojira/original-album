@@ -14,6 +14,8 @@
     <title>原画册</title>
 
     <!--引用样式部分-->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/reset.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
@@ -114,26 +116,29 @@
     window.onload=function () {
 
         /*实验ajax*/
-        getURL();
+
+        var URL="http://120.77.83.209:8800/api/category/list";
+//        getURL(URL);
+        /*$.ajax({
+            type : "GET",
+            url : URL,
+            data : {},//数据，这里使用的是Json格式进行传输
+            success : function(result) {//返回数据根据结果进行相应的处理
+//                designJson=result.payload;
+                console.log(result);
+//                Reset(designJson);
+            },
+        });*/
+
 
         Reset(designSet);
     };
 
-    function getURL() {
-        console.log("designURL"+designURL);
-        $.ajax({
-            type : "GET",
-            url : designURL,
-            data : {},//数据，这里使用的是Json格式进行传输
-            success : function(result) {//返回数据根据结果进行相应的处理
-                if ( result.success ) {
-                    console.log("数据成功:"+result);
-                } else {
-                    console.log("数据取得失败"+result);
-
-                }
-            },
-        });
+    function getURL(url) {
+        console.log(url);
+        $.getJSON(url,function (data) {
+            console.log("返回结果:"+data);
+        })
     }
 
 
@@ -180,9 +185,11 @@
 
         gotoDesignDetail();
     }
-    function Replace(data1,data2,data3){
-        $('.resultItem').append(card.replace("%data1%",data1).replace("%data2%",data2).replace("%data3%",data3));
+    function Replace(id,img,title){
+        $('.resultItem').append(card.replace("%data_id%",id).replace("%data_img%",img).replace("%data_title%",title));
     }
+
+
     function gotoDesignDetail() {
 
         $("[id^=card]").click( function () {

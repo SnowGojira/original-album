@@ -2,17 +2,11 @@
  * Created by hakuh on 2017/9/8.
  */
 
-/***********************menu的逻辑****************************/
-$('#menu_btn').click(function () {
-   $('.nav-menu').show();
-});
 
-$('#close_btn').click(function () {
-   $('.nav-menu').hide();
-});
-
-/***********************design page的逻辑****************************/
-
+/**
+ * PC页面的互动逻辑
+ **/
+/**********************搜索筛选Bar逻辑****************************/
 
 //search bar 的hover逻辑
 $('#listTag').hover(function () {
@@ -74,7 +68,7 @@ $('.catalog-list-item').click(function () {
     $('#listCatalog').text(textValue);
 });
 
-/***********************team page的逻辑****************************/
+/***********************follow逻辑****************************/
 $('#follow-open').click(function () {
     $('.nav-pc-follow').show();
     $('.main-pc').css("padding-top","300px");
@@ -85,6 +79,8 @@ $('#follow-close').click(function () {
     $('.main-pc').css("padding-top","144px");
 });
 
+
+/***********************team介绍逻辑****************************/
 var     times=1;
 function countTimes(){
     times++;
@@ -214,13 +210,28 @@ $('#tlfqr').click(function(){
 
 
 
+/**
+ * 移动端页面的互动逻辑
+ **/
+/***********************移动端menu的逻辑****************************/
+$('#menu_btn').click(function () {
+    $('.nav-menu').show();
+});
 
+$('#close_btn').click(function () {
+    $('.nav-menu').hide();
+});
+
+
+/**
+ * 网页数据加载逻辑
+ **/
 /*******************下拉刷新的逻辑重新整理********************/
 
 // window.refreshObj=new Object();
 
-var card='<li id="card%data1%" class="work-col "> <div class="paper paper-work"> <img class="card-img" src="%data2%"/>'+
-    '<div class="work-title"> <h4><span>%data3%</span></h4> </div> <div class="project-status"> <span class="project-status-sep">'+
+var card='<li id="card%data_id%" class="work-col "> <div class="paper paper-work"> <img class="card-img" src="%data_img%" />'+
+    '<div class="work-title"> <h4><span>%data_title%</span></h4> </div> <div class="project-status"> <span class="project-status-sep">'+
     '<svg class="project-icon project-icon-appreciate" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0.5 0.5 16 16">'+
     '<path fill="none" d="M.5.5h16v16H.5z"></path>'+
     '<path d="M.5 7.5h3v8h-3zM7.207 15.207c.193.19.425.29.677.293H12c.256 0 .512-.098.707-.293l2.5-2.5c.19-.19.288-.457.293-.707V8.5c0-.553-.445-1-1-1h-5L11 5s.5-.792.5-1.5v-1c0-.553-.447-1-1-1l-1 2-4 4v6l1.707 1.707z"></path></svg>'+
@@ -277,7 +288,7 @@ EventObj.prototype={
         if(dataSet[0]!=null){
             for(var j=0;j<=initNum;j++){
                 if(dataSet[j]!=null){
-                    $('.resultItem').append(this.card.replace("%data1%",dataSet[j].id).replace("%data2%",dataSet[j].ava).replace("%data3%",dataSet[j].title));
+                    $('.resultItem').append(this.card.replace("%data_id%",dataSet[j].id).replace("%data_img%",dataSet[j].ava).replace("%data_title%",dataSet[j].title));
                     for(var m=0;m<dataSet[j].tag.length;m++){
                         $('#card'+j).addClass(dataSet[j].tag[m]);
                     }
@@ -339,7 +350,7 @@ EventObj.prototype={
                                 initNum=initNum+1;
                                 if(dataSet[initNum] != null){
                                     console.log('initNum Step:'+initNum);
-                                    $('.resultItem').append(this.card.replace("%data1%",dataSet[initNum].id).replace("%data2%",dataSet[initNum].ava).replace("%data3%",dataSet[initNum].title));
+                                    $('.resultItem').append(this.card.replace("%data_id%",dataSet[initNum].id).replace("%data_img%",dataSet[initNum].ava).replace("%data_title%",dataSet[initNum].title));
                                     for(var m=0;m<dataSet[initNum].tag.length;m++){
                                         $('#card'+initNum).addClass(dataSet[initNum].tag[m]);
                                     }
@@ -428,3 +439,9 @@ EventObj.prototype={
         });
     }
 };
+
+
+
+
+
+

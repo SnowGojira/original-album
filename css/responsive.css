@@ -3,7 +3,7 @@
         clear: both;
         position: relative;
         width: 95%;
-        padding: 72px 0 0;
+        /*padding: 72px 0 0;*/
         margin-left: auto;
         margin-right: auto;
     }
@@ -116,7 +116,12 @@
 
 
     .nav-search {
-
+        /*display: -webkit-box;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling:touch;*/
+    }
+    .nav-main_inner{
+        width: 90%;
     }
     .nav-pc_logo{
         position: absolute;
@@ -364,6 +369,20 @@
         padding:0 1rem;
     }
 
+    .richmedia-detail-data{
+        font-size: 0.8rem;
+        margin-bottom: 1.5rem;
+
+    }
+
+    .like_button{
+        height: 1.5rem;
+        padding: 0 0.9rem 0 0.9rem;
+        margin-right: 1.2rem;
+    }
+
+
+
     .richmedia-detail-sub{
         margin:1.3rem 1rem;
         border-left: 4px solid #97ddfc;
@@ -382,9 +401,32 @@
     .richmedia-detail-share{
         margin: 3rem 1rem 0 1rem;
     }
-    .richmedia-detail-share  img{
-        width:3rem;
-        height: 3rem;
-        margin-left: 0.4rem;
+    .rds_item{
+        width:2rem;
+        height: 2rem;
     }
+
+    .product-gallery .product-photo-main .swiper-container {
+        height: 40vh;
+        /*width: 100%;*/
+    }
+
+    .photo-detail{
+        margin-top:4rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        /*text-align: center;*/
+
+    }
+
+    .work-title{
+        font-size: 0.8rem;
+    }
+
+    .list-breadcrumb-Item{
+        font-family: PingFang SC Regular,Microsoft YaHei,Hiragino Sans GB,"微软雅黑 Light","Arial Narrow",WenQuanYi Micro Hei,Arial,sans-serif;
+        font-size: 0.8rem;
+        padding-right: 20px;
+    }
+
 }
