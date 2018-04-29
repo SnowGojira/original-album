@@ -244,10 +244,6 @@ function CardObj(url){
 CardObj.prototype ={
     card:card,
     pageIndex:1,
-    setURL:function (url) {
-        this.url=url;
-        return this.url
-    },
     getJsonData:function (index) {
         return getJsonData(this.url,index);
     },
@@ -285,7 +281,7 @@ CardObj.prototype ={
         var totalPage=Math.ceil(count/pageSize);
         console.log(totalPage);
 
-        AppendCard(Url,index);
+        AppendCard(Url,index,resultItem);
 
         $(window).scroll(function(){
             var srollPos = $(window).scrollTop();    //滚动条距顶部距离(页面超出窗口的高度)
@@ -297,7 +293,41 @@ CardObj.prototype ={
 
                 if (index<totalPage){
                     index++;
-                     AppendCard(Url,index);
+                     AppendCard(Url,index,resultItem);
+                }else{
+                    $('.loading').css("opacity", 0);
+                    $('#endHint').show();
+                }
+
+            }
+        });
+
+    },
+    result:function () {
+        var count=this.getCount();
+        var index=1;
+        var totalheight = 0;
+        var Url=this.url;
+        console.log(Url);
+
+        var range = 0;             //距下边界长度/单位px
+
+        var totalPage=Math.ceil(count/pageSize);
+        console.log(totalPage);
+
+        AppendCard(Url,index,returnResultItem);
+
+        $(window).scroll(function(){
+            var srollPos = $(window).scrollTop();    //滚动条距顶部距离(页面超出窗口的高度)
+
+
+            totalheight = parseFloat($(window).height()) + parseFloat(srollPos);
+            if(($(document).height()-range)*0.95 <= totalheight ) {
+                console.log('reach bottom');
+
+                if (index<totalPage){
+                    index++;
+                    AppendCard(Url,index,returnResultItem);
                 }else{
                     $('.loading').css("opacity", 0);
                     $('#endHint').show();
@@ -331,17 +361,19 @@ getJsonData=function (url,index) {
     return data;
 };
 
-ReplaceCard=function (card,obj) {
+var resultItem=$('.resultItem');
+var returnResultItem=$('.returnResultItem');
+ReplaceCard=function (card,obj,root) {
     console.log("card有没有执行？");
-    $('.resultItem').append(card.replace("%data_id%",obj.id).replace("%data_img%",obj.cover).replace("%data_title%",obj.title).replace("%data_likes%",obj.likes).replace("%data_views%",obj.views));
+    root.append(card.replace("%data_id%",obj.id).replace("%data_img%",obj.cover).replace("%data_title%",obj.title).replace("%data_likes%",obj.likes).replace("%data_views%",obj.views));
 };
-AppendCard=function (url,index) {
+AppendCard=function (url,index,root) {
     var dataSet = getJsonData(url,index);
     console.log(dataSet);
     if (dataSet[0] != null) {
         for (var j = 0; j < dataSet.length; j++) {
             if (dataSet[j] != null) {
-                ReplaceCard(this.card, dataSet[j]);
+                ReplaceCard(this.card, dataSet[j],root);
 
             } else {
                 console.log("#load opacity = 0");

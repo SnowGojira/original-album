@@ -100,6 +100,10 @@
 
 
     </ul>
+    <ul class="list-event returnResultItem">
+
+
+    </ul>
 
     <div class="loading">
         <svg id="load" x="0px" y="0px" viewBox="0 0 150 150"> <circle id="loading-inner" cx="75" cy="75" r="60"/> </svg>
@@ -135,41 +139,29 @@
 
     };
     ///////////////////////////////////
-//    PhotoEvent.reset();
 
-    var URL=localStorage.getItem('photo_result');
-    console.log(URL);
-    if (URL != null){
 
-        var PhotoEvent=new CardObj(URL);
-        PhotoEvent.build();
-
-    }else{
-        var PhotoEvent=new CardObj(photoURL);
-        PhotoEvent.build();
-    }
+    var PhotoEvent=new CardObj(photoURL);
+    PhotoEvent.build();
 
     var tagId;
     $('.tag-item').click(function () {
-        $('.resultItem').remove();
-
-        location.replace(location.href);
+        $('.work-col').remove();
 
         tagId=parseInt($(this).attr("id"));
-        console.log("photo:"+tagId);
-        if(tagId != null){
-            localStorage.setItem('photo_result', photoURL+'&tag='+tagId);
-//            URL=photoURL+'&tag='+tagId;
 
-        }else{
-            localStorage.setItem('photo_result', photoURL);
-//            URL=photoURL;
-        }
+            if(tagId != null){
+                var PhotoEvent=new CardObj(photoURL+'&tag='+tagId);
+                PhotoEvent.build();
+
+            }else{
+                var PhotoEvent=new CardObj(photoURL);
+                PhotoEvent.build();
+
+            }
 
     });
-    $('.menu-nav-item').click(function () {
-        localStorage.removeItem('photo_result');
-    });
+
 
    /* PhotoEvent.filterItem();
     $('#tagAll').click(function(){
