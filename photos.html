@@ -117,6 +117,7 @@
 <!--脚本文件-->
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/isotope.pkgd.min.js"></script>
+<script src="js/jquery.lazyload.js?v=1.9.1"></script>
 
 <script src="js/API.js"></script>
 <script src="js/lazyLoad.js"></script>
@@ -125,11 +126,7 @@
 
 <!--补偿脚本-->
 <script>
-//    var card='<li id="card%data1%" class="work-col "><div class="paper paper-work"><img class="card-img" src="%data2%"/><div class="work-title"><h4><span>%data3%</span></h4></div></div></li>';
 
-
-
-//    var PhotoEvent=new EventObj(photoSet);
 
     var TagEvent=new TagObj(allTagURL);
         TagEvent.build();
@@ -146,27 +143,24 @@
 
     var tagId;
     $('.tag-item').click(function () {
-        $('.work-col').remove();
 
         tagId=parseInt($(this).attr("id"));
+        setResult('tag',tagId);
 
-            if(tagId != null){
-                var PhotoEvent=new CardObj(photoURL+'&tag='+tagId);
-                PhotoEvent.build();
-
-            }else{
-                var PhotoEvent=new CardObj(photoURL);
-                PhotoEvent.build();
-
-            }
 
     });
 
+    function setResult(type,tagId){
+        $('.work-col').remove();
+        if(tagId != null){
+            var PhotoEvent=new CardObj(photoURL+'&'+type+'='+tagId);
+            PhotoEvent.build();
 
-   /* PhotoEvent.filterItem();
-    $('#tagAll').click(function(){
-        document.location.reload();
-    });*/
+        }else{
+            var PhotoEvent=new CardObj(photoURL);
+            PhotoEvent.build();
+        }
+    }
 
 
 

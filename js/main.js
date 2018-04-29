@@ -225,9 +225,10 @@ $('#close_btn').click(function () {
 
 // window.refreshObj=new Object();
 //reversion <img class="card-img" src="%data_img%" />
+
 //reversion <img class="card-img lazyload" src="img/loader.gif" data-img="%data_img%x-oss-process=image/resize,m_fill,w_497,h_328,limit_0/auto-orient,0/quality,q_90" alt="原画册"/>
 
-var card='<li id="card%data_id%" class="work-col "> <div class="paper paper-work"> <img class="card-img lazyload" src="img/loader.gif" data-img="%data_img%?x-oss-process=image/resize,m_fill,w_497,h_328,limit_0/auto-orient,0/quality,q_90" alt="原画册"/>'+
+var card='<li id="card%data_id%" class="work-col "> <div class="paper paper-work"> <img class="card-img lazy" data-original="%data_img%?x-oss-process=image/resize,m_fill,w_497,h_328,limit_0/auto-orient,0/quality,q_90" alt="原画册"/>'+
     '<div class="work-title">%data_title%</div> <div class="project-status"> <span class="project-status-sep">'+
     '<svg class="project-icon project-icon-appreciate" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0.5 0.5 16 16"> <path fill="none" d="M.5.5h16v16H.5z"></path> <path d="M.5 7.5h3v8h-3zM7.207 15.207c.193.19.425.29.677.293H12c.256 0 .512-.098.707-.293l2.5-2.5c.19-.19.288-.457.293-.707V8.5c0-.553-.445-1-1-1h-5L11 5s.5-.792.5-1.5v-1c0-.553-.447-1-1-1l-1 2-4 4v6l1.707 1.707z"></path></svg>'+
     '<span class="project-status-number likes">%data_likes%</span> </span>'+
@@ -385,6 +386,10 @@ AppendCard=function (url,index,root) {
         console.log("#load opacity = 0");
         $('.loading').css("opacity", 0);
     }
+
+    $(function() {
+        $("img.lazy").lazyload({effect: "fadeIn"});
+    });
 };
 
 
