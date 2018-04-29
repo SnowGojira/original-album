@@ -135,8 +135,8 @@
     };
     ///////////////////////////////////
 //    PhotoEvent.reset();
-
-    var PhotoEvent=new CardObj(photoURL);
+    var URL=localStorage.getItem('photo_result');
+    var PhotoEvent=new CardObj(URL);
     PhotoEvent.build();
 
 

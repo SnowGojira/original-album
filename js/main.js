@@ -281,14 +281,11 @@ CardObj.prototype ={
         var totalPage=Math.ceil(count/pageSize);
         console.log(totalPage);
 
-        Append(Url,index);
+        AppendCard(Url,index);
 
         $(window).scroll(function(){
             var srollPos = $(window).scrollTop();    //滚动条距顶部距离(页面超出窗口的高度)
 
-            console.log("滚动条到顶部的垂直高度: "+$(document).scrollTop());
-            console.log("页面的文档高度 ："+$(document).height());
-            console.log('浏览器的高度：'+$(window).height());
 
             totalheight = parseFloat($(window).height()) + parseFloat(srollPos);
             if(($(document).height()-range)*0.95 <= totalheight ) {
@@ -296,7 +293,7 @@ CardObj.prototype ={
 
                 if (index<totalPage){
                     index++;
-                     Append(Url,index);
+                     AppendCard(Url,index);
                 }else{
                     $('.loading').css("opacity", 0);
                     $('#endHint').show();
@@ -305,9 +302,8 @@ CardObj.prototype ={
             }
         });
 
-
-
     }
+
 };
 
 /*生成卡片逻辑*/
@@ -331,15 +327,18 @@ getJsonData=function (url,index) {
     return data;
 };
 
-Replace=function (card,obj) {
+ReplaceCard=function (card,obj) {
+    console.log("card有没有执行？");
     $('.resultItem').append(card.replace("%data_id%",obj.id).replace("%data_img%",obj.cover).replace("%data_title%",obj.title).replace("%data_likes%",obj.likes).replace("%data_views%",obj.views));
 };
-Append=function (url,index) {
+AppendCard=function (url,index) {
     var dataSet = getJsonData(url,index);
+    console.log(dataSet);
     if (dataSet[0] != null) {
-        for (var j = 0; j <= dataSet.length; j++) {
+        for (var j = 0; j < dataSet.length; j++) {
             if (dataSet[j] != null) {
-                Replace(this.card, dataSet[j]);
+                ReplaceCard(this.card, dataSet[j]);
+
             } else {
                 console.log("#load opacity = 0");
                 $('.loading').css("opacity", 0);
@@ -401,7 +400,6 @@ AppendTag=function (url) {
 
     if (dataSet[0] != null) {
         for (var j = 0; j < dataSet.length; j++) {
-            console.log(dataSet[j]);
             if (dataSet[j] != null) {
                 ReplaceTag(this.tag, dataSet[j]);
             } else {
@@ -428,7 +426,6 @@ ClickTag=function (type) {
     $('.'+type+'-item').click(function () {
         filter_tag.hide();
         var textValue=$(this).data('value');
-        console.log(textValue);
         $('#list_'+type).text(textValue);
     });
 

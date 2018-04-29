@@ -213,10 +213,7 @@
 
 
     /*假数据加载*/
-    var AllEvent=new EventObj(allSet);
-    var photoEvent=new EventObj(photoSet);
-    var designEvent=new EventObj(designSet);
-    var eveEvent=new EventObj(eventSet);
+
 
 
     var  AllEvent=new CardObj(allURL);
@@ -233,27 +230,6 @@
 
 
 
-    /*数据的假性选择*/
-    $('#allSet').click(function () {
-        AllEvent.reset();
-    });
-
-    $('#photoSet').click(function(){
-        photoEvent.reset();
-    });
-
-    $('#designSet').click(function () {
-        designEvent.reset();
-    });
-
-    $('#eventSet').click(function () {
-        eveEvent.reset();
-    });
-    AllEvent.filterItem();
-
-    $('#tagAll').click(function(){
-        document.location.reload();
-    });
 
 
 </script>
