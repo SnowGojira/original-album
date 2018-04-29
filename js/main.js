@@ -26,10 +26,10 @@ $('#listTag').hover(function () {
 });
 
 $('#listYear').hover(function () {
-    $('.overlay-filter-tag').hide();
-    $('.overlay-filter-catalog').hide();
-    $('.overlay-filter-year').show();
-    $('.overlay-filter-year').hover(function(){
+    filter_tag.hide();
+    filter_catalog.hide();
+    filter_year.show();
+    filter_year.hover(function(){
         $(this).show();
     },function () {
         $(this).hide();
@@ -39,11 +39,11 @@ $('#listYear').hover(function () {
 });
 
 $('#listCatalog').hover(function () {
-    $('.overlay-filter-tag').hide();
-    $('.overlay-filter-year').hide();
+    filter_tag.hide();
+    filter_year.hide();
 
-    $('.overlay-filter-catalog').show();
-    $('.overlay-filter-catalog').hover(function(){
+    filter_catalog.show();
+    filter_catalog.hover(function(){
         $(this).show();
     },function () {
         $(this).hide();
@@ -54,19 +54,19 @@ $('#listCatalog').hover(function () {
 
 //search bar 的点选逻辑
 $('.tag-item').click(function () {
-    $('.overlay-filter-tag').hide();
+    filter_tag.hide();
     var textValue=$(this).data('value');
     $('#listTag').text(textValue);
 });
 
 $('.year-item').click(function () {
-    $('.overlay-filter-year').hide();
+    filter_year.hide();
     var textValue=$(this).data('value');
     $('#listYear').text(textValue);
 });
 
 $('.catalog-list-item').click(function () {
-    $('.overlay-filter-catalog').hide();
+    filter_catalog.hide();
     var textValue=$(this).data('value');
     $('#listCatalog').text(textValue);
 });
@@ -232,10 +232,8 @@ $('#close_btn').click(function () {
 /*******************下拉刷新的逻辑重新整理********************/
 
 // window.refreshObj=new Object();
-
-    //reversion <img class="card-img" src="%data_img%" />
-    //reversion <img class="card-img lazyload" src="img/loader.gif" data-img="%data_img%x-oss-process=image/resize,m_fill,w_497,h_328,limit_0/auto-orient,0/quality,q_90" alt="原画册"/>
-    var coverResize='%data_img%?x-oss-process=image/resize,m_fill,w_497,h_328,limit_0/auto-orient,0/quality,q_90'
+//reversion <img class="card-img" src="%data_img%" />
+//reversion <img class="card-img lazyload" src="img/loader.gif" data-img="%data_img%x-oss-process=image/resize,m_fill,w_497,h_328,limit_0/auto-orient,0/quality,q_90" alt="原画册"/>
 
 var card='<li id="card%data_id%" class="work-col "> <div class="paper paper-work"> <img class="card-img lazyload" src="img/loader.gif" data-img="%data_img%?x-oss-process=image/resize,m_fill,w_497,h_328,limit_0/auto-orient,0/quality,q_90" alt="原画册"/>'+
     '<div class="work-title">%data_title%</div> <div class="project-status"> <span class="project-status-sep">'+
@@ -472,7 +470,7 @@ CardObj.prototype ={
                 $('.Result').text(count);
             })
             .fail(function(err) {
-                console.log("error");
+                console.log("error"+err);
             })
             .always(function() {
             });
@@ -529,19 +527,20 @@ getJsonData=function (url,index) {
         type : "GET",
         async:false,//返回值的问题。
         url : url+'&pageSize='+pageSize+'&pageIndex='+index,
-        data : {},//数据，这里使用的是Json格式进行传输
+        data : {}//数据，这里使用的是Json格式进行传输
     })
         .done(function (result) {
             data=result.data;
         })
         .fail(function(err) {
-            console.log("error");
+            console.log("error:"+err);
         })
         .always(function() {
         });
 
     return data;
-},
+};
+
 Replace=function (card,obj) {
     $('.resultItem').append(card.replace("%data_id%",obj.id).replace("%data_img%",obj.cover).replace("%data_title%",obj.title).replace("%data_likes%",obj.likes).replace("%data_views%",obj.views));
 };
@@ -630,7 +629,7 @@ scrollDownRefresh=function (dataSet,count){
 
     });
 
-},
+};
 
 
 
