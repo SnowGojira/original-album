@@ -73,7 +73,7 @@
     <div class="nav-pc nav-search">
         <div class="nav-main_inner">
             <ul class="listSelect only-pc">
-                <li id="list_tag" class="listSelectItem">全部标签</li>
+                <li id="list_tag" class="listSelectItem">全部项目</li>
                 <li class="overlay overlay-filter-tag">
                     <ul class="list-filter filter-tag" data-filter-group="tag">
 
@@ -116,12 +116,9 @@
 
 <!--脚本文件-->
 <script src="js/jquery-3.2.1.min.js"></script>
-<script src="js/isotope.pkgd.min.js"></script>
 <script src="js/jquery.lazyload.js?v=1.9.1"></script>
 
 <script src="js/API.js"></script>
-<script src="js/lazyLoad.js"></script>
-<script src="js/objs.js"></script>
 <script src="js/main.js"></script>
 
 <!--补偿脚本-->
@@ -131,13 +128,6 @@
     var TagEvent=new TagObj(allTagURL);
         TagEvent.build();
 
-    window.onload=function () {
-        $.imgLazyLoad();
-
-    };
-    ///////////////////////////////////
-
-
     var PhotoEvent=new CardObj(photoURL);
     PhotoEvent.build();
 
@@ -146,18 +136,26 @@
 
         tagId=parseInt($(this).attr("id"));
         setResult('tag',tagId);
+        $('#list_year').text('全部年份');
 
+    });
+
+    $('.year-item').click(function () {
+
+        tagId=parseInt($(this).attr("id"));
+        setResult('time',tagId);
+        $('#list_tag').text('全部项目');
 
     });
 
     function setResult(type,tagId){
         $('.work-col').remove();
         if(tagId != null){
-            var PhotoEvent=new CardObj(photoURL+'&'+type+'='+tagId);
+            PhotoEvent=new CardObj(photoURL+'&'+type+'='+tagId);
             PhotoEvent.build();
 
         }else{
-            var PhotoEvent=new CardObj(photoURL);
+            PhotoEvent=new CardObj(photoURL);
             PhotoEvent.build();
         }
     }

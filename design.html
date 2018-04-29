@@ -21,11 +21,6 @@
     <link href="css/main.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
 
-    <!--引用库-->
-
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/isotope.pkgd.min.js"></script>
-
 </head>
 <body>
 <div class="nav-header">
@@ -76,93 +71,98 @@
     </div>
     <div id="searchIndex" class="nav-pc nav-search">
         <div class="nav-main_inner">
-           <ul class="listSelect only-pc">
-               <li id="listTag" class="listSelectItem">全部标签</li>
-               <li class="overlay overlay-filter-tag" >
-                   <ul class="list-filter" data-filter-group="tag">
-                       <li id="tagAll" data-value="全部标签" data-filter="" class="list-filter-item tag-item">全部标签</li>
-                       <li id="tagCard" data-value="卡片计划" data-filter=".卡片计划" class="list-filter-item tag-item">卡片计划</li>
-                   </ul>
-               </li>
-               <li id="listYear" class="listSelectItem">全部年份</li>
-               <li class="overlay overlay-filter-year" >
-                   <ul class="list-filter" data-filter-group="year">
-                       <li id="yearAll" data-value="全部年份" data-filter="" class="list-filter-item year-item">全部年份</li>
-                       <li id="year2017" data-value="2017" data-filter=".2017" class="list-filter-item year-item">2017</li>
-                       <li id="year2016" data-value="2016" data-filter=".2016" class="list-filter-item year-item">2016</li>
-                       <li id="year2015" data-value="2015" data-filter=".2015" class="list-filter-item year-item">2015</li>
-                       <li id="year2013" data-value="2013" data-filter=".2013" class="list-filter-item year-item">2013</li>
-                   </ul>
-               </li>
-           </ul>
+
+            <ul class="listSelect only-pc">
+                <li id="list_tag" class="listSelectItem">全部项目</li>
+                <li class="overlay overlay-filter-tag">
+                    <ul class="list-filter filter-tag" data-filter-group="tag">
+
+                    </ul>
+                </li>
+                <li id="list_year" class="listSelectItem">全部年份</li>
+                <li class="overlay overlay-filter-year">
+                    <ul class="list-filter filter-year" data-filter-group="year">
+
+                    </ul>
+                </li>
+            </ul>
+
         </div>
     </div>
 </div>
 
-<div class="main-pc list-work">
+<div id="main" class="main-pc list-work">
     <ul class="list-btn">
         <li><a href="#">#<span class="Result">0</span>个结果#</a></li>
     </ul>
+
     <ul class="list-event resultItem">
 
 
     </ul>
+    <ul class="list-event returnResultItem">
+
+
+    </ul>
+
+    <div class="loading">
+        <svg id="load" x="0px" y="0px" viewBox="0 0 150 150"> <circle id="loading-inner" cx="75" cy="75" r="60"/> </svg>
+        <div class="main-design">Designed by Assemble</div>
+    </div>
+
+    <div id="endHint" style="display:none;margin-top: -14rem;" class="main-design">Completed</div>
 
 </div>
 
+<!--引用脚本-->
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery.lazyload.js?v=1.9.1"></script>
 
 <script src="js/API.js"></script>
-<script src="js/objs.js"></script>
-<script src="js/lazyLoad.js"></script>
 <script src="js/main.js"></script>
 
+<!--补偿脚本-->
 <script>
 
+
+
+    var TagEvent=new TagObj(allTagURL);
+    TagEvent.build();
+
     var DesignEvent=new CardObj(designURL);
-
-    window.onload=function () {
-        $.imgLazyLoad();
-
-    };
-
-    var obj=DesignEvent.getJsonData(1);
-    console.log(obj);
-
     DesignEvent.build();
 
+    var tagId;
+    $('.tag-item').click(function () {
 
-
-//    Reset(designSet);
-
-
-
-
-
-    /////////////////////////////////
-    var filters = {};
-
-    $('.list-filter').on( 'click', '.list-filter-item', function() {
-            var $this = $(this);
-            // get group key
-            var $buttonGroup = $this.parents('.list-filter');
-            var filterGroup = $buttonGroup.attr('data-filter-group');
-            // set filter for group
-            filters[ filterGroup ] = $this.attr('data-filter');
-            // combine filters
-            var filterValue = '';
-            for ( var prop in filters ) {
-                filterValue += filters[ prop ];
-            }
-            console.log(filterValue);
-            // set filter for Isotope
-            $('.resultItem').isotope({ filter:filterValue});
-            var $grid=$('.resultItem').isotope({ filter:filterValue});
-            var iso = $grid.data('isotope');
-            var num=iso.filteredItems.length;
-            $('.Result').text(num);
-//        console.log(num);
+        tagId=parseInt($(this).attr("id"));
+        setResult('tag',tagId);
+        $('#list_year').text('全部年份');
 
     });
+
+    $('.year-item').click(function () {
+
+        tagId=parseInt($(this).attr("id"));
+        setResult('time',tagId);
+        $('#list_tag').text('全部项目');
+
+    });
+
+    function setResult(type,tagId){
+        $('.work-col').remove();
+        if(tagId != null){
+            DesignEvent=new CardObj(designURL+'&'+type+'='+tagId);
+            DesignEvent.build();
+
+        }else{
+            DesignEvent=new CardObj(designURL);
+            DesignEvent.build();
+        }
+    }
+
+
+
 
 
         ///////////////////////////////////

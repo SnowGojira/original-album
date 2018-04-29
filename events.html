@@ -70,11 +70,22 @@
     </div>
     <div class="nav-pc nav-search">
         <div class="nav-main_inner">
-            <ul class="listSelect only-pc">
-                <li id="listTag" class="listSelectItem">全部标签</li>
-                <li id="listYear" class="listSelectItem">全部年份</li>
 
+            <ul class="listSelect only-pc">
+                <li id="list_tag" class="listSelectItem">全部项目</li>
+                <li class="overlay overlay-filter-tag">
+                    <ul class="list-filter filter-tag" data-filter-group="tag">
+
+                    </ul>
+                </li>
+                <li id="list_year" class="listSelectItem">全部年份</li>
+                <li class="overlay overlay-filter-year">
+                    <ul class="list-filter filter-year" data-filter-group="year">
+
+                    </ul>
+                </li>
             </ul>
+
         </div>
     </div>
 </div>
@@ -91,20 +102,51 @@
 </div>
 
 
+<!--引用脚本-->
 <script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery.lazyload.js?v=1.9.1"></script>
+
 <script src="js/API.js"></script>
-<script src="js/lazyLoad.js"></script>
 <script src="js/main.js"></script>
 
+<!--补偿脚本-->
+
 <script>
+
+    var TagEvent=new TagObj(allTagURL);
+    TagEvent.build();
+
     var EventsEvent=new CardObj(eventURL);
-
-    window.onload=function () {
-        $.imgLazyLoad();
-
-    };
-
     EventsEvent.build();
+
+    var tagId;
+    $('.tag-item').click(function () {
+
+        tagId=parseInt($(this).attr("id"));
+        setResult('tag',tagId);
+        $('#list_year').text('全部年份');
+
+    });
+
+    $('.year-item').click(function () {
+
+        tagId=parseInt($(this).attr("id"));
+        setResult('time',tagId);
+        $('#list_tag').text('全部项目');
+
+    });
+
+    function setResult(type,tagId){
+        $('.work-col').remove();
+        if(tagId != null){
+            EventsEvent=new CardObj(eventURL+'&'+type+'='+tagId);
+            EventsEvent.build();
+
+        }else{
+            EventsEvent=new CardObj(eventURL);
+            EventsEvent.build();
+        }
+    }
 
 </script>
 </body>

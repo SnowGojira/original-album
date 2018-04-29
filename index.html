@@ -108,35 +108,21 @@
     <!--搜索栏-->
     <div class="nav-pc nav-search index-search none-display">
         <div class="nav-main_inner">
-            <div class="listSelect only-pc">
-                <div id="listTag" class="listSelectItem">全部项目</div>
-                <div class="overlay overlay-filter-tag">
-                    <ul class="list-filter" data-filter-group="tag">
-                        <li data-value="全部标签" data-filter="" class="list-filter-item tag-item">全部标签</li>
-                        <li data-value="获奖作品" data-filter=".获奖作品" class="list-filter-item tag-item">获奖作品</li>
-                        <li data-value="场所标本" data-filter=".场所标本" class="list-filter-item tag-item">场所标本</li>
-                        <li data-value="对等空间" data-filter=".对等空间" class="list-filter-item tag-item">对等空间</li>
-                        <li data-value="二人世界" data-filter=".二人世界" class="list-filter-item tag-item">二人世界</li>
-                        <li data-value="卡片计划" data-filter=".卡片计划" class="list-filter-item tag-item">卡片计划</li>
-                        <li data-value="儿童" data-filter=".儿童" class="list-filter-item tag-item">儿童</li>
-                        <li data-value="人文" data-filter=".人文" class="list-filter-item tag-item">人文</li>
-                        <li data-value="建筑" data-filter=".建筑" class="list-filter-item tag-item">建筑</li>
-                        <li data-value="几何" data-filter=".几何" class="list-filter-item tag-item">几何</li>
+            <ul class="listSelect only-pc">
+                <li id="list_tag" class="listSelectItem">全部项目</li>
+                <li class="overlay overlay-filter-tag">
+                    <ul class="list-filter filter-tag" data-filter-group="tag">
 
                     </ul>
-                </div>
-                <div id="listYear" class="listSelectItem">全部年份</div>
-                <div class="overlay overlay-filter-year">
-                    <ul class="list-filter" data-filter-group="year">
-                        <li data-value="全部年份" data-filter="" class="list-filter-item year-item">全部年份</li>
-                        <li data-value="2017" data-filter=".2017" class="list-filter-item year-item">2017</li>
-                        <li data-value="2016" data-filter=".2016" class="list-filter-item year-item">2016</li>
-                        <li data-value="2015" data-filter=".2015" class="list-filter-item year-item">2015</li>
-                        <li data-value="2013" data-filter=".2013" class="list-filter-item year-item">2013</li>
+                </li>
+                <li id="list_year" class="listSelectItem">全部年份</li>
+                <li class="overlay overlay-filter-year">
+                    <ul class="list-filter filter-year" data-filter-group="year">
+
                     </ul>
-                </div>
-            </div>
-            <div class="listSelect only-pc">
+                </li>
+            </ul>
+            <!--<div class="listSelect only-pc">
                 <div id="listCatalog" class="listSelectItem">全部类别</div>
                 <div class="overlay overlay-filter-catalog">
                     <ul class="list-filter list-filter-center" data-filter-group="catalog">
@@ -146,7 +132,7 @@
                         <li id="eventSet" data-value="动态" data-filter=".动态" class="list-item catalog-list-item">动态</li>
                     </ul>
                 </div>
-            </div>
+            </div>-->
         </div>
     </div>
 </div>
@@ -181,12 +167,10 @@
 
 <!--脚本文件-->
 <script src="js/jquery-3.2.1.min.js"></script>
-<script src="js/isotope.pkgd.min.js"></script>
+<script src="js/jquery.lazyload.js?v=1.9.1"></script>
 
 <script src="js/API.js"></script>
-<script src="js/objs.js"></script>
 <script src="js/logoEffects.js"></script>
-<script src="js/lazyLoad.js"></script>
 <script src="js/main.js"></script>
 
 <!--补偿脚本-->
@@ -212,23 +196,44 @@
     header();
 
 
-    /*假数据加载*/
+    /*数据加载*/
 
 
 
-    var  AllEvent=new CardObj(allURL);
+    var TagEvent=new TagObj(allTagURL);
+    TagEvent.build();
 
-    window.onload=function () {
-        $.imgLazyLoad();
-
-    };
-
-    var obj=AllEvent.getJsonData(1);
-    console.log(obj);
-
+    var AllEvent=new CardObj(allURL);
     AllEvent.build();
 
+    var tagId;
+    $('.tag-item').click(function () {
 
+        tagId=parseInt($(this).attr("id"));
+        setResult('tag',tagId);
+        $('#list_year').text('全部年份');
+
+    });
+
+    $('.year-item').click(function () {
+
+        tagId=parseInt($(this).attr("id"));
+        setResult('time',tagId);
+        $('#list_tag').text('全部项目');
+
+    });
+
+    function setResult(type,tagId){
+        $('.work-col').remove();
+        if(tagId != null){
+            AllEvent=new CardObj(allURL+'&'+type+'='+tagId);
+            AllEvent.build();
+
+        }else{
+            AllEvent=new CardObj(allURL);
+            AllEvent.build();
+        }
+    }
 
 
 

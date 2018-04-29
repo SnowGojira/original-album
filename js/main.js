@@ -323,7 +323,7 @@ CardObj.prototype ={
 
 
             totalheight = parseFloat($(window).height()) + parseFloat(srollPos);
-            if(($(document).height()-range)*0.95 <= totalheight ) {
+            if(($(document).height()-range)*1.05 <= totalheight ) {
                 console.log('reach bottom');
 
                 if (index<totalPage){
