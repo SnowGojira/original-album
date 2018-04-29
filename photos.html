@@ -95,6 +95,7 @@
     <ul class="list-btn">
         <li><a href="#">#<span class="Result">0</span>个结果#</a></li>
     </ul>
+
     <ul class="list-event resultItem">
 
 
@@ -136,31 +137,39 @@
     ///////////////////////////////////
 //    PhotoEvent.reset();
 
-    var PhotoEvent=new CardObj(photoURL);
-    PhotoEvent.build();
+    var URL=localStorage.getItem('photo_result');
+    console.log(URL);
+    if (URL != null){
 
+        var PhotoEvent=new CardObj(URL);
+        PhotoEvent.build();
+
+    }else{
+        var PhotoEvent=new CardObj(photoURL);
+        PhotoEvent.build();
+    }
 
     var tagId;
     $('.tag-item').click(function () {
-//        $('.resultItem').remove();
-        var url='http://localhost:63342/original-album/photos-result.html';
+        $('.resultItem').remove();
 
-        location.replace(url);
+        location.replace(location.href);
 
-        var PhotoResult;
         tagId=parseInt($(this).attr("id"));
         console.log("photo:"+tagId);
         if(tagId != null){
             localStorage.setItem('photo_result', photoURL+'&tag='+tagId);
+//            URL=photoURL+'&tag='+tagId;
 
         }else{
             localStorage.setItem('photo_result', photoURL);
-
+//            URL=photoURL;
         }
 
-
     });
-
+    $('.menu-nav-item').click(function () {
+        localStorage.removeItem('photo_result');
+    });
 
    /* PhotoEvent.filterItem();
     $('#tagAll').click(function(){

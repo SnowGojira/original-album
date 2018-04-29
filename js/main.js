@@ -244,6 +244,10 @@ function CardObj(url){
 CardObj.prototype ={
     card:card,
     pageIndex:1,
+    setURL:function (url) {
+        this.url=url;
+        return this.url
+    },
     getJsonData:function (index) {
         return getJsonData(this.url,index);
     },
