@@ -12,7 +12,8 @@
 var filter_year=$('.overlay-filter-year');
 var filter_catalog=$('.overlay-filter-catalog');
 var filter_tag=$('.overlay-filter-tag');
-$('#listTag').hover(function () {
+
+$('#list_tag').hover(function () {
     filter_year.hide();
     filter_catalog.hide();
     filter_tag.show();
@@ -25,7 +26,7 @@ $('#listTag').hover(function () {
 
 });
 
-$('#listYear').hover(function () {
+$('#list_year').hover(function () {
     filter_tag.hide();
     filter_catalog.hide();
     filter_year.show();
@@ -53,17 +54,8 @@ $('#listCatalog').hover(function () {
 });
 
 //search bar 的点选逻辑
-$('.tag-item').click(function () {
-    filter_tag.hide();
-    var textValue=$(this).data('value');
-    $('#listTag').text(textValue);
-});
 
-$('.year-item').click(function () {
-    filter_year.hide();
-    var textValue=$(this).data('value');
-    $('#listYear').text(textValue);
-});
+
 
 $('.catalog-list-item').click(function () {
     filter_catalog.hide();
@@ -243,214 +235,12 @@ var card='<li id="card%data_id%" class="work-col "> <div class="paper paper-work
     '<path fill="none" d=M.5.5h16v16H.5z"></path> <path d="M8.5 3.5c-5 0-8 5-8 5s3 5 8 5 8-5 8-5-3-5-8-5zm0 7c-1.105 0-2-.896-2-2 0-1.106.895-2 2-2 1.104 0 2 .894 2 2 0 1.104-.896 2-2 2z"></path> </svg>'+
     '<span class="project-status-number views">%data_views%</span> </span> </div> </div> </li>';
 
-function EventObj(dataSet) {
-    this.dataSet=dataSet;
-}
 
-
-/*EventObj.prototype={
-    constructor:EventObj,
-    initNum:20,
-    // card:'<li id="card%data1%" class="work-col "><div class="paper paper-work"><img class="card-img" src="%data2%"/><div class="work-title"><h4><span>%data3%</span></h4>  <div class="icon"><img src="img/icon_thumb.png">1111 <img src="img/icon_eye.png">110</div> </div></div></li>',
-    card:card,
-    getDataset:function () {
-        return this.dataSet;
-    },
-    getDetail:function () {
-        return this.gotoDetail();
-    },
-    gotoDetail:function () {
-        var dataSet=this.getDataset();
-        $(".work-col").click( function () {
-            // console.log(dataSet);
-            var id=parseInt($(this).attr("id").split("card")[1]);
-            console.log(id);
-
-            if(dataSet[id].catalog=='摄影'){
-                localStorage.setItem('photo-title', dataSet[id].title);
-                localStorage.setItem('photo-tag', dataSet[id].tag);
-                localStorage.setItem('photo-work', dataSet[id].work);
-                localStorage.setItem('photo-desc', dataSet[id].desc);
-                window.location.href="photos-detail.html";
-            }else{
-                localStorage.setItem('design-title', dataSet[id].title);
-                localStorage.setItem('design-tag', dataSet[id].tag);
-                localStorage.setItem('design-work', dataSet[id].work);
-                localStorage.setItem('design-desc', dataSet[id].desc);
-                window.location.href="design-detail.html";
-            }
-        });
-    },
-    reset:function () {
-        var dataSet=this.getDataset();
-
-        $('.Result').text(dataSet.length);
-        $('.work-col').remove();
-        $('#endHint').hide();
-        var initNum=this.initNum;
-
-        if(dataSet[0]!=null){
-            for(var j=0;j<=initNum;j++){
-                if(dataSet[j]!=null){
-                    $('.resultItem').append(this.card.replace("%data_id%",dataSet[j].id).replace("%data_img%",dataSet[j].ava).replace("%data_title%",dataSet[j].title));
-                    for(var m=0;m<dataSet[j].tag.length;m++){
-                        $('#card'+j).addClass(dataSet[j].tag[m]);
-                    }
-
-                }else{
-                    console.log("#load opacity = 0");
-                    $('.loading').css("opacity",0);
-                }
-            }
-
-        }else{
-            console.log("#load opacity = 0");
-            $('.loading').css("opacity",0);
-        }
-
-        $(".work-col").click( function () {
-            // console.log(dataSet);
-            var id=parseInt($(this).attr("id").split("card")[1]);
-            console.log(id);
-
-            if(dataSet[id].catalog=='摄影'){
-                localStorage.setItem('photo-title', dataSet[id].title);
-                localStorage.setItem('photo-tag', dataSet[id].tag);
-                localStorage.setItem('photo-work', dataSet[id].work);
-                localStorage.setItem('photo-desc', dataSet[id].desc);
-                window.location.href="photos-detail.html";
-            }else{
-                localStorage.setItem('design-title', dataSet[id].title);
-                localStorage.setItem('design-tag', dataSet[id].tag);
-                localStorage.setItem('design-work', dataSet[id].work);
-                localStorage.setItem('design-desc', dataSet[id].desc);
-                window.location.href="design-detail.html";
-            }
-        });
-
-        this.getscrollDown();
-    },
-    /!*翻页逻辑*!/
-    scrollDownRefresh:function (){
-        var pace = 8;
-        var totalheight = 0;
-        var dataSet=this.getDataset();
-        var initNum=20;
-
-
-        $(window).scroll(function(){
-
-                var scrollPos = $(window).scrollTop();//滚动条距顶部距离(页面超出窗口的高度)
-                var viewH=$(this).height();
-                totalheight = parseFloat(viewH) + parseFloat(scrollPos);
-
-                if($(document).height()*0.95 <= totalheight){
-
-                    $('.loading').css("opacity",1);
-                    setTimeout(function () {
-                        console.log("setTimeOut执行");
-                        $('.loading').css("opacity",0);
-                        if(initNum<dataSet.length){
-                            for(var i=0;i<pace;i++){
-                                initNum=initNum+1;
-                                if(dataSet[initNum] != null){
-                                    console.log('initNum Step:'+initNum);
-                                    $('.resultItem').append(this.card.replace("%data_id%",dataSet[initNum].id).replace("%data_img%",dataSet[initNum].ava).replace("%data_title%",dataSet[initNum].title));
-                                    for(var m=0;m<dataSet[initNum].tag.length;m++){
-                                        $('#card'+initNum).addClass(dataSet[initNum].tag[m]);
-                                    }
-
-                                    $(".work-col").click( function () {
-                                        // console.log(dataSet);
-                                        var id=parseInt($(this).attr("id").split("card")[1]);
-                                        console.log(id);
-
-                                        if(dataSet[id].catalog=='摄影'){
-                                            localStorage.setItem('photo-title', dataSet[id].title);
-                                            localStorage.setItem('photo-tag', dataSet[id].tag);
-                                            localStorage.setItem('photo-work', dataSet[id].work);
-                                            localStorage.setItem('photo-desc', dataSet[id].desc);
-                                            window.location.href="photos-detail.html";
-                                        }else{
-                                            localStorage.setItem('design-title', dataSet[id].title);
-                                            localStorage.setItem('design-tag', dataSet[id].tag);
-                                            localStorage.setItem('design-work', dataSet[id].work);
-                                            localStorage.setItem('design-desc', dataSet[id].desc);
-                                            window.location.href="design-detail.html";
-                                        }
-                                    });
-                                }else{
-
-                                }
-
-                            }
-                        }else{
-                            console.log('reach bottom');
-                            $('.loading').css("opacity",0);
-                            $('#endHint').show();
-                        }
-
-
-                    },1000);
-
-                }
-
-            });
-
-    },
-    getscrollDown:function () {
-        return this.scrollDownRefresh();
-    },
-    filterItem:function () {
-        var photo_filters = {};
-
-
-        $('.list-filter').on( 'click', '.list-filter-item', function() {
-
-            var $this = $(this);
-
-            // get group key
-            var $buttonGroup = $this.parents('.list-filter');
-            var filterGroup = $buttonGroup.attr('data-filter-group');
-            // set filter for group
-            photo_filters[ filterGroup ] = $this.attr('data-filter');
-            // combine filters
-            var filterValue = '';
-            var filters=[];
-            for ( var prop in photo_filters ) {
-                filterValue += photo_filters[ prop ];
-                filters.push(photo_filters[prop]);
-                console.log("filterValue: "+photo_filters[prop]);
-            }
-
-
-            // set filter for Isotope
-            $('.resultItem').isotope({ filter:filterValue});
-            var $grid=$('.resultItem').isotope({ filter:filterValue});
-            var iso = $grid.data('isotope');
-            var num=iso.filteredItems.length;
-            $('.Result').text(num);
-
-            if (num>photoSet.initNum){
-
-                // document.location.reload();
-
-            }else{
-                $(".loading").css("opacity",0);
-                $(window).off('scroll');
-
-            }
-
-        });
-    }
-};*/
 var pageSize=8;
 function CardObj(url){
     this.url=url;
 }
 
-
-//
 CardObj.prototype ={
     card:card,
     pageIndex:1,
@@ -561,435 +351,89 @@ Append=function (url,index) {
         $('.loading').css("opacity", 0);
     }
 };
-/*翻页逻辑*/
-scrollDownRefresh=function (dataSet,count){
-    var pace = 8;
-    var totalheight = 0;
-    var initNum=8;
 
 
 
-    $(window).scroll(function(){
+/*******************标签按钮********************/
+var tag='<li id="%data_id%" data-value="%data_val%"  class="list-filter-item %data_class%">%data_tag%</li>';
 
-        var scrollPos = $(window).scrollTop();//滚动条距顶部距离(页面超出窗口的高度)
-        var viewH=$(this).height();
-        totalheight = parseFloat(viewH) + parseFloat(scrollPos);
+function TagObj(url){
+    this.url=url;
+}
 
-        if($(document).height()*0.95 <= totalheight){
+TagObj.prototype ={
+    tag:tag,
+    //要得到第几页的数据，直接输入
+    build:function () {
+        var Url=this.url;
+        console.log(Url);
+        AppendTag(Url);
+    }
+};
 
-            $('.loading').css("opacity",1);
-            setTimeout(function () {
-                console.log("setTimeOut执行");
-                $('.loading').css("opacity",0);
+var tagAll= {"id":"","name":"全部项目","type":1};
+var yearAll= {"id":"","name":"全部年份","type":2};
 
-                if(initNum<dataSet.length){
-                    for(var i=0;i<pace;i++){
-                        initNum=initNum+1;
-                        if(dataSet[initNum] != null){
-                            console.log('initNum Step:'+initNum);
-                            $('.resultItem').append(this.card.replace("%data_id%",dataSet[initNum].id).replace("%data_img%",dataSet[initNum].cover).replace("%data_title%",dataSet[initNum].title));
-                            for(var m=0;m<dataSet[initNum].tag.length;m++){
-                                $('#card'+initNum).addClass(dataSet[initNum].tag[m]);
-                            }
+getTagData=function (url) {
+    var data;
+    $.ajax({
+        type : "GET",
+        async:false,//返回值的问题。
+        url : url,
+        data : {}//数据，这里使用的是Json格式进行传输
+    })
+        .done(function (result) {
+            data=result.data;
+            data.unshift(tagAll);
+            data.unshift(yearAll);
+        })
+        .fail(function(err) {
+            console.log("error:"+err);
+        })
+        .always(function() {
+        });
 
-                            $(".work-col").click( function () {
-                                // console.log(dataSet);
-                                var id=parseInt($(this).attr("id").split("card")[1]);
-                                console.log(id);
+    return data;
+};
 
-                                if(dataSet[id].catalog=='摄影'){
-                                    localStorage.setItem('photo-title', dataSet[id].title);
-                                    localStorage.setItem('photo-tag', dataSet[id].tag);
-                                    localStorage.setItem('photo-work', dataSet[id].work);
-                                    localStorage.setItem('photo-desc', dataSet[id].desc);
-                                    window.location.href="photos-detail.html";
-                                }else{
-                                    localStorage.setItem('design-title', dataSet[id].title);
-                                    localStorage.setItem('design-tag', dataSet[id].tag);
-                                    localStorage.setItem('design-work', dataSet[id].work);
-                                    localStorage.setItem('design-desc', dataSet[id].desc);
-                                    window.location.href="design-detail.html";
-                                }
-                            });
-                        }else{
+AppendTag=function (url) {
+    var dataSet=getTagData(url);
 
-                        }
-
-                    }
-                }else{
-                    console.log('reach bottom');
-                    $('.loading').css("opacity",0);
-                    $('#endHint').show();
-                }
-
-
-            },1000);
-
+    if (dataSet[0] != null) {
+        for (var j = 0; j < dataSet.length; j++) {
+            console.log(dataSet[j]);
+            if (dataSet[j] != null) {
+                ReplaceTag(this.tag, dataSet[j]);
+            } else {
+                console.log("err");
+            }
         }
 
+    } else {
+        console.log("err");
+    }
+};
+
+ReplaceTag=function (tag,obj) {
+    if(obj.type==1){
+        $('.filter-tag').append(tag.replace("%data_id%",obj.id).replace("%data_val%",obj.name).replace("%data_class%","tag-item").replace("%data_tag%",obj.name));
+        ClickTag('tag');
+    }else if(obj.type==2){
+        $('.filter-year').append(tag.replace("%data_id%",obj.id).replace("%data_val%",obj.name).replace("%data_class%","year-item").replace("%data_tag%",obj.name));
+        ClickTag('year');
+    }
+};
+
+ClickTag=function (type) {
+    $('.'+type+'-item').click(function () {
+        filter_tag.hide();
+        var textValue=$(this).data('value');
+        console.log(textValue);
+        $('#list_'+type).text(textValue);
     });
 
 };
 
-
-
-
-EventObj.prototype={
-    constructor:EventObj,
-    initNum:10,
-    // card:'<li id="card%data1%" class="work-col "><div class="paper paper-work"><img class="card-img" src="%data2%"/><div class="work-title"><h4><span>%data3%</span></h4>  <div class="icon"><img src="img/icon_thumb.png">1111 <img src="img/icon_eye.png">110</div> </div></div></li>',
-    card:card,
-    getDataset:function () {
-        return this.dataSet;
-    },
-    getDetail:function () {
-        return this.gotoDetail();
-    },
-    gotoDetail:function () {
-        var dataSet=this.getDataset();
-        $(".work-col").click( function () {
-            // console.log(dataSet);
-            var id=parseInt($(this).attr("id").split("card")[1]);
-            console.log(id);
-
-            if(dataSet[id].catalog=='摄影'){
-                localStorage.setItem('photo-title', dataSet[id].title);
-                localStorage.setItem('photo-tag', dataSet[id].tag);
-                localStorage.setItem('photo-work', dataSet[id].work);
-                localStorage.setItem('photo-desc', dataSet[id].desc);
-                window.location.href="photos-detail.html";
-            }else{
-                localStorage.setItem('design-title', dataSet[id].title);
-                localStorage.setItem('design-tag', dataSet[id].tag);
-                localStorage.setItem('design-work', dataSet[id].work);
-                localStorage.setItem('design-desc', dataSet[id].desc);
-                window.location.href="design-detail.html";
-            }
-        });
-    },
-    reset:function () {
-        var dataSet=this.getDataset();
-
-        $('.Result').text(dataSet.length);
-        $('.work-col').remove();
-        $('#endHint').hide();
-        var initNum=this.initNum;
-
-        if(dataSet[0]!=null){
-            for(var j=0;j<=initNum;j++){
-                if(dataSet[j]!=null){
-                    $('.resultItem').append(this.card.replace("%data_id%",dataSet[j].id).replace("%data_img%",dataSet[j].cover).replace("%data_title%",dataSet[j].title));
-                    /*for(var m=0;m<dataSet[j].tag.length;m++){
-                        $('#card'+j).addClass(dataSet[j].tag[m]);
-                    }*/
-
-                }else{
-                    console.log("#load opacity = 0");
-                    $('.loading').css("opacity",0);
-                }
-            }
-
-        }else{
-            console.log("#load opacity = 0");
-            $('.loading').css("opacity",0);
-        }
-
-        $(".work-col").click( function () {
-            // console.log(dataSet);
-            var id=parseInt($(this).attr("id").split("card")[1]);
-            console.log(id);
-
-            if(dataSet[id].catalog=='摄影'){
-                localStorage.setItem('photo-title', dataSet[id].title);
-                localStorage.setItem('photo-tag', dataSet[id].tag);
-                localStorage.setItem('photo-work', dataSet[id].work);
-                localStorage.setItem('photo-desc', dataSet[id].desc);
-                window.location.href="photos-detail.html";
-            }else{
-                localStorage.setItem('design-title', dataSet[id].title);
-                localStorage.setItem('design-tag', dataSet[id].tag);
-                localStorage.setItem('design-work', dataSet[id].work);
-                localStorage.setItem('design-desc', dataSet[id].desc);
-                window.location.href="design-detail.html";
-            }
-        });
-
-        this.getscrollDown();
-    },
-    /*翻页逻辑*/
-    scrollDownRefresh:function (count){
-        var pace = 8;
-        var totalheight = 0;
-        var dataSet=this.getDataset();
-        var initNum=20;
-
-
-        $(window).scroll(function(){
-
-                var scrollPos = $(window).scrollTop();//滚动条距顶部距离(页面超出窗口的高度)
-                var viewH=$(this).height();
-                totalheight = parseFloat(viewH) + parseFloat(scrollPos);
-
-                if($(document).height()*0.95 <= totalheight){
-
-                    $('.loading').css("opacity",1);
-                    setTimeout(function () {
-                        console.log("setTimeOut执行");
-                        $('.loading').css("opacity",0);
-                        if(initNum<dataSet.length){
-                            for(var i=0;i<pace;i++){
-                                initNum=initNum+1;
-                                if(dataSet[initNum] != null){
-                                    console.log('initNum Step:'+initNum);
-                                    $('.resultItem').append(this.card.replace("%data_id%",dataSet[initNum].id).replace("%data_img%",dataSet[initNum].cover).replace("%data_title%",dataSet[initNum].title));
-                                    for(var m=0;m<dataSet[initNum].tag.length;m++){
-                                        $('#card'+initNum).addClass(dataSet[initNum].tag[m]);
-                                    }
-
-                                    $(".work-col").click( function () {
-                                        // console.log(dataSet);
-                                        var id=parseInt($(this).attr("id").split("card")[1]);
-                                        console.log(id);
-
-                                        if(dataSet[id].catalog=='摄影'){
-                                            localStorage.setItem('photo-title', dataSet[id].title);
-                                            localStorage.setItem('photo-tag', dataSet[id].tag);
-                                            localStorage.setItem('photo-work', dataSet[id].work);
-                                            localStorage.setItem('photo-desc', dataSet[id].desc);
-                                            window.location.href="photos-detail.html";
-                                        }else{
-                                            localStorage.setItem('design-title', dataSet[id].title);
-                                            localStorage.setItem('design-tag', dataSet[id].tag);
-                                            localStorage.setItem('design-work', dataSet[id].work);
-                                            localStorage.setItem('design-desc', dataSet[id].desc);
-                                            window.location.href="design-detail.html";
-                                        }
-                                    });
-                                }else{
-
-                                }
-
-                            }
-                        }else{
-                            console.log('reach bottom');
-                            $('.loading').css("opacity",0);
-                            $('#endHint').show();
-                        }
-
-
-                    },1000);
-
-                }
-
-            });
-
-    },
-    getscrollDown:function () {
-        return this.scrollDownRefresh();
-    },
-    filterItem:function () {
-        var photo_filters = {};
-
-
-        $('.list-filter').on( 'click', '.list-filter-item', function() {
-
-            var $this = $(this);
-
-            // get group key
-            var $buttonGroup = $this.parents('.list-filter');
-            var filterGroup = $buttonGroup.attr('data-filter-group');
-            // set filter for group
-            photo_filters[ filterGroup ] = $this.attr('data-filter');
-            // combine filters
-            var filterValue = '';
-            var filters=[];
-            for ( var prop in photo_filters ) {
-                filterValue += photo_filters[ prop ];
-                filters.push(photo_filters[prop]);
-                console.log("filterValue: "+photo_filters[prop]);
-            }
-
-
-            // set filter for Isotope
-            $('.resultItem').isotope({ filter:filterValue});
-            var $grid=$('.resultItem').isotope({ filter:filterValue});
-            var iso = $grid.data('isotope');
-            var num=iso.filteredItems.length;
-            $('.Result').text(num);
-
-            if (num>photoSet.initNum){
-
-                // document.location.reload();
-
-            }else{
-                $(".loading").css("opacity",0);
-                $(window).off('scroll');
-
-            }
-
-        });
-    }
-};
-
-
-function JsonObj(dataSet) {
-    this.dataSet=dataSet;
-
-}
-
-JsonObj.prototype={
-    constructor:JsonObj,
-    initNum:10,
-    // card:'<li id="card%data1%" class="work-col "><div class="paper paper-work"><img class="card-img" src="%data2%"/><div class="work-title"><h4><span>%data3%</span></h4>  <div class="icon"><img src="img/icon_thumb.png">1111 <img src="img/icon_eye.png">110</div> </div></div></li>',
-    card:card,
-    getDataset:function () {
-        return this.dataSet;
-    },
-    getDetail:function () {
-        return this.gotoDetail();
-    },
-    gotoDetail:function () {
-        var dataSet=this.getDataset();
-        $(".work-col").click( function () {
-            // console.log(dataSet);
-            var id=parseInt($(this).attr("id").split("card")[1]);
-            console.log(id);
-
-            if(dataSet[id].catalog=='摄影'){
-                localStorage.setItem('photo-title', dataSet[id].title);
-                localStorage.setItem('photo-tag', dataSet[id].tag);
-                localStorage.setItem('photo-work', dataSet[id].work);
-                localStorage.setItem('photo-desc', dataSet[id].desc);
-                window.location.href="photos-detail.html";
-            }else{
-                localStorage.setItem('design-title', dataSet[id].title);
-                localStorage.setItem('design-tag', dataSet[id].tag);
-                localStorage.setItem('design-work', dataSet[id].work);
-                localStorage.setItem('design-desc', dataSet[id].desc);
-                window.location.href="design-detail.html";
-            }
-        });
-    },
-    reset:function () {
-        var dataSet=this.getDataset();
-
-        $('.work-col').remove();
-        $('#endHint').hide();
-        var initNum=this.initNum;
-
-        if(dataSet[0]!=null){
-            for(var j=0;j<=initNum;j++){
-                if(dataSet[j]!=null){
-                    $('.resultItem').append(this.card.replace("%data_id%",dataSet[j].id).replace("%data_img%",dataSet[j].ava).replace("%data_title%",dataSet[j].title));
-                    for(var m=0;m<dataSet[j].tag.length;m++){
-                        $('#card'+j).addClass(dataSet[j].tag[m]);
-                    }
-
-                }else{
-                    console.log("#load opacity = 0");
-                    $('.loading').css("opacity",0);
-                }
-            }
-
-        }else{
-            console.log("#load opacity = 0");
-            $('.loading').css("opacity",0);
-        }
-
-        $(".work-col").click( function () {
-            // console.log(dataSet);
-            var id=parseInt($(this).attr("id").split("card")[1]);
-            console.log(id);
-
-            if(dataSet[id].catalog=='摄影'){
-                localStorage.setItem('photo-title', dataSet[id].title);
-                localStorage.setItem('photo-tag', dataSet[id].tag);
-                localStorage.setItem('photo-work', dataSet[id].work);
-                localStorage.setItem('photo-desc', dataSet[id].desc);
-                window.location.href="photos-detail.html";
-            }else{
-                localStorage.setItem('design-title', dataSet[id].title);
-                localStorage.setItem('design-tag', dataSet[id].tag);
-                localStorage.setItem('design-work', dataSet[id].work);
-                localStorage.setItem('design-desc', dataSet[id].desc);
-                window.location.href="design-detail.html";
-            }
-        });
-
-        this.getscrollDown();
-    },
-    /*翻页逻辑*/
-    scrollDownRefresh:function (){
-        var pace = 8;
-        var totalheight = 0;
-        var dataSet=this.getDataset();
-        var initNum=10;
-
-
-        $(window).scroll(function(){
-
-            var scrollPos = $(window).scrollTop();//滚动条距顶部距离(页面超出窗口的高度)
-            var viewH=$(this).height();
-            totalheight = parseFloat(viewH) + parseFloat(scrollPos);
-
-            if($(document).height()*0.95 <= totalheight){
-
-                $('.loading').css("opacity",1);
-                setTimeout(function () {
-                    console.log("setTimeOut执行");
-                    $('.loading').css("opacity",0);
-                    if(initNum<dataSet.length){
-                        for(var i=0;i<pace;i++){
-                            initNum=initNum+1;
-                            if(dataSet[initNum] != null){
-                                console.log('initNum Step:'+initNum);
-                                $('.resultItem').append(this.card.replace("%data_id%",dataSet[initNum].id).replace("%data_img%",dataSet[initNum].ava).replace("%data_title%",dataSet[initNum].title));
-                                for(var m=0;m<dataSet[initNum].tag.length;m++){
-                                    $('#card'+initNum).addClass(dataSet[initNum].tag[m]);
-                                }
-
-                                $(".work-col").click( function () {
-                                    // console.log(dataSet);
-                                    var id=parseInt($(this).attr("id").split("card")[1]);
-                                    console.log(id);
-
-                                    if(dataSet[id].catalog=='摄影'){
-                                        localStorage.setItem('photo-title', dataSet[id].title);
-                                        localStorage.setItem('photo-tag', dataSet[id].tag);
-                                        localStorage.setItem('photo-work', dataSet[id].work);
-                                        localStorage.setItem('photo-desc', dataSet[id].desc);
-                                        window.location.href="photos-detail.html";
-                                    }else{
-                                        localStorage.setItem('design-title', dataSet[id].title);
-                                        localStorage.setItem('design-tag', dataSet[id].tag);
-                                        localStorage.setItem('design-work', dataSet[id].work);
-                                        localStorage.setItem('design-desc', dataSet[id].desc);
-                                        window.location.href="design-detail.html";
-                                    }
-                                });
-                            }else{
-
-                            }
-
-                        }
-                    }else{
-                        console.log('reach bottom');
-                        $('.loading').css("opacity",0);
-                        $('#endHint').show();
-                    }
-
-
-                },1000);
-
-            }
-
-        });
-
-    },
-    getscrollDown:function () {
-        return this.scrollDownRefresh();
-    }
-};
 
 
 

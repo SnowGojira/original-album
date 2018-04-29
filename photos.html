@@ -73,28 +73,16 @@
     <div class="nav-pc nav-search">
         <div class="nav-main_inner">
             <ul class="listSelect only-pc">
-                <li id="listTag" class="listSelectItem">全部标签</li>
+                <li id="list_tag" class="listSelectItem">全部标签</li>
                 <li class="overlay overlay-filter-tag">
-                    <ul class="list-filter" data-filter-group="tag">
-                        <li id="tagAll" data-value="全部标签" data-filter="" class="list-filter-item tag-item">全部标签</li>
-                        <li id="tagHoner" data-value="获奖作品" data-filter=".获奖作品" class="list-filter-item tag-item">获奖作品</li>
-                        <li id="tagSpace" data-value="场所标本" data-filter=".场所标本" class="list-filter-item tag-item">场所标本</li>
-                        <li id="tagSym" data-value="对等空间" data-filter=".对等空间" class="list-filter-item tag-item">对等空间</li>
-                        <li id="tagPair" data-value="二人世界" data-filter=".二人世界" class="list-filter-item tag-item">二人世界</li>
-                        <li id="tagChild" data-value="儿童" data-filter=".儿童" class="list-filter-item tag-item">儿童</li>
-                        <li id="tagPort" data-value="人文" data-filter=".人文" class="list-filter-item tag-item">人文</li>
-                        <li id="tagArchi" data-value="建筑" data-filter=".建筑" class="list-filter-item tag-item">建筑</li>
-                        <li id="tagGeo" data-value="几何" data-filter=".几何" class="list-filter-item tag-item">几何</li>
+                    <ul class="list-filter filter-tag" data-filter-group="tag">
 
                     </ul>
                 </li>
-                <li id="listYear" class="listSelectItem">全部年份</li>
+                <li id="list_year" class="listSelectItem">全部年份</li>
                 <li class="overlay overlay-filter-year">
-                    <ul class="list-filter" data-filter-group="year">
-                        <li id="yearAll" data-value="全部年份" data-filter="" class="list-filter-item year-item ">全部年份</li>
-                        <li id="year2016" data-value="2016" data-filter=".2016" class="list-filter-item year-item">2016</li>
-                        <li id="year2015" data-value="2015" data-filter=".2015" class="list-filter-item year-item">2015</li>
-                        <li id="year2013" data-value="2013" data-filter=".2013" class="list-filter-item year-item">2013</li>
+                    <ul class="list-filter filter-year" data-filter-group="year">
+
                     </ul>
                 </li>
             </ul>
@@ -138,6 +126,7 @@
 
 //    var PhotoEvent=new EventObj(photoSet);
     var PhotoEvent=new CardObj(photoURL);
+    var TagEvent=new TagObj(allTagURL);
 
     window.onload=function () {
         $.imgLazyLoad();
@@ -145,10 +134,10 @@
     };
     ///////////////////////////////////
 //    PhotoEvent.reset();
-    var obj=PhotoEvent.getJsonData(1);
-    console.log(obj);
+
 
     PhotoEvent.build();
+    TagEvent.build();
 
 
    /* PhotoEvent.filterItem();
