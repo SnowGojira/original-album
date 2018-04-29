@@ -20,6 +20,9 @@
     <link href="css/main.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
 
+    <script src="js/jquery-3.2.1.min.js"></script>
+
+
 </head>
 <body>
 
@@ -176,12 +179,17 @@
 
 
 
+<!--脚本文件-->
 <script src="js/jquery-3.2.1.min.js"></script>
-<!--<script src="js/p5.js"></script>-->
 <script src="js/isotope.pkgd.min.js"></script>
+
+<script src="js/API.js"></script>
 <script src="js/objs.js"></script>
 <script src="js/logoEffects.js"></script>
+<script src="js/lazyLoad.js"></script>
 <script src="js/main.js"></script>
+
+<!--补偿脚本-->
 <script>
     /*滑动显示隐藏筛选选项*/
     function header(){
@@ -209,11 +217,20 @@
     var photoEvent=new EventObj(photoSet);
     var designEvent=new EventObj(designSet);
     var eveEvent=new EventObj(eventSet);
+
+
+    var  AllEvent=new CardObj(allURL);
+
     window.onload=function () {
+        $.imgLazyLoad();
 
     };
 
-    AllEvent.reset();
+    var obj=AllEvent.getJsonData(1);
+    console.log(obj);
+
+    AllEvent.build();
+
 
 
     /*数据的假性选择*/

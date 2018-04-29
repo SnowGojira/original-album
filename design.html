@@ -21,6 +21,11 @@
     <link href="css/main.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
 
+    <!--引用库-->
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+
 </head>
 <body>
 <div class="nav-header">
@@ -105,41 +110,30 @@
 
 </div>
 
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="js/isotope.pkgd.min.js"></script>
+
 <script src="js/API.js"></script>
 <script src="js/objs.js"></script>
+<script src="js/lazyLoad.js"></script>
 <script src="js/main.js"></script>
 
 <script>
 
+    var DesignEvent=new CardObj(designURL);
+
     window.onload=function () {
+        $.imgLazyLoad();
 
-        /*实验ajax*/
-
-        var URL="http://120.77.83.209:8800/api/category/list";
-//        getURL(URL);
-        /*$.ajax({
-            type : "GET",
-            url : URL,
-            data : {},//数据，这里使用的是Json格式进行传输
-            success : function(result) {//返回数据根据结果进行相应的处理
-//                designJson=result.payload;
-                console.log(result);
-//                Reset(designJson);
-            },
-        });*/
-
-
-        Reset(designSet);
     };
 
-    function getURL(url) {
-        console.log(url);
-        $.getJSON(url,function (data) {
-            console.log("返回结果:"+data);
-        })
-    }
+    var obj=DesignEvent.getJsonData(1);
+    console.log(obj);
+
+    DesignEvent.build();
+
+
+
+//    Reset(designSet);
+
 
 
 
@@ -173,8 +167,8 @@
 
         ///////////////////////////////////
 
-    function Reset(dataSet){
-        $('.Result').text(dataSet.length);
+    /*function Reset(dataSet){
+//        $('.Result').text(dataSet.length);
         $('.work-col').remove();
         for(var j=0;j<dataSet.length;j++){
             Replace(j,dataSet[j].ava,dataSet[j].title);
@@ -202,7 +196,7 @@
             window.location.href="design-detail.html";
 
         });
-    }
+    }*/
 
 </script>
 </body>

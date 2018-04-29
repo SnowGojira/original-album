@@ -105,6 +105,14 @@
 
     .project-status{
         float: left;
+        margin-top: 0;
+    }
+
+    .project-status-sep{
+        font-size: 10px;
+    }
+    .project-status-sep svg {
+        max-width: 10px;
     }
 
 

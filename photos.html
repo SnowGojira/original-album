@@ -20,8 +20,6 @@
     <link href="css/main.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
 
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/isotope.pkgd.min.js"></script>
     <!--<script src="js/iscroll.js"></script>-->
 
 </head>
@@ -123,22 +121,40 @@
 
 </div>
 
+<!--脚本文件-->
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/isotope.pkgd.min.js"></script>
+
+<script src="js/API.js"></script>
+<script src="js/lazyLoad.js"></script>
 <script src="js/objs.js"></script>
 <script src="js/main.js"></script>
+
+<!--补偿脚本-->
 <script>
 //    var card='<li id="card%data1%" class="work-col "><div class="paper paper-work"><img class="card-img" src="%data2%"/><div class="work-title"><h4><span>%data3%</span></h4></div></div></li>';
 
-    var PhotoEvent=new EventObj(photoSet);
-    /*window.onload=function () {
 
 
-    };*/
+//    var PhotoEvent=new EventObj(photoSet);
+    var PhotoEvent=new CardObj(photoURL);
+
+    window.onload=function () {
+        $.imgLazyLoad();
+
+    };
     ///////////////////////////////////
-    PhotoEvent.reset();
-    PhotoEvent.filterItem();
+//    PhotoEvent.reset();
+    var obj=PhotoEvent.getJsonData(1);
+    console.log(obj);
+
+    PhotoEvent.build();
+
+
+   /* PhotoEvent.filterItem();
     $('#tagAll').click(function(){
         document.location.reload();
-    });
+    });*/
 
 
 

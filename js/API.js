@@ -4,13 +4,13 @@
  */
 var rootURL="http://120.77.83.209:8800/api/";
 var allTagURL=rootURL+"category/list";
-var photoURL=rootURL+"/albums";
-var designURL=rootURL+"/designs";
-var eventURL=rootURL+"/events";
+var allURL=rootURL+"list?category=0";
+var photoURL=rootURL+"list?category=1";
+var designURL=rootURL+"list?category=2";
+var eventURL=rootURL+"list?category=3";
 var photoDURL=rootURL+"/photos";
 var designDURL=rootURL+"/category";
 var catelogueURL=rootURL+"/category";
-var allTagURL=rootURL+"category/list";
 
 
 var design=catelogueURL+"/design";

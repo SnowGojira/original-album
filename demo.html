@@ -16,20 +16,40 @@
 <script src="js/objs.js"></script>
 <script src="js/main.js"></script>
 <script>
+
     var URL="http://120.77.83.209:8800/api/category/list";
+    var URL0="http://www.yuanhuace.com/api/list";
     var URL1="https://lj7jdv5khk.execute-api.ap-southeast-1.amazonaws.com/staging/designs";
+    var URL2="https://suggest.taobao.com/sug?code=utf-8&q=%E5%8D%AB%E8%A1%A3&callback=cb";
 
-   /* $.getJSON(URL1,function (data) {
+    $.getJSON(URL,function (data) {
+        console.log(URL);
         console.log(data);
-        $("#text").text(data);
-    })*/
+        $("#text").html(syntaxHighlight(data));
+    });
 
-    axios.get(URL)
-            .then(function (response) {
-                console.log(response);
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
+
+
+    function syntaxHighlight(json) {
+        if (typeof json != 'string') {
+            json = JSON.stringify(json, undefined, 2);
+        }
+        json = json.replace(/&/g, '&').replace(/</g, '<').replace(/>/g, '>');
+        return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function(match) {
+            var cls = 'number';
+            if (/^"/.test(match)) {
+                if (/:$/.test(match)) {
+                    cls = 'key';
+                } else {
+                    cls = 'string';
+                }
+            } else if (/true|false/.test(match)) {
+                cls = 'boolean';
+            } else if (/null/.test(match)) {
+                cls = 'null';
+            }
+            return '<span class="' + cls + '">' + match + '</span>';
+        });
+    }
 </script>
 </html>

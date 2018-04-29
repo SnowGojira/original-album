@@ -81,16 +81,31 @@
 
 <div class="main-pc list-work">
     <ul class="list-btn">
-        <li><a href="..">#0个结果#</a></li>
+        <li><a href="#">#<span class="Result">0</span>个结果#</a></li>
+    </ul>
+
+    <ul class="list-event resultItem">
+
+
     </ul>
 </div>
 
 
 <script src="js/jquery-3.2.1.min.js"></script>
-<!--<script src="js/p5.js"></script>-->
-<script src="js/isotope.pkgd.min.js"></script>
-<script src="js/objs.js"></script>
-<script src="js/logoEffects.js"></script>
+<script src="js/API.js"></script>
+<script src="js/lazyLoad.js"></script>
 <script src="js/main.js"></script>
+
+<script>
+    var EventsEvent=new CardObj(eventURL);
+
+    window.onload=function () {
+        $.imgLazyLoad();
+
+    };
+
+    EventsEvent.build();
+
+</script>
 </body>
 </html>

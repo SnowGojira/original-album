@@ -514,10 +514,17 @@ body {
     text-align: left;
     margin-top: 1rem;
     /*margin-bottom: 1rem;*/
-    margin-left: 0.7rem;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
     font-size: 1rem;
     font-weight: bold;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
 }
+
 
 
 .list-work{
