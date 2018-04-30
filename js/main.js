@@ -1,7 +1,15 @@
 /**
  * Created by hakuh on 2017/9/8.
  */
-
+var rootURL="http://120.77.83.209:8800/api/";
+var allTagURL=rootURL+"category/list";
+var allURL=rootURL+"list?category=0";
+var photoURL=rootURL+"list?category=1";
+var designURL=rootURL+"list?category=2";
+var eventURL=rootURL+"list?category=3";
+var addViewURL=rootURL+"addViews";
+var addLikeURL=rootURL+"addLikes";
+var detailURL=rootURL+"detail?id=";
 
 /**
  * PC页面的互动逻辑
@@ -413,14 +421,14 @@ var DetailObj=function(url){
 }
 
 DetailObj.prototype ={
-    tag:detailTag,
+
     build:function () {
         var URL=this.url;
         console.log("访问的url："+URL);
         var detailObj=getDetailsData(URL);
-        console.log("前往的对象"+detailObj[0]);
+        // console.log("前往的对象"+detailObj.timeNames);
 
-        // AppendDetailHead(URL);
+        AppendDetailHead(URL);
 
     }
 };
@@ -428,7 +436,7 @@ DetailObj.prototype ={
 getDetailsData=function (url) {
     var data;
     var id=localStorage.getItem('item_id');
-    console.log("前往的id"+id);
+
 
     $.ajax({
         type : "GET",
@@ -437,7 +445,10 @@ getDetailsData=function (url) {
         data : {}//数据，这里使用的是Json格式进行传输
     })
         .done(function (result) {
-            data=result.data;
+            // data=result.data;
+            data=result.data[0];
+            console.log("前往的data"+data);
+
         })
         .fail(function(err) {
             console.log("error:"+err);
@@ -448,8 +459,9 @@ getDetailsData=function (url) {
     return data;
 };
 
-function ReplaceDetailTag(tag,str){
-    $('#designDetailWork').append(tag.replace("%data_tag%",str));
+function ReplaceDetailTag(str){
+    console.log("ReplaceDetailTag");
+    $('.list-btn').append(detailTag.replace("%data_tag%",str));
 };
 
 function AppendDetailHead(url) {
@@ -457,27 +469,78 @@ function AppendDetailHead(url) {
     console.log("前往的对象"+detailObj);
     var tags=detailObj.tagNames;
     var times=detailObj.timeNames;
-    console.log("前往的对象"+tags+times);
+    var title=detailObj.title;
+    var date=detailObj.updateTime;
+    var likes=detailObj.likes;
+    var type=detailObj.type;
+    var imgSrc=detailObj.cover;
+    var id=detailObj.id;
 
-    if (tags[0] != null) {
+
+    if (tags instanceof Array) {
         for (var j = 0; j < tags.length; j++) {
             if (tags[j] != null) {
-                ReplaceDetailTag(this.tag,tags[j]);
+                ReplaceDetailTag(tags[j]);
             } else {
                 console.log("err");
             }
         }
     } else {
-        console.log("err");
+        ReplaceDetailTag(tags);
     }
-    ReplaceDetailTag(this.tag,times);
+    ReplaceDetailTag(times);
+
+    $('.richmedia-detail-title').text(title);
+    $('.detail_date').text(date);
+    $('.like_button_text').text(likes);
+
+    $('.like_button').click(function(){
+
+        $('.like_button_text').text(likes+1);
+        $(this).attr('disabled',"true");
+        $(this).css('background-color','#dddddd');
+        LikeLogic(id);
+    });
+
+    $(function() {
+        $("img.lazy").lazyload({effect: "fadeIn"});
+    });
+
+    if (type !=1){
+        $('.richmedia-detail-header').append(detailCover.replace("%data_img%",imgSrc));
+    }else{
+
+    }
 
 }
 
+LikeLogic=function (id) {
+    console.log("Likes:"+id);
+    var params={
+        "id":id
+    };
+    $.ajax({
+        type : "POST",
+        url : addLikeURL,
+        data : JSON.stringify(params)//数据，这里使用的是Json格式进行传输
+    })
+        .done(function (result) {
+            console.log("success:"+result);
+        })
+        .fail(function(err) {
+            console.log("error:"+err);
+        })
+        .always(function() {
+        });
+};
 
 
 
-AppendPhotoDetail=function () {
+AppendPhotoArticle=function () {
+
+};
+
+AppendEventArticle=function () {
 
 };
 
