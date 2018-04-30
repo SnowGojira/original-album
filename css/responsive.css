@@ -142,6 +142,28 @@
         height:1.25rem;
     }
 
+
+
+    .overlay-filter-tag{
+        width: 100%;
+    }
+    .overlay-filter-year{
+        width: auto;
+        left: 0;
+    }
+
+    .list-filter-item {
+        cursor: pointer;
+        color: #fff;
+        font-size: 0.8rem;
+        line-height: 1.5;
+        overflow: hidden;
+        white-space: nowrap;
+        width: calc(33% - 24px);
+        text-align: left;
+        margin: 8px 0 8px 24px;
+    }
+
     #menu_btn{
         display: inline-block;
     }
@@ -174,8 +196,8 @@
     }
     .paper-work:hover,.paper-work:focus{
         transform: translateY(0px) scale(1) translateZ(0);
-        box-shadow: 0 0px 0px rgba(0,0,0,0),
-        0 0px 0px rgba(220, 233, 255, 0.48);
+        box-shadow: 0 0 0 rgba(0,0,0,0),
+        0 0 0 rgba(220, 233, 255, 0.48);
     }
 
     /*contact page*/
@@ -266,10 +288,9 @@
     }
     .foto_tlf1{
         position: absolute;
-        left: 0px;
-        top:0px;
-        left:0px;
-        bottom:0px;
+        left: 0;
+        top:0;
+        bottom:0;
         width:100%;
         height:100%;
         background-image: url(../img/tlf1.png);
@@ -279,10 +300,9 @@
     }
     .foto_tlf2{
         position: absolute;
-        left: 0px;
-        top:0px;
-        left:0px;
-        bottom:0px;
+        left: 0;
+        top:0;
+        bottom:0;
         width:100%;
         height:100%;
         background-image: url(../img/tlf2.png);
@@ -292,10 +312,9 @@
     }
     .foto_tlf3{
         position: absolute;
-        left: 0px;
-        top:0px;
-        left:0px;
-        bottom:0px;
+        left: 0;
+        top:0;
+        bottom:0;
         width:100%;
         height:100%;
         background-image: url(../img/tlf3.png);
@@ -315,10 +334,9 @@
     }
     .foto_zw1{
         position: absolute;
-        left: 0px;
-        top:0px;
-        left:0px;
-        bottom:0px;
+        left: 0;
+        top:0;
+        bottom:0;
         width:100%;
         height:100%;
         background-image: url(../img/zw1.png);
@@ -328,10 +346,9 @@
     }
     .foto_zw2{
         position: absolute;
-        left: 0px;
-        top:0px;
-        left:0px;
-        bottom:0px;
+        left: 0;
+        top:0;
+        bottom:0;
         width:100%;
         height:100%;
         background-image: url(../img/zw2.png);
@@ -341,10 +358,9 @@
     }
     .foto_zw3{
         position: absolute;
-        left: 0px;
-        top:0px;
-        left:0px;
-        bottom:0px;
+        left: 0;
+        top:0;
+        bottom:0;
         width:100%;
         height:100%;
         background-image: url(../img/zw3.png);
@@ -389,7 +405,11 @@
         margin-right: 1.2rem;
     }
 
-
+    h3{
+        margin:1.3rem 1rem;
+        border-left: 4px solid #97ddfc;
+        font-size: 1.3rem;
+    }
 
     .richmedia-detail-sub{
         margin:1.3rem 1rem;
@@ -397,15 +417,27 @@
         font-size: 1.3rem;
     }
 
+    /*文章p*/
+    p{
+        margin: auto 1rem;
+        font-size: 0.9rem;
+    }
     .richmedia-detail-desc{
         margin: auto 1rem;
         font-size: 0.9rem;
     }
 
+    /*文章a*/
+    a{
+        margin: auto 1rem;
+        font-size: 0.9rem;
+    }
     .richmedia-detail-href{
         margin: auto 1rem;
         font-size: 0.9rem;
     }
+
+
     .richmedia-detail-share{
         margin: 3rem 1rem 0 1rem;
     }

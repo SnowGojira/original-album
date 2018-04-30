@@ -95,7 +95,7 @@ body {
     width: 100%;
     height: 6.6rem;
     background-color: #ffffff;
-    box-shadow: 0px 1px 3px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 
 }
 
@@ -116,10 +116,10 @@ body {
 
 .nav-pc_logo>a{
     position: absolute;
-    top:0px;
-    left: 0px;
-    right: 0px;
-    bottom:0px;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom:0;
 }
 .list-nav{
     top:2.7rem;
@@ -662,7 +662,7 @@ body {
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
     background-color: #1a162a;*/
 
-    margin: 0px;
+    margin: 0;
     position: relative;
     background-color: #189ae5;
     width: 100vw;
@@ -748,7 +748,7 @@ canvas {
 }
 .team-profile-last{
 
-    margin-right:0px;
+    margin-right:0;
 
 }
 .team-contact{
@@ -779,10 +779,9 @@ canvas {
 }
 .foto_hs1{
     position: absolute;
-    left: 0px;
-    top:0px;
-    left:0px;
-    bottom:0px;
+    left: 0;
+    top:0;
+    bottom:0;
     width:100%;
     height:100%;
     background-image: url(../img/hs3.png);
@@ -792,10 +791,9 @@ canvas {
 }
 .foto_hs2{
     position: absolute;
-    left: 0px;
-    top:0px;
-    left:0px;
-    bottom:0px;
+    left: 0;
+    top:0;
+    bottom:0;
     width:100%;
     height:100%;
     background-image: url(../img/hs2.png);
@@ -805,10 +803,9 @@ canvas {
 }
 .foto_hs3{
     position: absolute;
-    left: 0px;
-    top:0px;
-    left:0px;
-    bottom:0px;
+    left: 0;
+    top:0;
+    bottom:0;
     width:100%;
     height:100%;
     background-image: url(../img/hs1.png);
@@ -830,10 +827,9 @@ canvas {
  }
 .foto_tlf1{
     position: absolute;
-    left: 0px;
-    top:0px;
-    left:0px;
-    bottom:0px;
+    left: 0;
+    top:0;
+    bottom:0;
     width:100%;
     height:100%;
     background-image: url(../img/tlf1.png);
@@ -843,10 +839,9 @@ canvas {
 }
 .foto_tlf2{
     position: absolute;
-    left: 0px;
-    top:0px;
-    left:0px;
-    bottom:0px;
+    left: 0;
+    top:0;
+    bottom:0;
     width:100%;
     height:100%;
     background-image: url(../img/tlf2.png);
@@ -856,10 +851,9 @@ canvas {
 }
 .foto_tlf3{
     position: absolute;
-    left: 0px;
-    top:0px;
-    left:0px;
-    bottom:0px;
+    left: 0;
+    top:0;
+    bottom:0;
     width:100%;
     height:100%;
     background-image: url(../img/tlf3.png);
@@ -879,10 +873,9 @@ canvas {
 }
 .foto_zw1{
     position: absolute;
-    left: 0px;
-    top:0px;
-    left:0px;
-    bottom:0px;
+    left: 0;
+    top:0;
+    bottom:0;
     width:100%;
     height:100%;
     background-image: url(../img/zw1.png);
@@ -892,10 +885,9 @@ canvas {
 }
 .foto_zw2{
     position: absolute;
-    left: 0px;
-    top:0px;
-    left:0px;
-    bottom:0px;
+    left: 0;
+    top:0;
+    bottom:0;
     width:100%;
     height:100%;
     background-image: url(../img/zw2.png);
@@ -905,10 +897,9 @@ canvas {
 }
 .foto_zw3{
     position: absolute;
-    left: 0px;
-    top:0px;
-    left:0px;
-    bottom:0px;
+    left: 0;
+    top:0;
+    bottom:0;
     width:100%;
     height:100%;
     background-image: url(../img/zw3.png);
@@ -939,6 +930,8 @@ canvas {
     font-weight: bold;
     margin-top: 1.5rem;
     margin-bottom: 3rem;
+    text-align: center;
+    color: #000;
 }
 
 .underline--magical {
@@ -1024,7 +1017,7 @@ canvas {
 .like_button{
     display: flex;
     align-items: center;
-    border:0px;
+    border:0;
     width: auto;
     height: 2.5rem;
     padding: 0 1rem 0 1rem;
@@ -1049,6 +1042,20 @@ canvas {
     text-align: center;
 }
 
+/*文章的副标题*/
+h3{
+    text-align: justify;
+    word-break: break-all;
+    margin-top:1.8rem;
+    margin-bottom: 1.8rem;
+    padding-left: 1rem;
+    border-left: 5px solid #97ddfc;
+    /*border-left: 5px solid #e7f8ff;*/
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #010101;
+}
 .richmedia-detail-sub{
     text-align: justify;
     word-break: break-all;
@@ -1062,6 +1069,16 @@ canvas {
     font-size: 1.5rem;
     color: #010101;
 }
+
+/*文章p*/
+p{
+    text-align: justify;
+    word-break: break-all;
+    font-size: 1.1rem;
+    color: #888888;
+    letter-spacing: 3px;
+}
+
 .richmedia-detail-desc{
     text-align: justify;
     word-break: break-all;
@@ -1070,14 +1087,27 @@ canvas {
     letter-spacing: 3px;
 }
 
+/*文章的粗体*/
+strong{
+    font-weight: bold;
+    color: #010101;
+}
 .richmedia-detail-bold{
     font-weight: bold;
     color: #010101;
 }
+
+/*文章图片*/
+.media-wrap{
+    width:100%;
+    margin-top: 1.5rem;
+}
+
 .richmedia-detail-img{
     width: 100%;
     margin-top: 1.5rem;
 }
+
 
 .richmedia-detail-fig{
     text-align: center;
@@ -1085,6 +1115,13 @@ canvas {
     color: #d3d3d3;
 }
 
+/*文章链接*/
+a{
+    text-decoration: underline;
+    color: #2dbcfc;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
 .richmedia-detail-href{
     text-decoration: underline;
     color: #2dbcfc;

@@ -1,9 +1,225 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5f470de5-9d74-4ea1-8279-9e1f184e94b0" name="Default" comment="">
+    <list default="true" id="5f470de5-9d74-4ea1-8279-9e1f184e94b0" name="Default" comment="finish the event article logic">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/event-detail.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/events-detail.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/architecture/IMG_2443.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/architecture/IMG_2750.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/architecture/IMG_4030.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/architecture/IMG_8056.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/architecture/SongHan_02.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/architecture/_MG_9464.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/architecture/p2306520410.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/architecture/p2313583971.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/architecture/p2313584011.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/architecture/p2313584051.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/architecture/p2411754855.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/card/001-resize.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/card/004-resize.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/card/037-resize.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/card/039-resize.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/card/0FE-resize.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/card/242-resize.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/card/C21-resize.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/children/IMG_1230.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/children/IMG_1618.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/children/IMG_1837.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/children/IMG_1838.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/children/IMG_1841.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/children/IMG_1842.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/children/IMG_1935.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/children/IMG_2725.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/children/IMG_4038.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/children/IMG_4039.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/geometry/IMG_20161125_182316.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/geometry/IMG_20161125_185938.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/geometry/IMG_20161125_193532.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/geometry/IMG_20161125_213145.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/geometry/IMG_20161126_163040.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/geometry/IMG_20161126_172140.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/geometry/IMG_20161126_181247.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/geometry/IMG_20161126_181849.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/geometry/IMG_20161126_225133.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/geometry/IMG_20161127_190405.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/geometry/IMG_20161127_211908.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/geometry/IMG_20161127_212032.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/geometry/IMG_20161127_231610.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/geometry/IMG_20161128_104348.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/geometry/IMG_20161128_110746.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/geometry/IMG_20161129_111935.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/geometry/IMG_20161129_135145.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/honor/hongkong1.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/honor/hongkong2.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/honor/hongkong3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/honor/hongkong4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/honor/kyoto.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/honor/turkey1.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/honor/turkey2.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/pair/IMG_1350.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/pair/IMG_2089.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/pair/IMG_3003.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/pair/IMG_4032.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/pair/IMG_5144.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/pair/IMG_6011.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/pair/IMG_6989.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/pair/IMG_7385.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/pair/IMG_8972.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/pair/IMG_8979.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/pair/IMG_9065.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/pair/IMG_9077.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/pair/IMG_9787.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/portrait/IMG_1318.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/portrait/IMG_1737.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/portrait/IMG_2446.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/portrait/IMG_2991.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/portrait/IMG_3146.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/portrait/IMG_5566.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/portrait/IMG_5567.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/portrait/IMG_5662.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/portrait/IMG_5742.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/portrait/IMG_9186.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/portrait/SongHan01-children.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/portrait/SongHan_03.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/portrait/p2323014664.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/portrait/p2411753703.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/portrait/p2411753835.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/portrait/p2411753952.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/portrait/p2411754985.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/symmetry/IMG_0311.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/symmetry/IMG_0349.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/symmetry/IMG_0684.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/symmetry/IMG_0797.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/symmetry/IMG_0910.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/symmetry/IMG_1224.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/symmetry/IMG_1600.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/symmetry/IMG_20161014_151909.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/symmetry/IMG_20161014_191034.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/symmetry/IMG_20161015_143914.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/symmetry/IMG_20161015_162500.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/symmetry/IMG_20161015_173637.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/symmetry/IMG_9487.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/symmetry/IMG_9490.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/symmetry/IMG_9491.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/symmetry/p2372724085.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/architecture/berlin-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/architecture/guangzhou-resize.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/architecture/kanezawa-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/architecture/lisbon-resize.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/architecture/shenzhen1-resize.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/architecture/shenzhen2-resize.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/architecture/soul1-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/architecture/spain1-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/architecture/takamatsu-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/architecture/tokyo1-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/architecture/tokyo2-resize.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/architecture/toyojima-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/architecture/turkey-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/card/001-resize.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/card/004-resize.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/card/037-resize.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/card/039-resize.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/card/0FE-resize.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/card/242-resize.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/card/C21-resize.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/children/turkey1-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/children/turkey10-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/children/turkey2-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/children/turkey3-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/children/turkey4-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/children/turkey5-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/children/turkey6-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/children/turkey7-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/children/turkey8-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/children/turkey9-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/geometry/berlin1-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/geometry/berlin10-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/geometry/berlin11-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/geometry/berlin12-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/geometry/berlin13-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/geometry/berlin14-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/geometry/berlin15-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/geometry/berlin16-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/geometry/berlin17-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/geometry/berlin2-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/geometry/berlin3-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/geometry/berlin4-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/geometry/berlin5-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/geometry/berlin6-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/geometry/berlin7-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/geometry/berlin8-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/geometry/berlin9-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/honor/LingfeiTan05-architecture-resize.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/honor/LingfeiTan_01-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/honor/LingfeiTan_02-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/honor/LingfeiTan_03-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/honor/SongHan04-people-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/honor/SongHan05-travel-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/honor/p2306520175-resize.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/pair/japan-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/pair/japan2-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/pair/japan3-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/pair/japan4-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/pair/japan5-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/pair/japan6-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/pair/japan7-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/pair/japan8-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/pair/japan9-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/pair/nara-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/pair/oasaka2-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/pair/osaka-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/pair/tokyo-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/portrait/berlin1-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/portrait/hongkong1-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/portrait/imaji-resize.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/portrait/lisbon1-resize.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/portrait/lisbon2-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/portrait/lisbon3-resize.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/portrait/moscow1-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/portrait/moscow2-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/portrait/moscow3-resize.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/portrait/sichuan-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/portrait/spain1-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/portrait/spain2-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/portrait/spain3-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/portrait/spain4-resize.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/portrait/turkey1-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/portrait/turkey2-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/portrait/turkey3-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/space/akida-resize.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/space/berlin-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/space/berlin2-resize.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/space/budapest-resize.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/space/hokaidou-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/space/kyoto-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/space/lisbon-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/space/lisbon2-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/space/moscow-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/space/qinghai-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/space/sichuan-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/space/sichuan2-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/space/tibet-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/space/turkey1-resize.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/symmetry/IMG_0311-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/symmetry/IMG_0349-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/symmetry/IMG_0684-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/symmetry/IMG_0797-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/symmetry/IMG_0910-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/symmetry/IMG_1224-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/symmetry/IMG_1600-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/symmetry/IMG_20161014_151909-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/symmetry/IMG_20161014_191034-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/symmetry/IMG_20161015_143914-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/symmetry/IMG_20161015_162500-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/symmetry/IMG_20161015_173637-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/symmetry/IMG_9487-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/symmetry/IMG_9490-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/symmetry/IMG_9491-resize.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/symmetry/p2372724085-resize.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/API.js" afterPath="$PROJECT_DIR$/js/API.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/responsive.css" afterPath="$PROJECT_DIR$/css/responsive.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/design-detail.html" afterPath="$PROJECT_DIR$/design-detail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/photos-detail.html" afterPath="$PROJECT_DIR$/photos-detail.html" />
     </list>
@@ -31,35 +247,43 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="502" column="7" selection-start-line="502" selection-start-column="7" selection-end-line="502" selection-end-column="7" />
+            <state relative-caret-position="124">
+              <caret line="589" column="11" selection-start-line="589" selection-start-column="11" selection-end-line="589" selection-end-column="11" />
               <folding>
-                <element signature="e#666#852#0" expanded="false" />
-                <element signature="e#907#1094#0" expanded="false" />
-                <element signature="e#1639#1720#0" expanded="false" />
-                <element signature="e#1761#1842#0" expanded="false" />
+                <element signature="e#768#954#0" expanded="false" />
+                <element signature="e#1009#1196#0" expanded="false" />
+                <element signature="e#1741#1822#0" expanded="false" />
+                <element signature="e#1863#1944#0" expanded="false" />
                 <element signature="n#!!block;n#countTimes#0" expanded="false" />
-                <element signature="e#2084#2535#0" expanded="false" />
-                <element signature="e#2548#2569#0" expanded="false" />
+                <element signature="e#2186#2637#0" expanded="false" />
+                <element signature="e#2650#2671#0" expanded="false" />
                 <element signature="n#!!block;n#tlf_countTimes#0" expanded="false" />
-                <element signature="e#2772#3194#0" expanded="false" />
-                <element signature="e#3207#3232#0" expanded="false" />
+                <element signature="e#2874#3296#0" expanded="false" />
+                <element signature="e#3309#3334#0" expanded="false" />
                 <element signature="n#!!block;n#zw_countTimes#0" expanded="false" />
-                <element signature="e#3427#3837#0" expanded="false" />
-                <element signature="e#3850#3874#0" expanded="false" />
-                <element signature="e#3911#3993#0" expanded="false" />
-                <element signature="e#4024#4114#0" expanded="false" />
-                <element signature="e#4151#4233#0" expanded="false" />
-                <element signature="e#4264#4346#0" expanded="false" />
-                <element signature="e#4384#4470#0" expanded="false" />
-                <element signature="e#4502#4586#0" expanded="false" />
+                <element signature="e#3529#3939#0" expanded="false" />
+                <element signature="e#3952#3976#0" expanded="false" />
+                <element signature="e#4013#4095#0" expanded="false" />
+                <element signature="e#4126#4216#0" expanded="false" />
+                <element signature="e#4253#4335#0" expanded="false" />
+                <element signature="e#4366#4448#0" expanded="false" />
+                <element signature="e#4486#4572#0" expanded="false" />
+                <element signature="e#4604#4688#0" expanded="false" />
                 <element signature="n#!!block;n#CardObj#0" expanded="false" />
-                <element signature="e#6710#7190#0" expanded="false" />
-                <element signature="e#13058#13469#0" expanded="false" />
+                <element signature="e#13134#13545#0" expanded="false" />
                 <element signature="n#!!block;n#TagObj#0" expanded="false" />
-                <element signature="e#14033#14463#0" expanded="false" />
-                <element signature="e#14859#15295#0" expanded="false" />
+                <element signature="e#15006#15442#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="event-detail.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/event-detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="482">
+              <caret line="151" column="8" selection-start-line="151" selection-start-column="8" selection-end-line="159" selection-end-column="7" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -67,10 +291,10 @@
       <file leaf-file-name="design-detail.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/design-detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="133" column="4" selection-start-line="133" selection-start-column="4" selection-end-line="134" selection-end-column="24" />
+            <state relative-caret-position="363">
+              <caret line="102" column="41" selection-start-line="102" selection-start-column="41" selection-end-line="102" selection-end-column="41" />
               <folding>
-                <element signature="e#8510#12838#0" expanded="false" />
+                <element signature="e#8497#12825#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -79,11 +303,11 @@
       <file leaf-file-name="photos-detail.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/photos-detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="193" column="0" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
+            <state relative-caret-position="124">
+              <caret line="145" column="24" selection-start-line="145" selection-start-column="24" selection-end-line="145" selection-end-column="24" />
               <folding>
-                <element signature="e#12594#13538#0" expanded="false" />
-                <marker date="1525108227864" expanded="false" signature="13050:13536" ph="{...}" />
+                <element signature="e#12574#13518#0" expanded="false" />
+                <marker date="1525119076192" expanded="false" signature="13030:13516" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -92,40 +316,14 @@
       <file leaf-file-name="design.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/design.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
+            <state relative-caret-position="1477">
               <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="123" selection-end-column="11" />
               <folding>
                 <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#ul#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="e#5441#5564#0" expanded="false" />
                 <element signature="e#5606#5729#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="518">
-              <caret line="1030" column="20" selection-start-line="1030" selection-start-column="4" selection-end-line="1030" selection-end-column="20" />
-              <folding>
-                <element signature="e#10837#10900#0" expanded="false" />
-                <element signature="e#10914#10939#0" expanded="false" />
-                <element signature="e#10951#11025#0" expanded="false" />
-                <element signature="e#11038#11315#0" expanded="false" />
-                <element signature="e#11316#11408#0" expanded="false" />
-                <element signature="e#11409#11493#0" expanded="false" />
-                <element signature="e#11494#11634#0" expanded="false" />
-                <element signature="e#13064#13111#0" expanded="false" />
-                <element signature="e#13133#13167#0" expanded="false" />
-                <element signature="e#13186#13220#0" expanded="false" />
-                <element signature="e#17860#17902#0" expanded="false" />
-                <element signature="e#19748#19792#0" expanded="false" />
-                <element signature="e#19815#19885#0" expanded="false" />
-                <element signature="e#19909#20008#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -134,12 +332,32 @@
       <file leaf-file-name="events.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/events.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
+            <state relative-caret-position="2028">
               <caret line="145" column="12" selection-start-line="145" selection-start-column="12" selection-end-line="145" selection-end-column="12" />
               <folding>
-                <element signature="n#ul#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="e#4939#5062#0" expanded="false" />
                 <element signature="e#5104#5227#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="1229" column="4" selection-start-line="1229" selection-start-column="4" selection-end-line="1229" selection-end-column="4" />
+              <folding>
+                <element signature="e#10827#10890#0" expanded="false" />
+                <element signature="e#10904#10929#0" expanded="false" />
+                <element signature="e#11028#11305#0" expanded="false" />
+                <element signature="e#13052#13099#0" expanded="false" />
+                <element signature="e#13121#13155#0" expanded="false" />
+                <element signature="e#13174#13208#0" expanded="false" />
+                <element signature="e#17707#17749#0" expanded="false" />
+                <element signature="e#20245#20315#0" expanded="false" />
+                <element signature="e#20327#20426#0" expanded="false" />
+                <element signature="e#20449#20548#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -148,8 +366,8 @@
       <file leaf-file-name="responsive.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/responsive.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="176" column="23" selection-start-line="176" selection-start-column="23" selection-end-line="176" selection-end-column="23" />
+            <state relative-caret-position="112">
+              <caret line="362" column="16" selection-start-line="362" selection-start-column="16" selection-end-line="362" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -206,7 +424,6 @@
         <option value="$PROJECT_DIR$/contact.html" />
         <option value="$PROJECT_DIR$/events-detail.html" />
         <option value="$PROJECT_DIR$/team.html" />
-        <option value="$PROJECT_DIR$/css/responsive.css" />
         <option value="C:/nginx-1.13.12/nginx-1.13.12/conf/nginx.conf" />
         <option value="$PROJECT_DIR$/test.html" />
         <option value="$PROJECT_DIR$/demo.html" />
@@ -217,10 +434,12 @@
         <option value="$PROJECT_DIR$/design.html" />
         <option value="$PROJECT_DIR$/photos.html" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/css/main.css" />
-        <option value="$PROJECT_DIR$/design-detail.html" />
         <option value="$PROJECT_DIR$/js/API.js" />
         <option value="$PROJECT_DIR$/photos-detail.html" />
+        <option value="$PROJECT_DIR$/design-detail.html" />
+        <option value="$PROJECT_DIR$/event-detail.html" />
+        <option value="$PROJECT_DIR$/css/responsive.css" />
+        <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/js/main.js" />
       </list>
     </option>
@@ -300,8 +519,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\assemble微信+设计+网站\Assemble-h5\original-album\js" />
       <recent name="F:\assemble微信+设计+网站\Assemble-h5\original-album" />
+      <recent name="F:\assemble微信+设计+网站\Assemble-h5\original-album\js" />
       <recent name="F:\assemble微信+设计+网站\Assemble-h5\original-album\img" />
       <recent name="F:\assemble微信+设计+网站\Assemble-h5\original-album\css" />
       <recent name="F:\assemble微信+设计+网站\Assemble-h5\original-album\img\ava" />
@@ -412,7 +631,7 @@
       <workItem from="1524749202438" duration="22159000" />
       <workItem from="1524841643169" duration="10000" />
       <workItem from="1524841662632" duration="4711000" />
-      <workItem from="1524847424530" duration="74242000" />
+      <workItem from="1524847424530" duration="82682000" />
     </task>
     <task id="LOCAL-00001" summary="build the frame">
       <created>1502180958325</created>
@@ -610,11 +829,18 @@
       <option name="project" value="LOCAL" />
       <updated>1525096784004</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="finish the header logic.">
+      <created>1525108480941</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1525108480941</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="432546000" />
+    <option name="totallyTimeSpent" value="440986000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -670,8 +896,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change the canvas structure and team photo structure." />
-    <MESSAGE value="fix some problem in contact page&#10;" />
     <MESSAGE value="add the qr function to team page&#10;" />
     <MESSAGE value="add a lot of factors" />
     <MESSAGE value="finished the design first page function&#10;" />
@@ -695,7 +919,9 @@
     <MESSAGE value="almost finish the first page logic,  scroll down has some add event bug." />
     <MESSAGE value="fix some warnings" />
     <MESSAGE value="finish the click logic, but has bug in build the prototype" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish the click logic, but has bug in build the prototype" />
+    <MESSAGE value="finish the header logic." />
+    <MESSAGE value="finish the event article logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish the event article logic" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -704,7 +930,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/css/swiper.min.js" />
     <entry file="file://$PROJECT_DIR$/img/work/architecture/berlin-resize.JPG">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -854,13 +1079,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/events-detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="16" column="71" selection-start-line="16" selection-start-column="71" selection-end-line="16" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/team.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -914,14 +1132,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/responsive.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="176" column="23" selection-start-line="176" selection-start-column="23" selection-end-line="176" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/jquery.lazyload.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -946,18 +1156,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/events.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="145" column="12" selection-start-line="145" selection-start-column="12" selection-end-line="145" selection-end-column="12" />
-          <folding>
-            <element signature="n#ul#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#4939#5062#0" expanded="false" />
-            <element signature="e#5104#5227#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="466">
@@ -973,21 +1171,6 @@
             <element signature="e#7702#8185#0" expanded="false" />
             <element signature="e#8394#8517#0" expanded="false" />
             <element signature="e#8559#8682#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/design.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="123" selection-end-column="11" />
-          <folding>
-            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#ul#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#5441#5564#0" expanded="false" />
-            <element signature="e#5606#5729#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1016,80 +1199,123 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/main.css">
+    <entry file="file://$PROJECT_DIR$/events-detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="1030" column="20" selection-start-line="1030" selection-start-column="4" selection-end-line="1030" selection-end-column="20" />
+        <state relative-caret-position="544">
+          <caret line="16" column="71" selection-start-line="16" selection-start-column="71" selection-end-line="16" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/events.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2028">
+          <caret line="145" column="12" selection-start-line="145" selection-start-column="12" selection-end-line="145" selection-end-column="12" />
           <folding>
-            <element signature="e#10837#10900#0" expanded="false" />
-            <element signature="e#10914#10939#0" expanded="false" />
-            <element signature="e#10951#11025#0" expanded="false" />
-            <element signature="e#11038#11315#0" expanded="false" />
-            <element signature="e#11316#11408#0" expanded="false" />
-            <element signature="e#11409#11493#0" expanded="false" />
-            <element signature="e#11494#11634#0" expanded="false" />
-            <element signature="e#13064#13111#0" expanded="false" />
-            <element signature="e#13133#13167#0" expanded="false" />
-            <element signature="e#13186#13220#0" expanded="false" />
-            <element signature="e#17860#17902#0" expanded="false" />
-            <element signature="e#19748#19792#0" expanded="false" />
-            <element signature="e#19815#19885#0" expanded="false" />
-            <element signature="e#19909#20008#0" expanded="false" />
+            <element signature="e#4939#5062#0" expanded="false" />
+            <element signature="e#5104#5227#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/design.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1477">
+          <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="123" selection-end-column="11" />
+          <folding>
+            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#ul#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#5441#5564#0" expanded="false" />
+            <element signature="e#5606#5729#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/design-detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="133" column="4" selection-start-line="133" selection-start-column="4" selection-end-line="134" selection-end-column="24" />
+        <state relative-caret-position="363">
+          <caret line="102" column="41" selection-start-line="102" selection-start-column="41" selection-end-line="102" selection-end-column="41" />
           <folding>
-            <element signature="e#8510#12838#0" expanded="false" />
+            <element signature="e#8497#12825#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/event-detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="151" column="8" selection-start-line="151" selection-start-column="8" selection-end-line="159" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/photos-detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="193" column="0" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
+        <state relative-caret-position="124">
+          <caret line="145" column="24" selection-start-line="145" selection-start-column="24" selection-end-line="145" selection-end-column="24" />
           <folding>
-            <element signature="e#12594#13538#0" expanded="false" />
-            <marker date="1525108227864" expanded="false" signature="13050:13536" ph="{...}" />
+            <element signature="e#12574#13518#0" expanded="false" />
+            <marker date="1525119076192" expanded="false" signature="13030:13516" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/responsive.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="362" column="16" selection-start-line="362" selection-start-column="16" selection-end-line="362" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="1229" column="4" selection-start-line="1229" selection-start-column="4" selection-end-line="1229" selection-end-column="4" />
+          <folding>
+            <element signature="e#10827#10890#0" expanded="false" />
+            <element signature="e#10904#10929#0" expanded="false" />
+            <element signature="e#11028#11305#0" expanded="false" />
+            <element signature="e#13052#13099#0" expanded="false" />
+            <element signature="e#13121#13155#0" expanded="false" />
+            <element signature="e#13174#13208#0" expanded="false" />
+            <element signature="e#17707#17749#0" expanded="false" />
+            <element signature="e#20245#20315#0" expanded="false" />
+            <element signature="e#20327#20426#0" expanded="false" />
+            <element signature="e#20449#20548#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="502" column="7" selection-start-line="502" selection-start-column="7" selection-end-line="502" selection-end-column="7" />
+        <state relative-caret-position="124">
+          <caret line="589" column="11" selection-start-line="589" selection-start-column="11" selection-end-line="589" selection-end-column="11" />
           <folding>
-            <element signature="e#666#852#0" expanded="false" />
-            <element signature="e#907#1094#0" expanded="false" />
-            <element signature="e#1639#1720#0" expanded="false" />
-            <element signature="e#1761#1842#0" expanded="false" />
+            <element signature="e#768#954#0" expanded="false" />
+            <element signature="e#1009#1196#0" expanded="false" />
+            <element signature="e#1741#1822#0" expanded="false" />
+            <element signature="e#1863#1944#0" expanded="false" />
             <element signature="n#!!block;n#countTimes#0" expanded="false" />
-            <element signature="e#2084#2535#0" expanded="false" />
-            <element signature="e#2548#2569#0" expanded="false" />
+            <element signature="e#2186#2637#0" expanded="false" />
+            <element signature="e#2650#2671#0" expanded="false" />
             <element signature="n#!!block;n#tlf_countTimes#0" expanded="false" />
-            <element signature="e#2772#3194#0" expanded="false" />
-            <element signature="e#3207#3232#0" expanded="false" />
+            <element signature="e#2874#3296#0" expanded="false" />
+            <element signature="e#3309#3334#0" expanded="false" />
             <element signature="n#!!block;n#zw_countTimes#0" expanded="false" />
-            <element signature="e#3427#3837#0" expanded="false" />
-            <element signature="e#3850#3874#0" expanded="false" />
-            <element signature="e#3911#3993#0" expanded="false" />
-            <element signature="e#4024#4114#0" expanded="false" />
-            <element signature="e#4151#4233#0" expanded="false" />
-            <element signature="e#4264#4346#0" expanded="false" />
-            <element signature="e#4384#4470#0" expanded="false" />
-            <element signature="e#4502#4586#0" expanded="false" />
+            <element signature="e#3529#3939#0" expanded="false" />
+            <element signature="e#3952#3976#0" expanded="false" />
+            <element signature="e#4013#4095#0" expanded="false" />
+            <element signature="e#4126#4216#0" expanded="false" />
+            <element signature="e#4253#4335#0" expanded="false" />
+            <element signature="e#4366#4448#0" expanded="false" />
+            <element signature="e#4486#4572#0" expanded="false" />
+            <element signature="e#4604#4688#0" expanded="false" />
             <element signature="n#!!block;n#CardObj#0" expanded="false" />
-            <element signature="e#6710#7190#0" expanded="false" />
-            <element signature="e#13058#13469#0" expanded="false" />
+            <element signature="e#13134#13545#0" expanded="false" />
             <element signature="n#!!block;n#TagObj#0" expanded="false" />
-            <element signature="e#14033#14463#0" expanded="false" />
-            <element signature="e#14859#15295#0" expanded="false" />
+            <element signature="e#15006#15442#0" expanded="false" />
           </folding>
         </state>
       </provider>

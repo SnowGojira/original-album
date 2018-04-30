@@ -2,6 +2,8 @@
  * Created by hakuh on 2017/9/8.
  */
 var rootURL="http://120.77.83.209:8800/api/";
+// var rootURL="http://120.77.83.209/api/";
+//     var rootURL="http://www.yuanhuace.com:63342/api/";
 var allTagURL=rootURL+"category/list";
 var allURL=rootURL+"list?category=0";
 var photoURL=rootURL+"list?category=1";
@@ -401,7 +403,7 @@ ClickCard =function(id,type){
         window.location.href="design-detail.html";
 
     }else if(type==3){
-        window.location.href="events-detail.html";
+        window.location.href="event-detail.html";
 
     }else{
 
@@ -424,9 +426,7 @@ DetailObj.prototype ={
 
     build:function () {
         var URL=this.url;
-        console.log("访问的url："+URL);
-        var detailObj=getDetailsData(URL);
-        // console.log("前往的对象"+detailObj.timeNames);
+        // console.log("访问的url："+URL);
 
         AppendDetailHead(URL);
 
@@ -447,7 +447,6 @@ getDetailsData=function (url) {
         .done(function (result) {
             // data=result.data;
             data=result.data[0];
-            console.log("前往的data"+data);
 
         })
         .fail(function(err) {
@@ -460,13 +459,13 @@ getDetailsData=function (url) {
 };
 
 function ReplaceDetailTag(str){
-    console.log("ReplaceDetailTag");
+
     $('.list-btn').append(detailTag.replace("%data_tag%",str));
 };
 
 function AppendDetailHead(url) {
     var detailObj=getDetailsData(url);
-    console.log("前往的对象"+detailObj);
+
     var tags=detailObj.tagNames;
     var times=detailObj.timeNames;
     var title=detailObj.title;
@@ -475,6 +474,7 @@ function AppendDetailHead(url) {
     var type=detailObj.type;
     var imgSrc=detailObj.cover;
     var id=detailObj.id;
+    var content=detailObj.content;
 
 
     if (tags instanceof Array) {
@@ -508,6 +508,10 @@ function AppendDetailHead(url) {
 
     if (type !=1){
         $('.richmedia-detail-header').append(detailCover.replace("%data_img%",imgSrc));
+        $('.richmedia-detail-article').append(content);
+
+        $('.media-wrap img').css("width","100%");
+        console.log('文章内容：'+content);
     }else{
 
     }
@@ -541,7 +545,7 @@ AppendPhotoArticle=function () {
 };
 
 AppendEventArticle=function () {
-
+    $('.richmedia-detail-article p').addClass("richmedia-detail-desc");
 };
 
 /*******************标签按钮********************/
