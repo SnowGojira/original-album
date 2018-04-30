@@ -8,11 +8,9 @@ var allURL=rootURL+"list?category=0";
 var photoURL=rootURL+"list?category=1";
 var designURL=rootURL+"list?category=2";
 var eventURL=rootURL+"list?category=3";
-var photoDURL=rootURL+"/photos";
-var designDURL=rootURL+"/category";
-var catelogueURL=rootURL+"/category";
+var addViewURL=rootURL+"addViews";
+var addViewURL=rootURL+"addViews";
+var detailURL=rootURL+"detail?id=";
 
-
-var design=catelogueURL+"/design";
 
 

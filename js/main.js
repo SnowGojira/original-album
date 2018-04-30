@@ -228,7 +228,7 @@ $('#close_btn').click(function () {
 
 //reversion <img class="card-img lazyload" src="img/loader.gif" data-img="%data_img%x-oss-process=image/resize,m_fill,w_497,h_328,limit_0/auto-orient,0/quality,q_90" alt="原画册"/>
 
-var card='<li id="card%data_id%" class="work-col "> <div class="paper paper-work"> <img class="card-img lazy" data-original="%data_img%?x-oss-process=image/resize,m_fill,w_497,h_328,limit_0/auto-orient,0/quality,q_90" alt="原画册"/>'+
+var card='<li id="%data_id%" data-value="%data_type%" class="work-col "> <div class="paper paper-work"> <img class="card-img lazy" data-original="%data_img%?x-oss-process=image/resize,m_fill,w_497,h_328,limit_0/auto-orient,0/quality,q_90" alt="原画册"/>'+
     '<div class="work-title">%data_title%</div> <div class="project-status"> <span class="project-status-sep">'+
     '<svg class="project-icon project-icon-appreciate" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0.5 0.5 16 16"> <path fill="none" d="M.5.5h16v16H.5z"></path> <path d="M.5 7.5h3v8h-3zM7.207 15.207c.193.19.425.29.677.293H12c.256 0 .512-.098.707-.293l2.5-2.5c.19-.19.288-.457.293-.707V8.5c0-.553-.445-1-1-1h-5L11 5s.5-.792.5-1.5v-1c0-.553-.447-1-1-1l-1 2-4 4v6l1.707 1.707z"></path></svg>'+
     '<span class="project-status-number likes">%data_likes%</span> </span>'+
@@ -275,7 +275,7 @@ CardObj.prototype ={
         var index=1;
         var totalheight = 0;
         var Url=this.url;
-        console.log(Url);
+        // console.log(Url);
 
         var range = 0;             //距下边界长度/单位px
 
@@ -303,42 +303,7 @@ CardObj.prototype ={
             }
         });
 
-    },
-    result:function () {
-        var count=this.getCount();
-        var index=1;
-        var totalheight = 0;
-        var Url=this.url;
-        console.log(Url);
-
-        var range = 0;             //距下边界长度/单位px
-
-        var totalPage=Math.ceil(count/pageSize);
-        console.log(totalPage);
-
-        AppendCard(Url,index,returnResultItem);
-
-        $(window).scroll(function(){
-            var srollPos = $(window).scrollTop();    //滚动条距顶部距离(页面超出窗口的高度)
-
-
-            totalheight = parseFloat($(window).height()) + parseFloat(srollPos);
-            if(($(document).height()-range)*1.05 <= totalheight ) {
-                console.log('reach bottom');
-
-                if (index<totalPage){
-                    index++;
-                    AppendCard(Url,index,returnResultItem);
-                }else{
-                    $('.loading').css("opacity", 0);
-                    $('#endHint').show();
-                }
-
-            }
-        });
-
     }
-
 };
 
 /*生成卡片逻辑*/
@@ -365,12 +330,12 @@ getJsonData=function (url,index) {
 var resultItem=$('.resultItem');
 var returnResultItem=$('.returnResultItem');
 ReplaceCard=function (card,obj,root) {
-    console.log("card有没有执行？");
-    root.append(card.replace("%data_id%",obj.id).replace("%data_img%",obj.cover).replace("%data_title%",obj.title).replace("%data_likes%",obj.likes).replace("%data_views%",obj.views));
+    // console.log("card有没有执行？");
+    root.append(card.replace("%data_id%",obj.id).replace("%data_type%",obj.type).replace("%data_img%",obj.cover).replace("%data_title%",obj.title).replace("%data_likes%",obj.likes).replace("%data_views%",obj.views));
 };
 AppendCard=function (url,index,root) {
     var dataSet = getJsonData(url,index);
-    console.log(dataSet);
+    // console.log(dataSet);
     if (dataSet[0] != null) {
         for (var j = 0; j < dataSet.length; j++) {
             if (dataSet[j] != null) {
@@ -390,9 +355,131 @@ AppendCard=function (url,index,root) {
     $(function() {
         $("img.lazy").lazyload({effect: "fadeIn"});
     });
+
+    $('.work-col').click(function () {
+        var cardId=parseInt($(this).attr("id"));
+        var cardType=parseInt($(this).attr("data-value"));
+        console.log("cardId:"+cardId);
+        ClickCard(cardId,cardType);
+
+    });
 };
 
 
+/*卡片跳转：1、views +1 2、记住id*/
+ClickCard =function(id,type){
+    var params={
+        "id":id
+    };
+    $.ajax({
+        type : "POST",
+        url : addViewURL,
+        data : JSON.stringify(params)//数据，这里使用的是Json格式进行传输
+    })
+        .done(function (result) {
+            console.log("success:"+result);
+        })
+        .fail(function(err) {
+            console.log("error:"+err);
+        })
+        .always(function() {
+        });
+    localStorage.setItem('item_id', id);
+
+    if(type==1){
+        window.location.href="photos-detail.html";
+
+    }else if(type==2){
+        window.location.href="design-detail.html";
+
+    }else if(type==3){
+        window.location.href="events-detail.html";
+
+    }else{
+
+    }
+};
+
+
+
+/*生成二级界面逻辑，1、类型判断type=1,2&3 2、like post逻辑 */
+
+var detailTag='<li><a href="#"><span class="Tag">%data_tag%</span></a></li>';
+var detailCover='<img class="richmedia-detail-img lazy" data-original="%data_img%?x-oss-process=image/resize,m_fill,w_497,h_328,limit_0/auto-orient,0/quality,q_90" alt="原画册"/>';
+
+
+var DetailObj=function(url){
+    this.url=url;
+}
+
+DetailObj.prototype ={
+    tag:detailTag,
+    build:function () {
+        var URL=this.url;
+        console.log("访问的url："+URL);
+        var detailObj=getDetailsData(URL);
+        console.log("前往的对象"+detailObj[0]);
+
+        // AppendDetailHead(URL);
+
+    }
+};
+
+getDetailsData=function (url) {
+    var data;
+    var id=localStorage.getItem('item_id');
+    console.log("前往的id"+id);
+
+    $.ajax({
+        type : "GET",
+        async:false,//返回值的问题。
+        url : url+id,
+        data : {}//数据，这里使用的是Json格式进行传输
+    })
+        .done(function (result) {
+            data=result.data;
+        })
+        .fail(function(err) {
+            console.log("error:"+err);
+        })
+        .always(function() {
+        });
+
+    return data;
+};
+
+function ReplaceDetailTag(tag,str){
+    $('#designDetailWork').append(tag.replace("%data_tag%",str));
+};
+
+function AppendDetailHead(url) {
+    var detailObj=getDetailsData(url);
+    console.log("前往的对象"+detailObj);
+    var tags=detailObj.tagNames;
+    var times=detailObj.timeNames;
+    console.log("前往的对象"+tags+times);
+
+    if (tags[0] != null) {
+        for (var j = 0; j < tags.length; j++) {
+            if (tags[j] != null) {
+                ReplaceDetailTag(this.tag,tags[j]);
+            } else {
+                console.log("err");
+            }
+        }
+    } else {
+        console.log("err");
+    }
+    ReplaceDetailTag(this.tag,times);
+
+}
+
+
+
+
+AppendPhotoDetail=function () {
+
+};
 
 /*******************标签按钮********************/
 var tag='<li id="%data_id%" data-value="%data_val%"  class="list-filter-item %data_class%">%data_tag%</li>';
