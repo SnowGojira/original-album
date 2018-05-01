@@ -1195,8 +1195,8 @@ a{
 }
 
 .product-gallery .product-photos-side .swiper-slide {
-    width: 70px;
-    opacity: .4;
+    width: 10rem;
+    opacity: .2;
     transition: 225ms opacity ease-in-out;
 }
 

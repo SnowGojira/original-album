@@ -475,8 +475,10 @@ function AppendDetailHead(url) {
     var imgSrc=detailObj.cover;
     var id=detailObj.id;
     var content=detailObj.content;
+    var photoList=detailObj.photoList;
 
 
+    //添加标签逻辑
     if (tags instanceof Array) {
         for (var j = 0; j < tags.length; j++) {
             if (tags[j] != null) {
@@ -490,10 +492,10 @@ function AppendDetailHead(url) {
     }
     ReplaceDetailTag(times);
 
+    //点赞逻辑
     $('.richmedia-detail-title').text(title);
     $('.detail_date').text(date);
     $('.like_button_text').text(likes);
-
     $('.like_button').click(function(){
 
         $('.like_button_text').text(likes+1);
@@ -502,17 +504,21 @@ function AppendDetailHead(url) {
         LikeLogic(id);
     });
 
-    $(function() {
-        $("img.lazy").lazyload({effect: "fadeIn"});
-    });
 
+
+    //页面显示逻辑
     if (type !=1){
+        $(function() {
+            $("img.lazy").lazyload({effect: "fadeIn"});
+        });
         $('.richmedia-detail-header').append(detailCover.replace("%data_img%",imgSrc));
         $('.richmedia-detail-article').append(content);
 
         $('.media-wrap img').css("width","100%");
-        console.log('文章内容：'+content);
+        // console.log('文章内容：'+content);
     }else{
+        console.log('文章内容：'+photoList);
+        AppendPhotoArticle(photoList);
 
     }
 
@@ -539,14 +545,37 @@ LikeLogic=function (id) {
 };
 
 
-
-AppendPhotoArticle=function () {
-
-};
-
 AppendEventArticle=function () {
     $('.richmedia-detail-article p').addClass("richmedia-detail-desc");
 };
+
+
+var photoZoomDetails='<div class="swiper-slide"> <div class="swiper-zoom-container"> <img src="%work%" draggable="false" ondragstart="return false;"> </div> </div>';
+var photoDetails='<div class="swiper-slide" ><div class="swiper-zoom-container"><img src="%work%"></div> </div>';
+var photoDesc='<div class="swiper-slide" ><div class="swiper-zoom-container"><h2 >%desc%</h2></div> </div>';
+// var photoDesc='<div id="photoDesc" class="design-detail-desc"> <h2 class="none-display" id="desc">%desc%</h2> </div>';
+
+/*添加相册逻辑，1、添加相册 2、添加描述 3、相册与描述一一对应*/
+AppendPhotoArticle=function (arr) {
+    if(arr!=null){
+        for(i=0;i<arr.length;i++){
+            var src=arr[i].source;
+            var desc=arr[i].description;
+
+            $('#photoSwiper').append(photoDetails.replace("%work%",src));
+            $('#photoSwiperSlider').append(photoDesc.replace("%desc%",desc));
+            $('#photoSwiperfull').append(photoZoomDetails.replace("%work%",src));
+            // $('#photoDesc').append(photoDesc.replace("%id%",i).replace("%desc%",desc));
+
+
+        }
+    }else{
+        console.log("err");
+    }
+
+};
+
+
 
 /*******************标签按钮********************/
 var tag='<li id="%data_id%" data-value="%data_val%"  class="list-filter-item %data_class%">%data_tag%</li>';

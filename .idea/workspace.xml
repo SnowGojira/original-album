@@ -1,225 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5f470de5-9d74-4ea1-8279-9e1f184e94b0" name="Default" comment="finish the event article logic">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/event-detail.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/events-detail.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/architecture/IMG_2443.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/architecture/IMG_2750.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/architecture/IMG_4030.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/architecture/IMG_8056.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/architecture/SongHan_02.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/architecture/_MG_9464.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/architecture/p2306520410.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/architecture/p2313583971.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/architecture/p2313584011.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/architecture/p2313584051.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/architecture/p2411754855.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/card/001-resize.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/card/004-resize.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/card/037-resize.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/card/039-resize.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/card/0FE-resize.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/card/242-resize.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/card/C21-resize.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/children/IMG_1230.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/children/IMG_1618.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/children/IMG_1837.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/children/IMG_1838.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/children/IMG_1841.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/children/IMG_1842.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/children/IMG_1935.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/children/IMG_2725.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/children/IMG_4038.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/children/IMG_4039.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/geometry/IMG_20161125_182316.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/geometry/IMG_20161125_185938.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/geometry/IMG_20161125_193532.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/geometry/IMG_20161125_213145.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/geometry/IMG_20161126_163040.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/geometry/IMG_20161126_172140.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/geometry/IMG_20161126_181247.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/geometry/IMG_20161126_181849.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/geometry/IMG_20161126_225133.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/geometry/IMG_20161127_190405.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/geometry/IMG_20161127_211908.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/geometry/IMG_20161127_212032.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/geometry/IMG_20161127_231610.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/geometry/IMG_20161128_104348.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/geometry/IMG_20161128_110746.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/geometry/IMG_20161129_111935.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/geometry/IMG_20161129_135145.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/honor/hongkong1.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/honor/hongkong2.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/honor/hongkong3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/honor/hongkong4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/honor/kyoto.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/honor/turkey1.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/honor/turkey2.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/pair/IMG_1350.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/pair/IMG_2089.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/pair/IMG_3003.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/pair/IMG_4032.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/pair/IMG_5144.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/pair/IMG_6011.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/pair/IMG_6989.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/pair/IMG_7385.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/pair/IMG_8972.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/pair/IMG_8979.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/pair/IMG_9065.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/pair/IMG_9077.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/pair/IMG_9787.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/portrait/IMG_1318.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/portrait/IMG_1737.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/portrait/IMG_2446.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/portrait/IMG_2991.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/portrait/IMG_3146.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/portrait/IMG_5566.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/portrait/IMG_5567.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/portrait/IMG_5662.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/portrait/IMG_5742.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/portrait/IMG_9186.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/portrait/SongHan01-children.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/portrait/SongHan_03.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/portrait/p2323014664.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/portrait/p2411753703.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/portrait/p2411753835.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/portrait/p2411753952.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/portrait/p2411754985.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/symmetry/IMG_0311.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/symmetry/IMG_0349.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/symmetry/IMG_0684.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/symmetry/IMG_0797.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/symmetry/IMG_0910.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/symmetry/IMG_1224.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/symmetry/IMG_1600.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/symmetry/IMG_20161014_151909.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/symmetry/IMG_20161014_191034.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/symmetry/IMG_20161015_143914.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/symmetry/IMG_20161015_162500.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/symmetry/IMG_20161015_173637.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/symmetry/IMG_9487.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/symmetry/IMG_9490.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/symmetry/IMG_9491.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ava/symmetry/p2372724085.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/architecture/berlin-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/architecture/guangzhou-resize.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/architecture/kanezawa-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/architecture/lisbon-resize.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/architecture/shenzhen1-resize.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/architecture/shenzhen2-resize.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/architecture/soul1-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/architecture/spain1-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/architecture/takamatsu-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/architecture/tokyo1-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/architecture/tokyo2-resize.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/architecture/toyojima-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/architecture/turkey-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/card/001-resize.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/card/004-resize.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/card/037-resize.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/card/039-resize.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/card/0FE-resize.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/card/242-resize.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/card/C21-resize.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/children/turkey1-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/children/turkey10-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/children/turkey2-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/children/turkey3-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/children/turkey4-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/children/turkey5-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/children/turkey6-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/children/turkey7-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/children/turkey8-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/children/turkey9-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/geometry/berlin1-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/geometry/berlin10-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/geometry/berlin11-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/geometry/berlin12-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/geometry/berlin13-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/geometry/berlin14-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/geometry/berlin15-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/geometry/berlin16-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/geometry/berlin17-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/geometry/berlin2-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/geometry/berlin3-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/geometry/berlin4-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/geometry/berlin5-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/geometry/berlin6-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/geometry/berlin7-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/geometry/berlin8-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/geometry/berlin9-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/honor/LingfeiTan05-architecture-resize.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/honor/LingfeiTan_01-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/honor/LingfeiTan_02-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/honor/LingfeiTan_03-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/honor/SongHan04-people-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/honor/SongHan05-travel-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/honor/p2306520175-resize.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/pair/japan-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/pair/japan2-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/pair/japan3-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/pair/japan4-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/pair/japan5-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/pair/japan6-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/pair/japan7-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/pair/japan8-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/pair/japan9-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/pair/nara-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/pair/oasaka2-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/pair/osaka-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/pair/tokyo-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/portrait/berlin1-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/portrait/hongkong1-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/portrait/imaji-resize.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/portrait/lisbon1-resize.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/portrait/lisbon2-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/portrait/lisbon3-resize.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/portrait/moscow1-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/portrait/moscow2-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/portrait/moscow3-resize.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/portrait/sichuan-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/portrait/spain1-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/portrait/spain2-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/portrait/spain3-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/portrait/spain4-resize.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/portrait/turkey1-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/portrait/turkey2-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/portrait/turkey3-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/space/akida-resize.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/space/berlin-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/space/berlin2-resize.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/space/budapest-resize.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/space/hokaidou-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/space/kyoto-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/space/lisbon-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/space/lisbon2-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/space/moscow-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/space/qinghai-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/space/sichuan-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/space/sichuan2-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/space/tibet-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/space/turkey1-resize.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/symmetry/IMG_0311-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/symmetry/IMG_0349-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/symmetry/IMG_0684-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/symmetry/IMG_0797-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/symmetry/IMG_0910-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/symmetry/IMG_1224-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/symmetry/IMG_1600-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/symmetry/IMG_20161014_151909-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/symmetry/IMG_20161014_191034-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/symmetry/IMG_20161015_143914-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/symmetry/IMG_20161015_162500-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/symmetry/IMG_20161015_173637-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/symmetry/IMG_9487-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/symmetry/IMG_9490-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/symmetry/IMG_9491-resize.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/work/symmetry/p2372724085-resize.jpg" afterPath="" />
+    <list default="true" id="5f470de5-9d74-4ea1-8279-9e1f184e94b0" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/photos-sample.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/responsive.css" afterPath="$PROJECT_DIR$/css/responsive.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/design-detail.html" afterPath="$PROJECT_DIR$/design-detail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/photos-detail.html" afterPath="$PROJECT_DIR$/photos-detail.html" />
     </list>
@@ -244,11 +29,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="589" column="11" selection-start-line="589" selection-start-column="11" selection-end-line="589" selection-end-column="11" />
+            <state relative-caret-position="536">
+              <caret line="561" column="34" selection-start-line="561" selection-start-column="34" selection-end-line="561" selection-end-column="34" />
               <folding>
                 <element signature="e#768#954#0" expanded="false" />
                 <element signature="e#1009#1196#0" expanded="false" />
@@ -270,10 +55,42 @@
                 <element signature="e#4486#4572#0" expanded="false" />
                 <element signature="e#4604#4688#0" expanded="false" />
                 <element signature="n#!!block;n#CardObj#0" expanded="false" />
-                <element signature="e#13134#13545#0" expanded="false" />
+                <element signature="e#6812#7292#0" expanded="false" />
+                <element signature="e#12186#12400#0" expanded="false" />
+                <element signature="e#12645#12814#0" expanded="false" />
+                <element signature="e#13304#13715#0" expanded="false" />
                 <element signature="n#!!block;n#TagObj#0" expanded="false" />
-                <element signature="e#15006#15442#0" expanded="false" />
+                <element signature="e#16243#16679#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="swiper.min.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/swiper.min.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="268">
+              <caret line="14" column="4803" selection-start-line="14" selection-start-column="4803" selection-end-line="14" selection-end-column="4803" />
+              <folding>
+                <element signature="e#2953#3211#2" expanded="true" />
+                <element signature="e#3352#3610#2" expanded="true" />
+                <element signature="e#3730#3988#2" expanded="true" />
+                <element signature="e#4068#4326#2" expanded="true" />
+                <element signature="e#4467#4725#2" expanded="true" />
+                <element signature="e#4845#5103#2" expanded="true" />
+                <element signature="e#14570#16017#2" expanded="true" />
+                <element signature="e#16172#17616#2" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="photos-detail.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/photos-detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="267">
+              <caret line="118" column="48" selection-start-line="118" selection-start-column="42" selection-end-line="118" selection-end-column="48" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -291,23 +108,10 @@
       <file leaf-file-name="design-detail.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/design-detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="102" column="41" selection-start-line="102" selection-start-column="41" selection-end-line="102" selection-end-column="41" />
+            <state relative-caret-position="772">
+              <caret line="163" column="7" selection-start-line="163" selection-start-column="7" selection-end-line="163" selection-end-column="7" />
               <folding>
                 <element signature="e#8497#12825#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="photos-detail.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/photos-detail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="145" column="24" selection-start-line="145" selection-start-column="24" selection-end-line="145" selection-end-column="24" />
-              <folding>
-                <element signature="e#12574#13518#0" expanded="false" />
-                <marker date="1525119076192" expanded="false" signature="13030:13516" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -342,11 +146,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="1229" column="4" selection-start-line="1229" selection-start-column="4" selection-end-line="1229" selection-end-column="4" />
+            <state relative-caret-position="97">
+              <caret line="1197" column="16" selection-start-line="1197" selection-start-column="16" selection-end-line="1197" selection-end-column="16" />
               <folding>
                 <element signature="e#10827#10890#0" expanded="false" />
                 <element signature="e#10904#10929#0" expanded="false" />
@@ -369,27 +173,6 @@
             <state relative-caret-position="112">
               <caret line="362" column="16" selection-start-line="362" selection-start-column="16" selection-end-line="362" selection-end-column="16" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="466">
-              <caret line="57" column="36" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
-              <folding>
-                <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#ul#0;n#div#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="e#5936#6748#0" expanded="false" />
-                <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="e#7702#8185#0" expanded="false" />
-                <element signature="e#8394#8517#0" expanded="false" />
-                <element signature="e#8559#8682#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -419,7 +202,6 @@
         <option value="$PROJECT_DIR$/photo-sample.html" />
         <option value="$PROJECT_DIR$/js/logoEffects.js" />
         <option value="$PROJECT_DIR$/design-sample.html" />
-        <option value="$PROJECT_DIR$/photos-sample.html" />
         <option value="$PROJECT_DIR$/js/gallery.js" />
         <option value="$PROJECT_DIR$/contact.html" />
         <option value="$PROJECT_DIR$/events-detail.html" />
@@ -435,12 +217,13 @@
         <option value="$PROJECT_DIR$/photos.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/API.js" />
-        <option value="$PROJECT_DIR$/photos-detail.html" />
         <option value="$PROJECT_DIR$/design-detail.html" />
         <option value="$PROJECT_DIR$/event-detail.html" />
         <option value="$PROJECT_DIR$/css/responsive.css" />
-        <option value="$PROJECT_DIR$/css/main.css" />
+        <option value="$PROJECT_DIR$/photos-sample.html" />
         <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/photos-detail.html" />
+        <option value="$PROJECT_DIR$/css/main.css" />
       </list>
     </option>
   </component>
@@ -500,6 +283,34 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="original-album" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="original-album" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="original-album" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="original-album" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="original-album" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -631,7 +442,7 @@
       <workItem from="1524749202438" duration="22159000" />
       <workItem from="1524841643169" duration="10000" />
       <workItem from="1524841662632" duration="4711000" />
-      <workItem from="1524847424530" duration="82682000" />
+      <workItem from="1524847424530" duration="91677000" />
     </task>
     <task id="LOCAL-00001" summary="build the frame">
       <created>1502180958325</created>
@@ -836,11 +647,18 @@
       <option name="project" value="LOCAL" />
       <updated>1525108480941</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="finish the event article logic">
+      <created>1525119607350</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1525119607350</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="440986000" />
+    <option name="totallyTimeSpent" value="449981000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -933,13 +751,6 @@
     <entry file="file://$PROJECT_DIR$/img/work/architecture/berlin-resize.JPG">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/swiper.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="14" column="4803" selection-start-line="14" selection-start-column="4803" selection-end-line="14" selection-end-column="4803" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/isotope.pkgd.min.js">
@@ -1049,7 +860,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/photos-sample.html" />
     <entry file="file://$PROJECT_DIR$/design-sample.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
@@ -1232,32 +1042,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/design-detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="102" column="41" selection-start-line="102" selection-start-column="41" selection-end-line="102" selection-end-column="41" />
-          <folding>
-            <element signature="e#8497#12825#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/event-detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="482">
           <caret line="151" column="8" selection-start-line="151" selection-start-column="8" selection-end-line="159" selection-end-column="7" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/photos-detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="145" column="24" selection-start-line="145" selection-start-column="24" selection-end-line="145" selection-end-column="24" />
-          <folding>
-            <element signature="e#12574#13518#0" expanded="false" />
-            <marker date="1525119076192" expanded="false" signature="13030:13516" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1269,29 +1058,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/main.css">
+    <entry file="file://$PROJECT_DIR$/design-detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="1229" column="4" selection-start-line="1229" selection-start-column="4" selection-end-line="1229" selection-end-column="4" />
+        <state relative-caret-position="772">
+          <caret line="163" column="7" selection-start-line="163" selection-start-column="7" selection-end-line="163" selection-end-column="7" />
           <folding>
-            <element signature="e#10827#10890#0" expanded="false" />
-            <element signature="e#10904#10929#0" expanded="false" />
-            <element signature="e#11028#11305#0" expanded="false" />
-            <element signature="e#13052#13099#0" expanded="false" />
-            <element signature="e#13121#13155#0" expanded="false" />
-            <element signature="e#13174#13208#0" expanded="false" />
-            <element signature="e#17707#17749#0" expanded="false" />
-            <element signature="e#20245#20315#0" expanded="false" />
-            <element signature="e#20327#20426#0" expanded="false" />
-            <element signature="e#20449#20548#0" expanded="false" />
+            <element signature="e#8497#12825#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/swiper.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="14" column="4803" selection-start-line="14" selection-start-column="4803" selection-end-line="14" selection-end-column="4803" />
+          <folding>
+            <element signature="e#2953#3211#2" expanded="true" />
+            <element signature="e#3352#3610#2" expanded="true" />
+            <element signature="e#3730#3988#2" expanded="true" />
+            <element signature="e#4068#4326#2" expanded="true" />
+            <element signature="e#4467#4725#2" expanded="true" />
+            <element signature="e#4845#5103#2" expanded="true" />
+            <element signature="e#14570#16017#2" expanded="true" />
+            <element signature="e#16172#17616#2" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/photos-sample.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="143" column="49" selection-start-line="143" selection-start-column="49" selection-end-line="143" selection-end-column="49" />
+          <folding>
+            <element signature="n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <marker date="1525163864389" expanded="false" signature="7273:9354" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="589" column="11" selection-start-line="589" selection-start-column="11" selection-end-line="589" selection-end-column="11" />
+        <state relative-caret-position="536">
+          <caret line="561" column="34" selection-start-line="561" selection-start-column="34" selection-end-line="561" selection-end-column="34" />
           <folding>
             <element signature="e#768#954#0" expanded="false" />
             <element signature="e#1009#1196#0" expanded="false" />
@@ -1313,9 +1123,39 @@
             <element signature="e#4486#4572#0" expanded="false" />
             <element signature="e#4604#4688#0" expanded="false" />
             <element signature="n#!!block;n#CardObj#0" expanded="false" />
-            <element signature="e#13134#13545#0" expanded="false" />
+            <element signature="e#6812#7292#0" expanded="false" />
+            <element signature="e#12186#12400#0" expanded="false" />
+            <element signature="e#12645#12814#0" expanded="false" />
+            <element signature="e#13304#13715#0" expanded="false" />
             <element signature="n#!!block;n#TagObj#0" expanded="false" />
-            <element signature="e#15006#15442#0" expanded="false" />
+            <element signature="e#16243#16679#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/photos-detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="118" column="48" selection-start-line="118" selection-start-column="42" selection-end-line="118" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="1197" column="16" selection-start-line="1197" selection-start-column="16" selection-end-line="1197" selection-end-column="16" />
+          <folding>
+            <element signature="e#10827#10890#0" expanded="false" />
+            <element signature="e#10904#10929#0" expanded="false" />
+            <element signature="e#11028#11305#0" expanded="false" />
+            <element signature="e#13052#13099#0" expanded="false" />
+            <element signature="e#13121#13155#0" expanded="false" />
+            <element signature="e#13174#13208#0" expanded="false" />
+            <element signature="e#17707#17749#0" expanded="false" />
+            <element signature="e#20245#20315#0" expanded="false" />
+            <element signature="e#20327#20426#0" expanded="false" />
+            <element signature="e#20449#20548#0" expanded="false" />
           </folding>
         </state>
       </provider>
