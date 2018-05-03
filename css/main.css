@@ -37,7 +37,7 @@ body {
     margin-right: 0.3rem;
     margin-left: 0.3rem;
     /*width: 100% ;*/
-    font-family: Arial;
+    font-family: Arial Microsoft YaHei sans-serif;
     font-weight: bold;
     display: flex;
     display: -ms-flexbox;
@@ -271,7 +271,7 @@ body {
     height: 2rem;
     text-align:center;
     font-size: 1rem;
-    font-family: myFont Arial;
+    font-family: myFont Arial Microsoft YaHei sans-serif;
     color: #fff;
 }
 
@@ -471,7 +471,7 @@ body {
     margin-right: auto;
     text-align: center;
     color: #a4a4a4;
-    font-family: myFont;
+    font-family: myFont Arial Microsoft YaHei sans-serif;
 
 }
 .work-col{
@@ -603,7 +603,7 @@ body {
 }
 .percentage{
     margin-top: 2.4vh;
-    font-family: myFont;
+    font-family: myFont Arial Microsoft YaHei sans-serif;
     font-size: 1.1rem;
 }
 .water-fill {
@@ -766,6 +766,7 @@ canvas {
     font-family: "Adobe 黑体 Std R";
     font-weight: bold;
     margin-bottom: 2rem;
+    margin-top: 0.8rem;
 }
 
 
@@ -1033,8 +1034,8 @@ canvas {
     color: white;
 }
 .like_button_icon{
-    width:1rem;
-    margin-bottom: -1px;
+    width:0.9rem;
+    margin-bottom: 2px;
     margin-right: 0.4rem;
     color: #fff;
     cursor: pointer;
