@@ -397,13 +397,13 @@ ClickCard =function(id,type){
     localStorage.setItem('item_id', id);
 
     if(type==1){
-        window.location.href="photos-detail.html";
+        window.location.href="photos-detail.html?id="+id;
 
     }else if(type==2){
-        window.location.href="design-detail.html";
+        window.location.href="design-detail.html?id="+id;
 
     }else if(type==3){
-        window.location.href="event-detail.html";
+        window.location.href="event-detail.html?id="+id;
 
     }else{
 
@@ -478,11 +478,13 @@ function AppendDetailHead(url) {
     var photoList=detailObj.photoList;
 
 
+     var result=tags.split(",");
+
     //添加标签逻辑
-    if (tags instanceof Array) {
-        for (var j = 0; j < tags.length; j++) {
-            if (tags[j] != null) {
-                ReplaceDetailTag(tags[j]);
+    if (result instanceof Array) {
+        for (var j = 0; j < result.length; j++) {
+            if (result[j] != null) {
+                ReplaceDetailTag(result[j]);
             } else {
                 console.log("err");
             }
@@ -621,6 +623,7 @@ getTagData=function (url) {
 
 AppendTag=function (url) {
     var dataSet=getTagData(url);
+
 
     if (dataSet[0] != null) {
         for (var j = 0; j < dataSet.length; j++) {
