@@ -9,7 +9,6 @@
     <meta name="x5-fullscreen" content="true">
     <meta name="360-fullscreen" content="true">
     <meta name="screen-orientation" content="portrait">
-    <!--<meta http-equiv="expires" content="0">-->
     <title>原画册</title>
 
     <!--引用样式部分-->
@@ -89,7 +88,6 @@
 <div class="main-pc list-work" >
 
     <ul id="photoDetailTag" class="list-btn">
-        <!--<li><a href="#">#<span class="Tag">0</span>#</a></li>-->
     </ul>
 
     <div id="photoDetailWork" class="paper paperRoute photo-detail">
@@ -117,11 +115,7 @@
             <div class="product-photos-side">
                         <div class="swiper-container ">
                             <div id="photoSwiperSlider" class="swiper-wrapper">
-                                <!--<div class="swiper-slide">
-                                    <div class="swiper-zoom-container">
-                                        <img src="%work%">
-                                    </div>
-                                </div>-->
+
                             </div>
                         </div>
                     </div>
@@ -130,11 +124,6 @@
         <div class="product-gallery-full-screen">
             <div class="swiper-container gallery-top">
                 <div id="photoSwiperfull" class="swiper-wrapper">
-                    <!--<div class="swiper-slide">
-                        <div class="swiper-zoom-container">
-                            <img src="%work%" draggable="false" ondragstart="return false;">
-                        </div>
-                    </div>-->
 
                 </div>
 
@@ -167,9 +156,6 @@
         </div>
 
 
-        <!--<div id="photoDesc" class="design-detail-desc">
-            <h2 class="none-display" id="desc">%desc%</h2>
-        </div>-->
     </div>
 
 </div>
@@ -186,23 +172,10 @@
 <script src="js/main.js"></script>
 <script>
 
-    //load the data
-    /*var str=window.location.href;
-    var first=str.split("?");
-    var second=first[1].split("&");
-    var third=second[0].split("=");
-    console.log(third);
-    var id=third[1];*/
-
     var URL=new ShareURLObj().build();
-    console.log(URL);
-
 
     var DetailEvent=new DetailObj(URL);
     DetailEvent.build();
-
-
-
 
 
 </script>

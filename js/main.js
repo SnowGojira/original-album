@@ -2,8 +2,6 @@
  * Created by hakuh on 2017/9/8.
  */
 var rootURL="http://120.77.83.209:8800/api/";
-// var rootURL="http://120.77.83.209/api/";
-//     var rootURL="http://www.yuanhuace.com:63342/api/";
 var allTagURL=rootURL+"category/list";
 var allURL=rootURL+"list?category=0";
 var photoURL=rootURL+"list?category=1";
@@ -285,12 +283,11 @@ CardObj.prototype ={
         var index=1;
         var totalheight = 0;
         var Url=this.url;
-        // console.log(Url);
 
         var range = 0;             //距下边界长度/单位px
 
         var totalPage=Math.ceil(count/pageSize);
-        console.log(totalPage);
+
 
         AppendCard(Url,index,resultItem);
 
@@ -300,7 +297,7 @@ CardObj.prototype ={
 
             totalheight = parseFloat($(window).height()) + parseFloat(srollPos);
             if(($(document).height()-range)*0.95 <= totalheight ) {
-                console.log('reach bottom');
+
 
                 if (index<totalPage){
                     index++;
@@ -340,25 +337,25 @@ getJsonData=function (url,index) {
 var resultItem=$('.resultItem');
 var returnResultItem=$('.returnResultItem');
 ReplaceCard=function (card,obj,root) {
-    // console.log("card有没有执行？");
+
     root.append(card.replace("%data_id%",obj.id).replace("%data_type%",obj.type).replace("%data_img%",obj.cover).replace("%data_title%",obj.title).replace("%data_likes%",obj.likes).replace("%data_views%",obj.views));
 };
 AppendCard=function (url,index,root) {
     var dataSet = getJsonData(url,index);
-    // console.log(dataSet);
+
     if (dataSet[0] != null) {
         for (var j = 0; j < dataSet.length; j++) {
             if (dataSet[j] != null) {
                 ReplaceCard(this.card, dataSet[j],root);
 
             } else {
-                console.log("#load opacity = 0");
+
                 $('.loading').css("opacity", 0);
             }
         }
 
     } else {
-        console.log("#load opacity = 0");
+
         $('.loading').css("opacity", 0);
     }
 
@@ -369,7 +366,7 @@ AppendCard=function (url,index,root) {
     $('.work-col').click(function () {
         var cardId=parseInt($(this).attr("id"));
         var cardType=parseInt($(this).attr("data-value"));
-        console.log("cardId:"+cardId);
+
         ClickCard(cardId,cardType);
 
     });
@@ -426,7 +423,6 @@ DetailObj.prototype ={
 
     build:function () {
         var URL=this.url;
-        console.log("访问的url："+URL);
 
         getDetailsData(URL);
 
@@ -439,7 +435,6 @@ getDetailsData=function (url) {
     var data;
     // var id=localStorage.getItem('item_id');
 
-    console.log("回调"+url);
 
     $.ajax({
         type : "GET",
@@ -450,7 +445,6 @@ getDetailsData=function (url) {
         .done(function (result) {
             // data=result.data;
             data=result.data[0];
-            console.log(data);
 
 
         })
@@ -596,7 +590,6 @@ TagObj.prototype ={
     //要得到第几页的数据，直接输入
     build:function () {
         var Url=this.url;
-        console.log(Url);
         AppendTag(Url);
     }
 };
@@ -679,7 +672,7 @@ ShareURLObj.prototype ={
         var first=str.split("?");
         var second=first[1].split("&");
         var third=second[0].split("=");
-        console.log(third);
+
         var id=third[1];
 
         var URL=detailURL+id;
