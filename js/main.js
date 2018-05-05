@@ -89,7 +89,7 @@ $('#follow-close').click(function () {
 var     times=1;
 function countTimes(){
     times++;
-    console.log(times);
+    // console.log(times);
     return times;
 }
 
@@ -101,7 +101,7 @@ $('.fotos_hs').hover(function(){
         $('.foto_hs2').hide();
         $('.foto_hs3').hide();
         // $('.foto_hs1').show();
-        console.log("team number effect1 shows");
+        // console.log("team number effect1 shows");
     }else if((times%3)==2){
         $('.foto_hs1').hide();
         $('.foto_hs2').show();
@@ -120,7 +120,7 @@ $('.fotos_hs').hover(function(){
 var     tlf_times=1;
 function tlf_countTimes(){
     tlf_times++;
-    console.log(tlf_times);
+    // console.log(tlf_times);
     return tlf_times;
 }
 
@@ -150,7 +150,7 @@ $('.fotos_tlf').hover(function(){
 var     zw_times=1;
 function zw_countTimes(){
     zw_times++;
-    console.log(zw_times);
+    // console.log(zw_times);
     return zw_times;
 }
 
@@ -255,9 +255,9 @@ function CardObj(url){
 CardObj.prototype ={
     card:card,
     pageIndex:1,
-    getJsonData:function (index) {
+    /*getJsonData:function (index) {
         return getJsonData(this.url,index);
-    },
+    },*/
     getCount:function(){
         var count;
         $.ajax({
@@ -426,7 +426,9 @@ DetailObj.prototype ={
 
     build:function () {
         var URL=this.url;
-        // console.log("访问的url："+URL);
+        console.log("访问的url："+URL);
+
+        getDetailsData(URL);
 
         AppendDetailHead(URL);
 
@@ -435,18 +437,21 @@ DetailObj.prototype ={
 
 getDetailsData=function (url) {
     var data;
-    var id=localStorage.getItem('item_id');
+    // var id=localStorage.getItem('item_id');
 
+    console.log("回调"+url);
 
     $.ajax({
         type : "GET",
         async:false,//返回值的问题。
-        url : url+id,
+        url : url,
         data : {}//数据，这里使用的是Json格式进行传输
     })
         .done(function (result) {
             // data=result.data;
             data=result.data[0];
+            console.log(data);
+
 
         })
         .fail(function(err) {
@@ -461,7 +466,7 @@ getDetailsData=function (url) {
 function ReplaceDetailTag(str){
 
     $('.list-btn').append(detailTag.replace("%data_tag%",str));
-};
+}
 
 function AppendDetailHead(url) {
     var detailObj=getDetailsData(url);
@@ -519,7 +524,7 @@ function AppendDetailHead(url) {
         $('.media-wrap img').css("width","100%");
         // console.log('文章内容：'+content);
     }else{
-        console.log('文章内容：'+photoList);
+        // console.log('文章内容：'+photoList);
         AppendPhotoArticle(photoList);
 
     }

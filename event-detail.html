@@ -130,11 +130,15 @@
 
 <script>
     //引入数据
-    var DetailEvent=new DetailObj(detailURL);
+    var str=window.location.href;
+    var arr=str.split("=");
+    var id=arr[arr.length-1];
+
+    var URL=detailURL+id;
+
+    var DetailEvent=new DetailObj(URL);
     DetailEvent.build();
 
-    var test = window.location.href;
-    console.log(test);
 
 
     /*var designDetails='<div class="paper paperRoute richmedia-detail">' +

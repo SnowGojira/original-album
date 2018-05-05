@@ -187,8 +187,14 @@
 <script>
 
     //load the data
+    var str=window.location.href;
+    var arr=str.split("=");
+    var id=arr[arr.length-1];
 
-    var DetailEvent=new DetailObj(detailURL);
+    var URL=detailURL+id;
+
+
+    var DetailEvent=new DetailObj(URL);
     DetailEvent.build();
 
 

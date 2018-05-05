@@ -1176,7 +1176,7 @@ a{
 }
 .swiper-button-next.swiper-button-disabled,
 .swiper-button-prev.swiper-button-disabled {
-    opacity: .1;
+    opacity: .2;
 }
 
 .product-gallery .product-photos-side,
@@ -1199,7 +1199,7 @@ a{
 
 .product-gallery .product-photos-side .swiper-slide {
     width: 10rem;
-    opacity: .2;
+    opacity: 0;
     transition: 225ms opacity ease-in-out;
 }
 
