@@ -455,8 +455,28 @@
         /*width: 100%;*/
     }
 
+    .list-btn li{
+        display: inline-block;
+        float: left;
+        margin-right:0.8rem;
+        margin-bottom: 0.5rem;
+        position: relative;
+        min-width:3rem;
+        padding:0.5rem;
+        /*height: 30px;*/
+        background-color: #f3f3f3;
+        /*line-height: 30px;*/
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        border-radius: 0.8rem;
+        text-align: center;
+        background-position: 90% 50%;
+        background-repeat: no-repeat;
+        cursor: pointer;
+
+    }
     .photo-detail{
-        margin-top:4rem;
+        margin-top:5rem;
         padding-left: 1rem;
         padding-right: 1rem;
         /*text-align: center;*/

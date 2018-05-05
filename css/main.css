@@ -706,15 +706,17 @@ canvas {
 .list-btn li{
     display: inline-block;
     float: left;
-    margin-right:0.5rem;
+    margin-right:0.8rem;
+    margin-bottom: 0.5rem;
     position: relative;
-    min-width:120px;
-    padding:0 20px;
-    height: 30px;
+    min-width:80px;
+    padding:13px;
+    /*height: 30px;*/
     background-color: #f3f3f3;
-    line-height: 30px;
+    /*line-height: 30px;*/
     font-size: 0.8rem;
-    border-radius: 10px;
+    letter-spacing: 1px;
+    border-radius: 18px;
     text-align: center;
     background-position: 90% 50%;
     background-repeat: no-repeat;
@@ -1387,7 +1389,7 @@ body:hover .gallery-nav {
 }
 
 .photo-detail{
-    margin-top:4rem;
+    margin-top:5.5rem;
     padding-left: 10rem;
     padding-right: 10rem;
     /*text-align: center;*/
