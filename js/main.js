@@ -664,6 +664,30 @@ ClickTag=function (type) {
 };
 
 
+/*******************获取Detail URL对象********************/
+
+
+function ShareURLObj(){
+    this.url=window.location.href;;
+}
+
+ShareURLObj.prototype ={
+
+    build:function () {
+        var str=this.url;
+
+        var first=str.split("?");
+        var second=first[1].split("&");
+        var third=second[0].split("=");
+        console.log(third);
+        var id=third[1];
+
+        var URL=detailURL+id;
+
+
+        return URL;
+    }
+};
 
 
 
