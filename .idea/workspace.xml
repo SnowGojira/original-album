@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5f470de5-9d74-4ea1-8279-9e1f184e94b0" name="Default" comment="add new share logic, fix the window.location.href=id bug">
+    <list default="true" id="5f470de5-9d74-4ea1-8279-9e1f184e94b0" name="Default" comment="fix the event tag href problem.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/design-detail.html" afterPath="$PROJECT_DIR$/design-detail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/event-detail.html" afterPath="$PROJECT_DIR$/event-detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/photos-detail.html" afterPath="$PROJECT_DIR$/photos-detail.html" />
     </list>
     <ignored path="original-album.iws" />
@@ -21,7 +19,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
+    <option name="PATCH_PATH" value="F:\assemble微信+设计+网站\Assemble-h5\original-album" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -29,7 +27,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="92">
@@ -89,8 +87,8 @@
       <file leaf-file-name="photos-detail.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/photos-detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="196" column="4" selection-start-line="196" selection-start-column="4" selection-end-line="197" selection-end-column="21" />
+            <state relative-caret-position="102">
+              <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -99,8 +97,8 @@
       <file leaf-file-name="event-detail.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/event-detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="134" column="4" selection-start-line="134" selection-start-column="4" selection-end-line="135" selection-end-column="21" />
+            <state relative-caret-position="124">
+              <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -109,7 +107,7 @@
       <file leaf-file-name="design-detail.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/design-detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
+            <state relative-caret-position="1366">
               <caret line="134" column="21" selection-start-line="134" selection-start-column="21" selection-end-line="134" selection-end-column="21" />
               <folding>
                 <element signature="e#8553#12881#0" expanded="false" />
@@ -134,7 +132,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="events.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="events.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/events.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2132">
@@ -221,10 +219,10 @@
         <option value="$PROJECT_DIR$/photos-sample.html" />
         <option value="$PROJECT_DIR$/css/responsive.css" />
         <option value="$PROJECT_DIR$/css/main.css" />
-        <option value="$PROJECT_DIR$/photos-detail.html" />
-        <option value="$PROJECT_DIR$/event-detail.html" />
         <option value="$PROJECT_DIR$/design-detail.html" />
         <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/event-detail.html" />
+        <option value="$PROJECT_DIR$/photos-detail.html" />
       </list>
     </option>
   </component>
@@ -416,7 +414,7 @@
       <workItem from="1524841643169" duration="10000" />
       <workItem from="1524841662632" duration="4711000" />
       <workItem from="1524847424530" duration="97649000" />
-      <workItem from="1525447763013" duration="6170000" />
+      <workItem from="1525447763013" duration="6483000" />
     </task>
     <task id="LOCAL-00001" summary="build the frame">
       <created>1502180958325</created>
@@ -677,11 +675,18 @@
       <option name="project" value="LOCAL" />
       <updated>1525499744399</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="fix the problem when share the message via the wechat">
+      <created>1525503635432</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1525503635432</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="462123000" />
+    <option name="totallyTimeSpent" value="462436000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -737,8 +742,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix the index problem&#10;" />
-    <MESSAGE value="reverse the refresh logic" />
     <MESSAGE value="the filter can just filter the exist item, it's fake now. When connect to the net, it will be changed." />
     <MESSAGE value="frontend has almost be done, this version saved for backup." />
     <MESSAGE value="update the design sample stylish" />
@@ -762,7 +765,9 @@
     <MESSAGE value="adjust the tags' logic" />
     <MESSAGE value="fix the list-btn's style bug, but the limit tags is 4." />
     <MESSAGE value="add new share logic, fix the window.location.href=id bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="add new share logic, fix the window.location.href=id bug" />
+    <MESSAGE value="fix the problem when share the message via the wechat" />
+    <MESSAGE value="fix the event tag href problem." />
+    <option name="LAST_COMMIT_MESSAGE" value="fix the event tag href problem." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -944,17 +949,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/photos-sample.html" />
-    <entry file="file://$PROJECT_DIR$/events.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2132">
-          <caret line="145" column="12" selection-start-line="145" selection-start-column="12" selection-end-line="145" selection-end-column="12" />
-          <folding>
-            <element signature="e#4939#5062#0" expanded="false" />
-            <element signature="e#5104#5227#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/responsive.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="478">
@@ -1001,32 +995,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/photos-detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="196" column="4" selection-start-line="196" selection-start-column="4" selection-end-line="197" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/event-detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="134" column="4" selection-start-line="134" selection-start-column="4" selection-end-line="135" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/design-detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="134" column="21" selection-start-line="134" selection-start-column="21" selection-end-line="134" selection-end-column="21" />
-          <folding>
-            <element signature="e#8553#12881#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
@@ -1057,6 +1025,43 @@
             <element signature="e#16042#16378#0" expanded="false" />
             <element signature="e#16411#16847#0" expanded="false" />
             <element signature="e#16875#17045#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/design-detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1366">
+          <caret line="134" column="21" selection-start-line="134" selection-start-column="21" selection-end-line="134" selection-end-column="21" />
+          <folding>
+            <element signature="e#8553#12881#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/event-detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/photos-detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/events.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2132">
+          <caret line="145" column="12" selection-start-line="145" selection-start-column="12" selection-end-line="145" selection-end-column="12" />
+          <folding>
+            <element signature="e#4939#5062#0" expanded="false" />
+            <element signature="e#5104#5227#0" expanded="false" />
           </folding>
         </state>
       </provider>
