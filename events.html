@@ -136,6 +136,7 @@
     });
 
     function setResult(type,tagId){
+        $(window).unbind('scroll');
         $('.work-col').remove();
         if(tagId != null){
             EventsEvent=new CardObj(eventURL+'&'+type+'='+tagId);

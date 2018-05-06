@@ -150,7 +150,9 @@
     });
 
     function setResult(type,tagId){
+        $(window).unbind('scroll');
         $('.work-col').remove();
+
         if(tagId != null){
             DesignEvent=new CardObj(designURL+'&'+type+'='+tagId);
             DesignEvent.build();
