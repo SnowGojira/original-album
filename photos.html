@@ -148,6 +148,7 @@
     });
 
     function setResult(type,tagId){
+        $(window).unbind('scroll');
         $('.work-col').remove();
         if(tagId != null){
             PhotoEvent=new CardObj(photoURL+'&'+type+'='+tagId);

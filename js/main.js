@@ -460,6 +460,7 @@ getDetailsData=function (url) {
 function ReplaceDetailTag(str){
 
     $('.list-btn').append(detailTag.replace("%data_tag%",str));
+
 }
 
 function AppendDetailHead(url) {
@@ -483,7 +484,7 @@ function AppendDetailHead(url) {
     if (result instanceof Array) {
         for (var j = 0; j < result.length; j++) {
             if (result[j] != null) {
-                ReplaceDetailTag(result[j]);
+                ReplaceDetailTag(result[j],"detail-li-tag");
             } else {
                 console.log("err");
             }

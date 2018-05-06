@@ -222,6 +222,7 @@
     });
 
     function setResult(type,tagId){
+        $(window).unbind('scroll');
         $('.work-col').remove();
         if(tagId != null){
             AllEvent=new CardObj(allURL+'&'+type+'='+tagId);
